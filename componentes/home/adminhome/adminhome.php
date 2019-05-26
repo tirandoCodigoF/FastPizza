@@ -1,17 +1,40 @@
-<?php
-echo "hola mudno";
-include_once 'navar/head.php';
-?>
+<?php 
+
+    include_once 'navar/head.php';
+    include_once 'navar/navar.php';
+    include_once 'MenuAdmin/modaladd.php';
+ ?>
+
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
+<html lang="es">
+
 <body>
-  <h1>hola mundo</h1>
+    <div class="container">
+        <div class="row d-flex justify-content-around mt-5">
+            <div class="card col-md-6 col-md-offset-6">
+                <article class="card-body">
+                    <h1>Bienvenido a mi ADMIN</h1>
+                        <?php                               
+                            echo "<li class=dropdown>
+                                        <a href='#' class='dropdown-toggle' data-toggle='dropdown'><span class='glyphicon glyphicon-user'></span> ".$_SESSION['user'].' '.$_SESSION['ap']."</a>
+                                        <ul class='dropdown-menu'>
+                                            <li><a href='../../../sesiones/cerrarsesion.php' >Cerrar Sesión</a></li>
+                                
+                                        </ul>
+                                    </li>";
+                        ?>
+                <!--<li><a href="../../Controlador/CerrarSesion.php" class="btn btn-primary btn-lg">Cerrar sesión</a></li>-->
+                        
+                </article>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#addusuarios">Agregar Usuarios
+</button>
+<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#addpizzas">Agregar Pizza
+</button>
+
+    <?php include_once 'navar/footer.php'; ?>
 </body>
 </html>
-
