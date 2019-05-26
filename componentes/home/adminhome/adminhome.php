@@ -19,7 +19,7 @@
                             echo "<li class=dropdown>
                                         <a href='#' class='dropdown-toggle' data-toggle='dropdown'><span class='glyphicon glyphicon-user'></span> ".$_SESSION['user'].' '.$_SESSION['ap']."</a>
                                         <ul class='dropdown-menu'>
-                                            <li><a href='../../../sesiones/cerrarsesion.php' >Cerrar Sesión</a></li>
+                                            <li><a href='../../sesiones/cerrarsesion.php' >Cerrar Sesión</a></li>
                                 
                                         </ul>
                                     </li>";

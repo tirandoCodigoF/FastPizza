@@ -1,6 +1,7 @@
 <?php 
 include_once 'navar/head.php';
- //require_once '../../Datos/Conne.php';
+ require_once '../../basededatos/Conne.php';
+
 
  ?>
 <!-- MODAL AGREGAR USUARIOS..........-->
@@ -241,4 +242,4 @@ include_once 'navar/head.php';
 
 
 
-<?php include_once '../navar/footer.php'; ?>
+<?php include_once 'navar/footer.php'; ?>
