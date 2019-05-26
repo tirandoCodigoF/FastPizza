@@ -1,2 +1,8 @@
-<?php  require '../../navbarsetc/navbarlogueada.php' ?>
-Hola Admin
+<?php
+echo "hola mudno";
+
+
+
+
+?>
+hola
