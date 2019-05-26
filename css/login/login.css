@@ -1,0 +1,23 @@
+
+.padre {
+  /*IMPORTANTE*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hijo {
+  width: 30%;;
+}
+h2{
+    text-align: center;
+}
+#user{
+    border-bottom: solid 1px black;
+}
+#pass{
+  border-bottom: solid 1px black;
+}
+footer{
+  font-size: .8em;
+  padding: 10px;
+}
