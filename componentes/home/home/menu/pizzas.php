@@ -142,9 +142,9 @@
             <option value="CHGR">Grande</option>
             <option value="CHFA">Familiar</option>
             </select>
-            <br>
+           <hr> 
             <input type="number" class="form-control-sm" name="cant" id="cant" placeholder="Cantidad" required>
-            <br>
+            <hr>
             <button type="submit" class="btn btn-outline-primary">Ordenar</button>
             </form>
             </div>
