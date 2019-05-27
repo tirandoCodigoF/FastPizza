@@ -1,5 +1,5 @@
 <?php 
-
+    include_once '../../basededatos/Conne.php';
     include_once 'navar/head.php';
     include_once 'navar/navar.php';
     include_once 'MenuAdmin/modaladd.php';
@@ -17,7 +17,7 @@
                     <h1>Bienvenido a mi ADMIN</h1>
                         <?php                               
                             echo "<li class=dropdown>
-                                        <a href='#' class='dropdown-toggle' data-toggle='dropdown'><span class='glyphicon glyphicon-user'></span> ".$_SESSION['user'].' '.$_SESSION['ap']."</a>
+                                        <a href='#' class='dropdown-toggle' data-toggle='dropdown'><span class='glyphicon glyphicon-user'></span>Cerrar Sesion</a>
                                         <ul class='dropdown-menu'>
                                             <li><a href='../../sesiones/cerrarsesion.php' >Cerrar Sesión</a></li>
                                 
