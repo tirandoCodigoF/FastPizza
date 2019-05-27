@@ -104,7 +104,9 @@
             <option value="3QGR">Grande</option>
             <option value="3QFA">Familiar</option>
             </select>
+            <hr>
             <input type="number" class="form-control-sm" name="cant" id="cant" placeholder="Cantidad" required>
+            <hr>
             <button type="submit" class="btn btn-outline-primary">Ordenar</button>
             </form>
             </div>
