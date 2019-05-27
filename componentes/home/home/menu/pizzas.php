@@ -20,7 +20,7 @@
     <header>
     <div class="textos">
     <h1 class="titulo">Star-Soft</h1>
-    <h3 class="subtitulo">Dessarrollo Web Pizzeria </h3>
+    <h3 class="subtitulo">Desarrollo Web Pizzeria </h3>
     <a href="../index.php" class="boton">Home</a>
     </div>
     
@@ -142,7 +142,9 @@
             <option value="CHGR">Grande</option>
             <option value="CHFA">Familiar</option>
             </select>
+            <br>
             <input type="number" class="form-control-sm" name="cant" id="cant" placeholder="Cantidad" required>
+            <br>
             <button type="submit" class="btn btn-outline-primary">Ordenar</button>
             </form>
             </div>
