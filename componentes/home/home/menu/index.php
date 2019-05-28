@@ -36,9 +36,12 @@ require ('../../../navbar/index.php');
    <div class="imagenes"><img src="https://www.dondeir.com/wp-content/uploads/2017/03/buffet-de-pizzas-en-cdmx-como-todo-que-puedas-por-149-pesos-3-1024x767.jpg" alt=""></div>
    <div class="imagenes"><img src="https://cdn2.dineroenimagen.com/media/dinero/styles/gallerie/public/images/2019/03/pizzas-hamburguesas.jpg" alt=""></div>
    <div class="imagenes"><img src="https://www.animalgourmet.com/wp-content/uploads/2013/08/1024px-Supreme_pizza.jpg" alt=""> <div class="encima">
+    
     <h2>Star-Soft</h2>
+    
     <div></div>
    </div></div>
+   
    <div class="imagenes"><img src="https://img.freepik.com/free-photo/homemade-napoli-pizza-anchovies-pizza-black-slate-stone_42124-38.jpg?size=626&ext=jpg" alt="">
   
   </div>
