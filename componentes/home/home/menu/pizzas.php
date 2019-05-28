@@ -73,7 +73,7 @@
     
         </div>
     <<!--Mexicana-->
-    
+
         <div class="tarjeta-wrap">
         <div class="tarjeta">
             <div class="adelante img3"></div>
@@ -95,6 +95,7 @@
     </div>
     </section>
 <!--TRES QUESOS-->
+
     <section class="acerca-de">
     <div class="wrap">
         <div class="tarjeta-wrap">
@@ -116,6 +117,7 @@
         </div>
         </div>
         <!--CARNES FRIAS-->
+        
         <div class="tarjeta-wrap">
         <div class="tarjeta">
             <div class="adelante img5"></div>
