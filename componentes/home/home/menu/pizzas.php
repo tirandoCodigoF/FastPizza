@@ -117,7 +117,7 @@
         </div>
         </div>
         <!--CARNES FRIAS-->
-        
+
         <div class="tarjeta-wrap">
         <div class="tarjeta">
             <div class="adelante img5"></div>
@@ -137,6 +137,7 @@
         </div> 
         </div>
         <!--CHORIZO-->
+        
         <div class="tarjeta-wrap">
         <div class="tarjeta">
             <div class="adelante img6"></div>
