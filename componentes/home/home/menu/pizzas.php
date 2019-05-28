@@ -19,6 +19,7 @@
     require ('../../../navbar/index.php');
     ?>
     <header>
+    
     <div class="textos">
     <h1 class="titulo">Star-Soft</h1>
     <h3 class="subtitulo">Dessarrollo Web Pizzeria </h3>
