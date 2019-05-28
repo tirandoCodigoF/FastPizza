@@ -19,16 +19,17 @@
     require ('../../../navbar/index.php');
     ?>
     <header>
-    
+
     <div class="textos">
     <h1 class="titulo">Star-Soft</h1>
     <h3 class="subtitulo">Dessarrollo Web Pizzeria </h3>
     <a href="../index.php" class="boton">Home</a>
     </div>
-    
     </header>
+
     <main>
     <!--HAWAIANA-->
+    
     <section class="acerca-de">
     <div class="wrap">
         <div class="tarjeta-wrap">
