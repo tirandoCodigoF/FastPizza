@@ -1,5 +1,5 @@
 <?php 
-include_once 'navar/head.php';
+ require_once './navar/head.php';
  require_once '../../basededatos/Conne.php';
  require '../../basededatos/conexion.php';
 
@@ -237,9 +237,4 @@ include_once 'navar/head.php';
   </div>
 </div>
 
-
-
-
-
-
-<?php include_once 'navar/footer.php'; ?>
+<?php include_once './navar/footer.php'; ?>

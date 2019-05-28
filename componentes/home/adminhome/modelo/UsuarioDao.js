@@ -36,7 +36,7 @@ $(document).on("submit", ".formulario_registro", function(event){
 
 
     $("#msg_error").hide();
-    var url_php = 'http://localhost:8080/Sistema-pizzas/PIZZAS/Controlador/RegistroControlador.php';
+    var url_php = 'http://localhost:8080/FastPizza/componentes/home/adminhome/controlador/RegistroControlador.php';
 
     $.ajax({
         type:'POST',

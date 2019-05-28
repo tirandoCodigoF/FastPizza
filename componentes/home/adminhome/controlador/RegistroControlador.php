@@ -1,6 +1,6 @@
 <?php 
-require_once "../Datos/Conne.php";
-require '../../basededatos/conexion.php';
+require_once '../../../basededatos/Conne.php';;
+require '../../../basededatos/conexion.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	header("Content-Type: application/json");
