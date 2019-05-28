@@ -1,4 +1,5 @@
 
+
 $(document).on("submit", ".formulario_registro", function(event){
     event.preventDefault();
     var $form = $(this);
@@ -55,7 +56,21 @@ $(document).on("submit", ".formulario_registro", function(event){
        if(res.redirect !== undefined){
         window.location = res.redirect;
     }
+    if(res.full !== undefined){
+        //$("#msg_full").text('registro exitoso').show();
+        alertify.success('Registro Exitoso');
+        //this.reset();
+        $('input').val("");
+        //$('.addpersona').modal('hide');
+        $("#addpersona .close").click();
+       // $ ('#addpersona'). Modal ('hide');
+       // $ ('#addpersona'). modal (). hide (); 
+        //onSubmit="this.reset()"
+        //$('#addpersona').hide();
+        return false;
+   } 
     })
+   
     .fail(function ajaxError(e){
         console.log(e);
     })

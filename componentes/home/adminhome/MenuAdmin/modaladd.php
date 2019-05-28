@@ -9,9 +9,36 @@
 <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">hola
 </button>-->
 <!-- Modal -->
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/alertify.min.js"></script>
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/alertify.min.css"/>
 <div class="modal fade" id="addusuarios" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
+<!-- JavaScript -->
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/alertify.min.js"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/alertify.min.css"/>
+<!-- Default theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/themes/default.min.css"/>
+<!-- Semantic UI theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/themes/semantic.min.css"/>
+<!-- Bootstrap theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/themes/bootstrap.min.css"/>
+
+<!-- 
+    RTL version
+-->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/alertify.rtl.min.css"/>
+<!-- Default theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/themes/default.rtl.min.css"/>
+<!-- Semantic UI theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/themes/semantic.rtl.min.css"/>
+<!-- Bootstrap theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/themes/bootstrap.rtl.min.css"/>
+  
+
+<div class="modal-dialog" role="document" id="addpersona" name="addpersona">
+    <div class="modal-content" id="addpersona" name="addpersona">
       <div class="modal-header">
         <h5 class="modal-title text-center" id="exampleModalLabel"><B>Formulario de Registro</B></h5>
         <button type="button" class="close"  data-dismiss="modal" aria-label="Close">
@@ -27,8 +54,9 @@
       <article class="card-body">
       
         <div id="msg_error" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
+        <div id="msg_full" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
        
-        <form action="POST" class="formulario_registro">
+        <form action="POST" class="formulario_registro" >
          <div class="form-group">
           <div class="row">
                 <div class="col-md-12">
@@ -120,7 +148,7 @@
             <!--<button type="submit"  class="btn btn-success">Registrar</button>-->
            
         <button type="submit" class="btn btn-success">Registrar</button>
-        <button type="submit" class="btn btn-danger" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-danger"  data-dismiss="modal" >Cerrar</button>
 
      
           </div>
