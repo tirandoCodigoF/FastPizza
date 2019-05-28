@@ -18,7 +18,7 @@ header{
  position: relative;
  overflow: hidden;
  color:#fff;
- text-align: center;
+ text-align: center; 
 }
 header .textos{
  margin-top:152px;
