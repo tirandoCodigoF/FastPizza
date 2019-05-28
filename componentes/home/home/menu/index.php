@@ -78,6 +78,7 @@ require ('../../../navbar/index.php');
   </div>
   </section>
   
+  
   <section class="fondo">
 
   </section>
