@@ -41,13 +41,12 @@ require ('../../../navbar/index.php');
     
     <div></div>
    </div></div>
-   
+
    <div class="imagenes"><img src="https://img.freepik.com/free-photo/homemade-napoli-pizza-anchovies-pizza-black-slate-stone_42124-38.jpg?size=626&ext=jpg" alt="">
   
   </div>
 
    <div class="imagenes"><img src="https://cdn-images-1.medium.com/max/1600/1*RkW3ffEnb_8NjfkfTxfx-Q.jpeg" alt=""></div>
-   
   </section>
   
   <section class="miembros">
