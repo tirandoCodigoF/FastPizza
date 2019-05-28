@@ -52,7 +52,7 @@
         
         </div>
     <!--PEPERONI-->
-    
+
         <div class="tarjeta-wrap">
         <div class="tarjeta">
             <div class="adelante img2"></div>
@@ -73,6 +73,7 @@
     
         </div>
     <<!--Mexicana-->
+    
         <div class="tarjeta-wrap">
         <div class="tarjeta">
             <div class="adelante img3"></div>
