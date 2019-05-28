@@ -168,7 +168,7 @@ header .boton{
 .fondo{
  height: 750px;
  position: relative;
- background-image: url(https://img.freepik.com/foto-gratis/cortar-rodajas-deliciosa-pizza-fresca-pepperoni_79782-17.jpg?size=626&ext=jpg);
+ background-image: url( https://img.freepik.com/foto-gratis/cortar-rodajas-deliciosa-pizza-fresca-pepperoni_79782-17.jpg?size=626&ext=jpg );
  overflow: hidden;
  background-attachment: fixed;
  background-position: center;
