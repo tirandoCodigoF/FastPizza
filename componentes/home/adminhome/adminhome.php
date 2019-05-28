@@ -8,32 +8,23 @@
 
 <!DOCTYPE html>
 <html lang="es">
-
-<body>
+<style>
+  body{
+    background-image: url("imGp/4.jpg");
+  }
+  </style>
+<body >
     <div class="container">
         <div class="row d-flex justify-content-around mt-5">
             <div class="card col-md-6 col-md-offset-6">
                 <article class="card-body">
-                    <h1>Bienvenido a mi ADMIN</h1>
-                        <?php                               
-                            echo "<li class=dropdown>
-                                        <a href='#' class='dropdown-toggle' data-toggle='dropdown'><span class='glyphicon glyphicon-user'></span>Cerrar Sesion</a>
-                                        <ul class='dropdown-menu'>
-                                            <li><a href='../../sesiones/cerrarsesion.php' >Cerrar Sesión</a></li>
-                                
-                                        </ul>
-                                    </li>";
-                        ?>
-                <!--<li><a href="../../Controlador/CerrarSesion.php" class="btn btn-primary btn-lg">Cerrar sesión</a></li>-->
-                        
+                    <h1>Bienvenido Administrador</h1>
+
+                  
                 </article>
             </div>
         </div>
     </div>
-    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#addusuarios">Agregar Usuarios
-</button>
-<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#addpizzas">Agregar Pizza
-</button>
 
     <?php include_once 'navar/footer.php'; ?>
 </body>
