@@ -29,7 +29,7 @@
 
     <main>
     <!--HAWAIANA-->
-    
+
     <section class="acerca-de">
     <div class="wrap">
         <div class="tarjeta-wrap">
@@ -52,6 +52,7 @@
         
         </div>
     <!--PEPERONI-->
+    
         <div class="tarjeta-wrap">
         <div class="tarjeta">
             <div class="adelante img2"></div>
