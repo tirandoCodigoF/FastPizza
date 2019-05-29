@@ -2,7 +2,13 @@
  require_once '../navar/head.php';
 
 ?>
-  <div class="container" id="listaclientes" name="listaclientes">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="esti/css/dataTables.bootstrap.min.css">
+	<link rel="stylesheet" href="esti/css/estilos.css">
+	<!-- Buttons DataTables -->
+	<link rel="stylesheet" href="esti/css/buttons.bootstrap.min.css">
+	<link rel="stylesheet" href="esti/css/font-awesome.min.css">
+  <div class="container">
       <br>
       <br>
       <br>
@@ -33,33 +39,20 @@
 			</div>			
 		</div>		
     </div>
-    </article>
-            </div>
-        </div>
-    </div>
-    <script>
-    $(document).on("ready", function(){
-    listar();
-});
-var listar= function(){
-    var table= $("#dt_cliente").DataTable({
-        "ajax":{
-            "method":"POST",
-            "url":"listarCliente.php"
-        },
-        "columns":[
-            {"data":"nombre_cliente"},
-            {"data":"direccion_cliente"},
-            {"data":"telefono_cliente"},
-            {"data":"email_cliente"},
-            {"data":"activacion"}
-        ]
-    });
-}
+    
+    <script src="esti/js/jquery-1.12.3.js"></script>
+	<script src="esti/js/bootstrap.min.js"></script>
+	<script src="esti/js/jquery.dataTables.min.js"></script>
+	<script src="esti/js/dataTables.bootstrap.js"></script>
+	<!--botones DataTables-->	
+	<script src="esti/js/dataTables.buttons.min.js"></script>
+	<script src="esti/js/buttons.bootstrap.min.js"></script>
+	<!--Libreria para exportar Excel-->
+	<script src="esti/js/jszip.min.js"></script>
+	<!--Librerias para exportar PDF-->
+	<script src="esti/js/pdfmake.min.js"></script>
+	<script src="esti/js/vfs_fonts.js"></script>
+	<!--Librerias para botones de exportación-->
+	<script src="esti/js/buttons.html5.min.js"></script>
 
-</script>
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
- 
- <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
- 
-    <?php include_once '../navar/footer.php'; ?>
+    <?php //include_once '../navar/footer.php'; ?>

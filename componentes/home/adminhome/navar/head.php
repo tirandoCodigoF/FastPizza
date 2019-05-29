@@ -5,12 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
-	<link rel="stylesheet" href="css/estilos.css">
-	<!-- Buttons DataTables -->
-	<link rel="stylesheet" href="css/buttons.bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
    <!--
 
 <link rel="stylesheet" type="text/css" href="lib/jquery/bootstrap.min.css">

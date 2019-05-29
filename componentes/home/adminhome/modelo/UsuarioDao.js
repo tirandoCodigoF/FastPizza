@@ -182,7 +182,7 @@ $(document).on("ready", function(){
     listarclie();
 });
 var listarclie= function(){
-    var table= $("#dt_Cliente").DataTable({
+    var table= $(".dt_cliente").DataTable({
         "ajax":{
             "method":"POST",
             "url":"listarCliente.php"
