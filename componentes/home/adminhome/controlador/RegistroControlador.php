@@ -36,7 +36,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$array_devolver['is_login']=false;
 		}
 		else{
-	$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+	//$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+	//$hash = (string) $usuario['password'];
+	$password = ($_POST['password']);
 	$query="INSERT INTO clientes (email_cliente, pass_cliente, nombre_cliente, telefono_cliente, direccion_cliente,tipo_user, activacion) VALUES (:email, :password, :nombre,:telefono ,:direccion, :tipo, :activa)";
 
 	$nusuario = $con->prepare($query);

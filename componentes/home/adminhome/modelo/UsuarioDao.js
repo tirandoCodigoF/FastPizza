@@ -16,7 +16,7 @@ $(document).on("submit", ".formulario_registro", function(event){
         priv: $("#priv",$form).val(),
         email: $("input[type='email']",$form).val(),
         password: $("input[type='password']", $form).val(),
-        activa: $("#priv",$form).val()
+        activa: $("#activa",$form).val()
     }
     if(data_form.email.length < 6 ){
         $("#msg_error").text("Necesitamos un email valido.").show();
@@ -62,6 +62,7 @@ $(document).on("submit", ".formulario_registro", function(event){
         alertify.success('Registro Exitoso');
         //this.reset();
         $('input').val("");
+        $('select').val("selected");
         //$('.addpersona').modal('hide');
         $("#addpersona .close").click();
        // $ ('#addpersona'). Modal ('hide');

@@ -139,7 +139,9 @@
            </select>
           </div>
           <div class="form-group">
-          <label>Activar Usuario: </label>
+          <label>Act/Des Cuenta: </label><br>
+            <!-- <input type="checkbox" name="activa" id="activa" value="1" />Activar</>
+             <input type="checkbox" name="activa" id="activa" value="0" />DesActivar</>-->
            <select name="activa" id="activa" class="form-control" required require>
            <option selected required>Seleccionar</option>
            <option value="1">Activar</option>
