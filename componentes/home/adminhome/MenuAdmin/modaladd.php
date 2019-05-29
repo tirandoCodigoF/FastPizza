@@ -1,7 +1,7 @@
 <?php 
  require_once './navar/head.php';
  require_once '../../basededatos/Conne.php';
- require '../../basededatos/conexion.php';
+ //require '../../basededatos/conexion.php';
 
  ?>
 <!-- MODAL AGREGAR USUARIOS..........-->
