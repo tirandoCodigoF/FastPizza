@@ -6,16 +6,17 @@ $(document).on("submit", ".formulario_registro", function(event){
   // $telf="/^[953]+[0-9]{7}$/";
     var data_form = {
         nombre: $("#nombre",$form).val(),
-        apellido:$("#apellido", $form).val(),
-        edad: $("#edad",$form).val(),
-        sexo:$("#sexo", $form).val(),
+        //apellido:$("#apellido", $form).val(),
+        //edad: $("#edad",$form).val(),
+        //sexo:$("#sexo", $form).val(),
         telefono:$("#telefono",$form).val(),
         direccion: $("#direccion",$form).val(),
-        ciudad: $("#ciudad",$form).val(),
-        estado: $("#estado",$form).val(),
+        //ciudad: $("#ciudad",$form).val(),
+        //estado: $("#estado",$form).val(),
         priv: $("#priv",$form).val(),
         email: $("input[type='email']",$form).val(),
-        password: $("input[type='password']", $form).val() 
+        password: $("input[type='password']", $form).val(),
+        activa: $("#priv",$form).val()
     }
     if(data_form.email.length < 6 ){
         $("#msg_error").text("Necesitamos un email valido.").show();

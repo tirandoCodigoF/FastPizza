@@ -1,5 +1,5 @@
 <?php 
-    include_once '../../basededatos/Conne.php';
+    require '../../basededatos/Conne.php';
     include_once 'navar/head.php';
     include_once 'navar/navar.php';
     include_once 'MenuAdmin/modaladd.php';

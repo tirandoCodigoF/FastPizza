@@ -1,11 +1,11 @@
 <?php 
-class Conexion {
+class Conexionn {
     protected static $con;
     private function __construct(){
         try{
             self::$con = new PDO(
                 'mysql:charset=utf8mb4;host=localhost;port=3306;dbname=pizzeria', 
-                'chanty', 'samuragi23');
+                'root', '');
             self::$con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             self::$con->setAttribute(PDO::ATTR_PERSISTENT, false);    
         }catch (PDOException $e){
@@ -15,7 +15,7 @@ class Conexion {
     }
     public static function getConn(){
         if(!self::$con){
-            new Conexion();
+            new Conexionn();
         }
         return self::$con;
     }

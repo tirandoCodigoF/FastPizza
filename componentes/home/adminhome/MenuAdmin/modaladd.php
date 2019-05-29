@@ -1,6 +1,6 @@
 <?php 
  require_once './navar/head.php';
- require_once '../../basededatos/Conne.php';
+ require '../../basededatos/Conne.php';
  //require '../../basededatos/conexion.php';
 
  ?>
@@ -66,7 +66,7 @@
             <label>Nombre: </label>
             <input type="text" name="nombre" id="nombre" class="form-control" autofocus placeholder="Nombre" required require  onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]{4,30}" title="No puede ingresar Caracteres especiales (*/&.@-%!$#''?¿¨´+*[]{}_;:) etc, minimo 4, maximo 30 letras"  maxlength="30">
           </div> 
-           <div class="form-group">
+          <!-- <div class="form-group">
             <label>Apellidos: </label>
             <input type="text" name="apellido" id="apellido" class="form-control"  autofocus placeholder="Apellidos" required require onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]{4,30}" title="No puede ingresar Caracteres especiales (*/&.@-%!$#''?¿¨´+*[]{}_;:) etc, minimo 4, maximo 30 letras" maxlength="30">
           </div> 
@@ -83,7 +83,7 @@
            <option value="M">Masculino</option>
            </select>
           
-          </div> 
+          </div> -->
           </div>
           <div class="col-md-4">
             
@@ -110,7 +110,7 @@
            </select>-->
 
           </div> 
-          
+          <!--
           <div class="form-group">
             <label>Ciudad: </label>
             <input type="text" name="ciudad" id="ciudad" class="form-control" autofocus placeholder="Cuidad" required require onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]{5,40}" title="No puede ingresar Caracteres especiales (*/&.@-%!$#''?¿¨´+*[]{}_;:) etc, Ciudad mayor a 10 letras y menor a 40"  maxlength="40" >
@@ -118,7 +118,7 @@
           <div class="form-group">
             <label>Estado: </label>
             <input type="text" name="estado" id="estado" class="form-control" autofocus placeholder="Estado" required require onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]{5,40}" title="No puede ingresar Caracteres especiales (*/&.@-%!$#''?¿¨´+*[]{}_;:) etc, Estado mayor 5 letras y menor a 40"  maxlength="40">
-          </div>
+          </div>-->
           </div>
           <div class="col-md-4">
           <div class="form-group">
@@ -136,6 +136,15 @@
             <option value="1">Administrador</option>
            <option value="2">Vendedor</option>
            <option value="3">Cliente</option>
+           </select>
+          </div>
+          <div class="form-group">
+          <label>Activar Usuario: </label>
+           <select name="activa" id="activa" class="form-control" required require>
+           <option selected required>Seleccionar</option>
+           <option value="1">Activar</option>
+            <option value="0">desActivar</option>
+           
            </select>
           </div>
 
@@ -231,12 +240,12 @@
             <label>Costo: </label>
             <select name="precio" id="precio">
             <?php 
-            $query ="SELECT * FROM preciopizza";
-            $consulta= $con->prepare($query);
-            $consulta->execute();
-             foreach ($consulta as $fin) {
-               echo "<option selected value=".$fin[0].">".$fin[1]."</option>";
-             } ?>
+            //$query ="SELECT * FROM preciopizza";
+            //$consulta= $con->prepare($query);
+            //$consulta->execute();
+             //foreach ($consulta as $fin) {
+               //echo "<option selected value=".$fin[0].">".$fin[1]."</option>";
+             //} ?>
 
            </select>
                  </div>

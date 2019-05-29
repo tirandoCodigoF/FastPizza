@@ -1,5 +1,5 @@
 <?php 
-require_once '../../../basededatos/Conne.php';;
+require '../../../basededatos/Conne.php';
 //require '../../../basededatos/conexion.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -7,24 +7,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$array_devolver=[];
 	$email= ($_POST['email']);
 	$nombre= $_POST['nombre'];
-	$apellido= $_POST['apellido'];
-	$edad= $_POST['edad'];
-	$sexo= $_POST['sexo'];
+	//$apellido= $_POST['apellido'];
+	//$edad= $_POST['edad'];
+	//$sexo= $_POST['sexo'];
 	$telefono= $_POST['telefono'];
 	$direccion= $_POST['direccion'];
-	$ciudad= $_POST['ciudad'];
-	$estado= $_POST['estado'];
+	//$ciudad= $_POST['ciudad'];
+	//$estado= $_POST['estado'];
 	$fk_tipo= $_POST['priv'];
+	$activa=$_POST['activa'];
 
 	//comprobar si existe el usuario
-	$query=" SELECT * FROM usuario WHERE email='$email' LIMIT 1";
+	$query=" SELECT * FROM clientes WHERE email_cliente='$email' LIMIT 1";
 	$resultado = $con -> prepare($query);
-	$resultado->bindParam(':email',$email,PDO::PARAM_STR);
+	$resultado->bindParam(':email_cliente',$email,PDO::PARAM_STR);
 	$resultado->execute();
 
-	$query2=" SELECT * FROM usuario WHERE telefono='$telefono' LIMIT 1";
+	$query2=" SELECT * FROM clientes WHERE telefono_cliente='$telefono' LIMIT 1";
 	$resultado2 = $con -> prepare($query2);
-	$resultado2->bindParam(':telefono',$telefono,PDO::PARAM_STR);
+	$resultado2->bindParam(':telefono_cliente',$telefono,PDO::PARAM_STR);
 	$resultado2->execute();
 	//si hay regsitro en la bdd
 	if ($resultado->rowCount() == 1) {
@@ -36,26 +37,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		}
 		else{
 	$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-	$query="INSERT INTO usuario (email, password, nombre, apellidos, edad, sexo, telefono, direccion, ciudad, estado, fk_tipo) VALUES (:email, :password, :nombre, :apellido, :edad, :sexo,:telefono ,:direccion,:ciudad, :estado, :tipo)";
+	$query="INSERT INTO clientes (email_cliente, pass_cliente, nombre_cliente, telefono_cliente, direccion_cliente,tipo_user, activacion) VALUES (:email, :password, :nombre,:telefono ,:direccion, :tipo, :activa)";
 
 	$nusuario = $con->prepare($query);
 	$nusuario -> bindParam(':email', $email, PDO::PARAM_STR);
 	$nusuario -> bindParam(':password',$password, PDO::PARAM_STR);
 	$nusuario -> bindParam(':nombre', $nombre, PDO::PARAM_STR);
-	$nusuario -> bindParam(':apellido', $apellido, PDO::PARAM_STR);
-	$nusuario -> bindParam(':sexo',$sexo , PDO::PARAM_STR);
+	//$nusuario -> bindParam(':apellido', $apellido, PDO::PARAM_STR);
+	//$nusuario -> bindParam(':sexo',$sexo , PDO::PARAM_STR);
 	$nusuario -> bindParam(':telefono',$telefono , PDO::PARAM_STR);
 	$nusuario -> bindParam(':direccion',$direccion , PDO::PARAM_STR);
-	$nusuario -> bindParam(':ciudad',$ciudad, PDO::PARAM_STR);
-	$nusuario -> bindParam(':estado',$estado, PDO::PARAM_STR);
-	$nusuario -> bindParam(':edad',$edad, PDO::PARAM_INT);
+	//$nusuario -> bindParam(':ciudad',$ciudad, PDO::PARAM_STR);
+	//$nusuario -> bindParam(':estado',$estado, PDO::PARAM_STR);
+	//$nusuario -> bindParam(':edad',$edad, PDO::PARAM_INT);
 	$nusuario -> bindParam(':tipo',$fk_tipo, PDO::PARAM_INT);
-	
+	$nusuario -> bindParam(':activa',$activa, PDO::PARAM_INT);
 	
  			$nusuario -> execute();
 
  			$user_id = $con->lastInsertId();
- 			$_SESSION['user_id'] = (int) $user_id;
+ 			$_SESSION['id'] = (int) $user_id;
 
  			//$array_devolver['redirect'] = 'http://localhost:8080/codigos/PIZZAS/Vista/TipoUsuario/Administrador.php';
 			 //$array_devolver['redirect']='#';

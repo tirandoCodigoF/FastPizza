@@ -1,4 +1,4 @@
 <?php 
     include_once 'Conexionn.php';
-    $con = Conexion::getConn();
+    $con = Conexionn::getConn();
 ?>
