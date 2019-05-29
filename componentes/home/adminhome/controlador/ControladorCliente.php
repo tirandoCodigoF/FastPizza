@@ -24,6 +24,10 @@ $resultado2 = $con -> prepare($query);
     $query=null;
     $con=null;
 
+    $un=1;
+
+
+
     //mysqli_free_result($resultado2);
     //mysqli_close($con);
     //include_once '../navar/footer.php';
@@ -53,5 +57,7 @@ $resultado=mysqli_query($conexion,$query);
     
     mysqli_free_result($resultado);
     mysqli_close($conexion);
+    
     */
+    
 ?>

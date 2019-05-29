@@ -1,6 +1,6 @@
 <?php 
  require_once '../navar/head.php';
-
+//include '../adminhome.php';
 ?>
 <link rel="stylesheet" href="esti/css/bootstrap.min.css">
 	<link rel="stylesheet" href="esti/css/dataTables.bootstrap.min.css">
@@ -8,7 +8,7 @@
 	<!-- Buttons DataTables -->
 	<link rel="stylesheet" href="esti/css/buttons.bootstrap.min.css">
 	<link rel="stylesheet" href="esti/css/font-awesome.min.css">
-  <div class="container">
+  <div class="container" id="listaclientes">
       <br>
       <br>
       <br>
@@ -61,9 +61,12 @@
 });
 var listar= function(){
     var table= $("#dt_cliente").DataTable({
+        "language": {
+      "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+    },
         "ajax":{
             "method":"POST",
-            "url":"listarCliente.php"
+            "url":"../controlador/ControladorCliente.php"
         },
         "columns":[
             {"data" : "nombre_cliente"},
@@ -74,6 +77,14 @@ var listar= function(){
         ]
     });
 }
+/*
+$(document).ready(function() {
+  $('#dt_cliente').DataTable({
+    "language": {
+      "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+    }
+  });
+});*/
     </script>
 
     <?php //include_once '../navar/footer.php'; ?>
