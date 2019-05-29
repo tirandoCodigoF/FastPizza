@@ -19,6 +19,7 @@
     ?>
     <header>
     <div class="textos">
+   
     <h1 class="titulo">Star-Soft</h1>
     <h3 class="subtitulo">Desarrollo Web Pizzeria </h3>
     <a href="../index.php" class="boton">Home</a>
