@@ -62,7 +62,7 @@ $(document).on("submit", ".formulario_registro", function(event){
         alertify.success('Registro Exitoso');
         //this.reset();
         $('input').val("");
-        $('select').val("selected");
+        $('select').val("");
         //$('.addpersona').modal('hide');
         $("#addpersona .close").click();
        // $ ('#addpersona'). Modal ('hide');
@@ -178,3 +178,21 @@ $(document).on("submit", ".formulario_acceso", function(event){
     return false;
 });
 
+$(document).on("ready", function(){
+    listarclie();
+});
+var listarclie= function(){
+    var table= $("#dt_Cliente").DataTable({
+        "ajax":{
+            "method":"POST",
+            "url":"listarCliente.php"
+        },
+        "columns":[
+            {"data":"nombre_cliente"},
+            {"data":"direccion_cliente"},
+            {"data":"telefono_cliente"},
+            {"data":"email_cliente"},
+            {"data":"activacion"}
+        ]
+    });
+}

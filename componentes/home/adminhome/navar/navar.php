@@ -1,5 +1,6 @@
 <?php
  include_once 'MenuAdmin/modaladd.php';
+ //include_once 'MenuAdmin/listas.php';
 ?>
 
 <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: black">
@@ -16,7 +17,7 @@
                   <a class="nav-link dropdown-toggle btn btn-success" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" 
                   aria-expanded="false">    Cliente</a>
                   <div class="dropdown-menu" aria-labelledby="dropdownId">
-                      <a  class="dropdown-item" href="../Vista/login/Acceso.php">Lista clientes</a>
+                      <a  class="dropdown-item" data-target="#listaclientes">Lista clientes</a>
                       <a  class="dropdown-item" style="cursor: pointer" data-toggle="modal" data-target="#addusuarios">Agregar Cliente</a>
                   </div>
               </li>

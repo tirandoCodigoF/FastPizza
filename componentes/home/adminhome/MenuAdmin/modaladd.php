@@ -261,7 +261,7 @@
             <!--<button type="submit"  class="btn btn-success">Registrar</button>-->
            
         <button type="submit" class="btn btn-success">Registrar</button>
-        <button type="submit" class="btn btn-danger" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
 
      
           </div>
