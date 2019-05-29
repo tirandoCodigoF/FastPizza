@@ -178,21 +178,3 @@ $(document).on("submit", ".formulario_acceso", function(event){
     return false;
 });
 
-$(document).on("ready", function(){
-    listarclie();
-});
-var listarclie= function(){
-    var table= $(".dt_cliente").DataTable({
-        "ajax":{
-            "method":"POST",
-            "url":"listarCliente.php"
-        },
-        "columns":[
-            {"data":"nombre_cliente"},
-            {"data":"direccion_cliente"},
-            {"data":"telefono_cliente"},
-            {"data":"email_cliente"},
-            {"data":"activacion"}
-        ]
-    });
-}

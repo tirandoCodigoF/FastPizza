@@ -2,7 +2,7 @@
  require_once '../navar/head.php';
 
 ?>
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="esti/css/bootstrap.min.css">
 	<link rel="stylesheet" href="esti/css/dataTables.bootstrap.min.css">
 	<link rel="stylesheet" href="esti/css/estilos.css">
 	<!-- Buttons DataTables -->
@@ -14,7 +14,7 @@
       <br>
       <h2 align="center">Lista Clientes</h2>
         <div class="row d-flex justify-content-around mt-5">
-            <div class="card col-md-12 col-md-offset-6">
+            <div class="card col-md-10 col-md-offset-1">
                 <article class="card-body">
                 
 <div class="row">
@@ -26,11 +26,11 @@
 				<table id="dt_cliente" class="table table-bordered table-hover" cellspacing="0" width="100%">
 					<thead>
 						<tr>								
-							<th>Nombre Completo</th>
-							<th>Apellidos</th>
+							<th>Nombre</th>
+							
                             <th>Direccion</th>
                             <th>Telefono</th>	
-                            <th>Correo electronico</th>	
+                            <th>Email</th>	
                             <th>Status</th>	
 							<th></th>											
 						</tr>
@@ -53,6 +53,27 @@
 	<script src="esti/js/pdfmake.min.js"></script>
 	<script src="esti/js/vfs_fonts.js"></script>
 	<!--Librerias para botones de exportación-->
-	<script src="esti/js/buttons.html5.min.js"></script>
+    <script src="esti/js/buttons.html5.min.js"></script>
+
+    <script>
+    $(document).on("ready", function(){
+    listar();
+});
+var listar= function(){
+    var table= $("#dt_cliente").DataTable({
+        "ajax":{
+            "method":"POST",
+            "url":"listarCliente.php"
+        },
+        "columns":[
+            {"data" : "nombre_cliente"},
+            {"data" : "direccion_cliente"},
+            {"data" : "telefono_cliente"},
+            {"data" : "email_cliente"},
+            {"data" : "activacion"}
+        ]
+    });
+}
+    </script>
 
     <?php //include_once '../navar/footer.php'; ?>
