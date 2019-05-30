@@ -1,5 +1,5 @@
 <?php 
-// require_once './navar/head.php';
+//require_once './navar/head.php';
  //require '../../basededatos/Conne.php';
  //require '../../basededatos/conexion.php';
 
@@ -9,36 +9,9 @@
 <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">hola
 </button>-->
 <!-- Modal -->
-<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/alertify.min.js"></script>
-
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/alertify.min.css"/>
 <div class="modal fade" id="addusuarios" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<!-- JavaScript -->
-<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/alertify.min.js"></script>
-
-<!-- CSS -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/alertify.min.css"/>
-<!-- Default theme -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/themes/default.min.css"/>
-<!-- Semantic UI theme -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/themes/semantic.min.css"/>
-<!-- Bootstrap theme -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/themes/bootstrap.min.css"/>
-
-<!-- 
-    RTL version
--->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/alertify.rtl.min.css"/>
-<!-- Default theme -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/themes/default.rtl.min.css"/>
-<!-- Semantic UI theme -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/themes/semantic.rtl.min.css"/>
-<!-- Bootstrap theme -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/themes/bootstrap.rtl.min.css"/>
-  
-
-<div class="modal-dialog" role="document" id="addpersona" name="addpersona">
-    <div class="modal-content" id="addpersona" name="addpersona">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title text-center" id="exampleModalLabel"><B>Formulario de Registro</B></h5>
         <button type="button" class="close"  data-dismiss="modal" aria-label="Close">
@@ -46,10 +19,7 @@
         </button>
       </div>
       <div class="modal-body">
-      
-<div class="container">
-  <div class="row d-flex justify-content-around mt-1">
-
+ 
     <div class="card cold-md-6 cold-md-offset-6">
       <article class="card-body">
       
@@ -140,12 +110,8 @@
           </div>
           </div>
           
-
-          
            </div>
-           </div>
-            </div>
-            <div class="form-group" align="center" >
+           <div class="form-group" >
           <label>Act/Des Cuenta: </label><br>
             <!-- <input type="checkbox" name="activa" id="activa" value="1" />Activar</>
              <input type="checkbox" name="activa" id="activa" value="0" />DesActivar</>-->
@@ -156,6 +122,8 @@
            
            </select>
           </div>
+           </div>
+            </div>
             <br>
           <div class="form-group" align="center">
             <!--<button type="submit"  class="btn btn-success">Registrar</button>-->
@@ -277,8 +245,14 @@
     </div>
   </div>
 </div>
+
+
+
+
 <?php //include_once './navar/footer.php';
 //require_once './modelo/UsuarioDao.js'; 
 //include_once './modelo/UsuarioDao.js';
+
+
 
 ?>

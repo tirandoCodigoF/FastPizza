@@ -1,10 +1,11 @@
 <?php 
  require_once '../navar/head.php';
 include 'modaladd.php';
+//include 'modaladdP.php';
 //include_once '../navar/navar.php';
 ?>
 
-  <div class="container" id="listaclientes">
+  <div class="container">
       <br>
       <br>
       <br>
@@ -40,6 +41,7 @@ include 'modaladd.php';
     
     <?php include_once '../navar/footer.php'; ?>
     <script src="../modelo/datolista.js"></script>
+    <script src="../modelo/UsuarioDao.js"></script>
     <script>
    
 /*
