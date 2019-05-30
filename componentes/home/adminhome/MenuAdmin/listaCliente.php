@@ -1,13 +1,18 @@
 <?php 
- require_once '../navar/head.php';
+require_once '../navar/head.php';
 //include '../adminhome.php';
+include_once 'modaladd.php';
 ?>
 <link rel="stylesheet" href="esti/css/bootstrap.min.css">
 	<link rel="stylesheet" href="esti/css/dataTables.bootstrap.min.css">
 	<link rel="stylesheet" href="esti/css/estilos.css">
 	<!-- Buttons DataTables -->
 	<link rel="stylesheet" href="esti/css/buttons.bootstrap.min.css">
-	<link rel="stylesheet" href="esti/css/font-awesome.min.css">
+  <link rel="stylesheet" href="esti/css/font-awesome.min.css">
+  
+
+  <button type="submit" class="btn btn-success dropdown-item"  style="cursor: pointer; width:auto ; height: auto" data-toggle="modal" data-target="#addusuarios" ><b>Agregar Cliente</b></button>
+  
   <div class="container" id="listaclientes">
       <br>
       <br>
@@ -87,4 +92,7 @@ $(document).ready(function() {
 });*/
     </script>
 
-    <?php //include_once '../navar/footer.php'; ?>
+    <?php //include_once '../navar/footer.php'; ?
+    
+    include_once '../modelo/UsuarioDao.js';
+    ?>

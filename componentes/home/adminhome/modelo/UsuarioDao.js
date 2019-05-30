@@ -177,4 +177,3 @@ $(document).on("submit", ".formulario_acceso", function(event){
     })
     return false;
 });
-

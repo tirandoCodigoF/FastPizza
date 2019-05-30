@@ -1,6 +1,6 @@
 <?php 
- require_once './navar/head.php';
- require '../../basededatos/Conne.php';
+ //require_once './navar/head.php';
+// require '../../basededatos/Conne.php';
  //require '../../basededatos/conexion.php';
 
  ?>
@@ -276,4 +276,4 @@
   </div>
 </div>
 
-<?php include_once './navar/footer.php'; ?>
+<?php //include_once '../navar/footer.php'; ?>
