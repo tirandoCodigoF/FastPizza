@@ -1,5 +1,5 @@
 <?php 
-    require '../../basededatos/Conne.php';
+    //require '../../basededatos/Conne.php';
     include_once 'navar/head.php';
     include_once 'navar/navar.php';
     include_once 'MenuAdmin/modaladd.php';
@@ -15,7 +15,7 @@
   }
   </style>
 <body >
-    <div class="container">
+   <!-- <div class="container">
         <div class="row d-flex justify-content-around mt-5">
             <div class="card col-md-6 col-md-offset-6">
                 <article class="card-body">
@@ -25,12 +25,12 @@
                 </article>
             </div>
         </div>
-    </div>
+    </div>-->
     
 
-    <?php include_once 'navar/footer.php'; 
-    
+   
+</body>
+<?php include_once 'navar/footer.php';     
     ?>
     <script src="./modelo/UsuarioDao.js"></script>
-</body>
 </html>

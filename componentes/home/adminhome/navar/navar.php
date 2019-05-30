@@ -1,6 +1,13 @@
 <?php
- include_once 'MenuAdmin/modaladd.php';
- //include_once 'MenuAdmin/listas.php';
+ //include_once 'MenuAdmin/modaladd.php';
+// include_once 'MenuAdmin/listas.php';
+ //include_once 'head.php';
+ //include_once 'navar/navar.php';
+ //include_once '../MenuAdmin/modaladd.php';
+ //include_once './MenuAdmin/modaladd.php';
+ //error_reporting(E_ERROR | E_WARNING | E_PARSE);
+ error_reporting(0);
+
 ?>
 
 <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: black">
@@ -10,14 +17,14 @@
       <div class="collapse navbar-collapse" id="collapsibleNavId">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
               <li class="nav-item active mr-5">
-                  <a class="nav-link btn btn-success" href="adminhome.php">     Inicio <span class="sr-only">(current)</span></a>
+                  <a class="nav-link btn btn-success" href="http://localhost:8080/FastPizza/componentes/home/adminhome/adminhome.php">     Inicio <span class="sr-only">(current)</span></a>
               </li>
              
               <li class="nav-item dropdown mr-5">
                   <a class="nav-link dropdown-toggle btn btn-success" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" 
                   aria-expanded="false">    Cliente</a>
                   <div class="dropdown-menu" aria-labelledby="dropdownId">
-                      <a  class="dropdown-item" href="http://localhost:8080/FastPizza/componentes/home/adminhome/MenuAdmin/listas.php">Lista clientes</a>
+                      <a  class="dropdown-item" href="http://localhost:8080/FastPizza/componentes/home/adminhome/MenuAdmin/listaCliente.php">Lista clientes</a>
                       <a  class="dropdown-item" style="cursor: pointer" data-toggle="modal" data-target="#addusuarios">Agregar Cliente</a>
                   </div>
               </li>
@@ -52,4 +59,6 @@
           </form>-->
       </div>
   </nav>
- 
+  <?php //include_once 'footer.php'; ?>
+  <!--
+  //<script src="./modelo/UsuarioDao.js"></script>-->

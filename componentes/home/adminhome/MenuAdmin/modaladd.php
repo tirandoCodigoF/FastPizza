@@ -1,6 +1,6 @@
 <?php 
- //require_once './navar/head.php';
-// require '../../basededatos/Conne.php';
+// require_once './navar/head.php';
+ //require '../../basededatos/Conne.php';
  //require '../../basededatos/conexion.php';
 
  ?>
@@ -61,7 +61,7 @@
           <div class="row">
                 <div class="col-md-12">
                 <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
               <div class="form-group">
             <label>Nombre: </label>
             <input type="text" name="nombre" id="nombre" class="form-control" autofocus placeholder="Nombre" required require  onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]{4,30}" title="No puede ingresar Caracteres especiales (*/&.@-%!$#''?¿¨´+*[]{}_;:) etc, minimo 4, maximo 30 letras"  maxlength="30">
@@ -84,8 +84,7 @@
            </select>
           
           </div> -->
-          </div>
-          <div class="col-md-4">
+         
             
             
            <div class="form-group">
@@ -110,6 +109,8 @@
            </select>-->
 
           </div> 
+          </div>
+          <div class="col-md-6">
           <!--
           <div class="form-group">
             <label>Ciudad: </label>
@@ -119,8 +120,7 @@
             <label>Estado: </label>
             <input type="text" name="estado" id="estado" class="form-control" autofocus placeholder="Estado" required require onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]{5,40}" title="No puede ingresar Caracteres especiales (*/&.@-%!$#''?¿¨´+*[]{}_;:) etc, Estado mayor 5 letras y menor a 40"  maxlength="40">
           </div>-->
-          </div>
-          <div class="col-md-4">
+          
           <div class="form-group">
             <label>Email: </label>
             <input type="email" name="email" class="form-control" require autofocus placeholder="Email">
@@ -138,22 +138,24 @@
            <option value="3">Cliente</option>
            </select>
           </div>
-          <div class="form-group">
+          </div>
+          
+
+          
+           </div>
+           </div>
+            </div>
+            <div class="form-group" align="center" >
           <label>Act/Des Cuenta: </label><br>
             <!-- <input type="checkbox" name="activa" id="activa" value="1" />Activar</>
              <input type="checkbox" name="activa" id="activa" value="0" />DesActivar</>-->
-           <select name="activa" id="activa" class="form-control" required require>
+           <select name="activa" id="activa" class="form-control" required require align="center">
            <option selected required>Seleccionar</option>
            <option value="1">Activar</option>
             <option value="0">desActivar</option>
            
            </select>
           </div>
-
-           </div>
-           </div>
-           </div>
-            </div>
             <br>
           <div class="form-group" align="center">
             <!--<button type="submit"  class="btn btn-success">Registrar</button>-->
@@ -275,5 +277,8 @@
     </div>
   </div>
 </div>
+<?php //include_once './navar/footer.php';
+//require_once './modelo/UsuarioDao.js'; 
+//include_once './modelo/UsuarioDao.js';
 
-<?php //include_once '../navar/footer.php'; ?>
+?>

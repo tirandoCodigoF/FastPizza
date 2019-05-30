@@ -1,34 +1,26 @@
 <?php 
-require_once '../navar/head.php';
-//include '../adminhome.php';
-include_once 'modaladd.php';
+ require_once '../navar/head.php';
+include 'modaladd.php';
+//include_once '../navar/navar.php';
 ?>
-<link rel="stylesheet" href="esti/css/bootstrap.min.css">
-	<link rel="stylesheet" href="esti/css/dataTables.bootstrap.min.css">
-	<link rel="stylesheet" href="esti/css/estilos.css">
-	<!-- Buttons DataTables -->
-	<link rel="stylesheet" href="esti/css/buttons.bootstrap.min.css">
-  <link rel="stylesheet" href="esti/css/font-awesome.min.css">
-  
 
-  <button type="submit" class="btn btn-success dropdown-item"  style="cursor: pointer; width:auto ; height: auto" data-toggle="modal" data-target="#addusuarios" ><b>Agregar Cliente</b></button>
-  
   <div class="container" id="listaclientes">
       <br>
       <br>
       <br>
-      <h2 align="center">Lista Clientes</h2>
+      
         <div class="row d-flex justify-content-around mt-5">
             <div class="card col-md-10 col-md-offset-1">
                 <article class="card-body">
-                
-<div class="row">
+                <h2 align="center">Lista Clientes</h2>
+                <button type="submit" class="btn btn-info btn-xs" data-toggle="modal" data-target="#addusuarios">Nuevo Usuario</button>
+                <div class="row">
 		<div id="cuadro1" class="col-sm-12 col-md-12 col-lg-12">
 			<div class="col-sm-offset-2 col-sm-8">
 				<h3 class="text-center"> <small class="mensaje"></small></h3>
 			</div>
 			<div class="table-responsive col-sm-12">		
-				<table id="dt_cliente" class="table table-bordered table-hover" cellspacing="0" width="100%">
+				<table id="dt_cliente" class="table table-bordered table-hover" cellspacing="0" width="108%" height="100%">
 					<thead>
 						<tr>								
 							<th>Nombre</th>
@@ -37,7 +29,8 @@ include_once 'modaladd.php';
                             <th>Telefono</th>	
                             <th>Email</th>	
                             <th>Status</th>	
-							<th></th>											
+                            <th></th>
+							<th> </th>											
 						</tr>
 					</thead>					
 				</table>
@@ -45,43 +38,10 @@ include_once 'modaladd.php';
 		</div>		
     </div>
     
-    <script src="esti/js/jquery-1.12.3.js"></script>
-	<script src="esti/js/bootstrap.min.js"></script>
-	<script src="esti/js/jquery.dataTables.min.js"></script>
-	<script src="esti/js/dataTables.bootstrap.js"></script>
-	<!--botones DataTables-->	
-	<script src="esti/js/dataTables.buttons.min.js"></script>
-	<script src="esti/js/buttons.bootstrap.min.js"></script>
-	<!--Libreria para exportar Excel-->
-	<script src="esti/js/jszip.min.js"></script>
-	<!--Librerias para exportar PDF-->
-	<script src="esti/js/pdfmake.min.js"></script>
-	<script src="esti/js/vfs_fonts.js"></script>
-	<!--Librerias para botones de exportación-->
-    <script src="esti/js/buttons.html5.min.js"></script>
-
+    <?php include_once '../navar/footer.php'; ?>
+    <script src="../modelo/datolista.js"></script>
     <script>
-    $(document).on("ready", function(){
-    listar();
-});
-var listar= function(){
-    var table= $("#dt_cliente").DataTable({
-        "language": {
-      "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
-    },
-        "ajax":{
-            "method":"POST",
-            "url":"../controlador/ControladorCliente.php"
-        },
-        "columns":[
-            {"data" : "nombre_cliente"},
-            {"data" : "direccion_cliente"},
-            {"data" : "telefono_cliente"},
-            {"data" : "email_cliente"},
-            {"data" : "activacion"}
-        ]
-    });
-}
+   
 /*
 $(document).ready(function() {
   $('#dt_cliente').DataTable({
@@ -92,7 +52,4 @@ $(document).ready(function() {
 });*/
     </script>
 
-    <?php //include_once '../navar/footer.php'; ?
     
-    include_once '../modelo/UsuarioDao.js';
-    ?>

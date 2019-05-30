@@ -1,5 +1,4 @@
 
-
 $(document).on("submit", ".formulario_registro", function(event){
     event.preventDefault();
     var $form = $(this);
