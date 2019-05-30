@@ -19,7 +19,6 @@
         </button>
       </div>
       <div class="modal-body">
- 
     <div class="card cold-md-6 cold-md-offset-6">
       <article class="card-body">
       
@@ -93,16 +92,16 @@
           
           <div class="form-group">
             <label>Email: </label>
-            <input type="email" name="email" class="form-control" require autofocus placeholder="Email">
+            <input type="email" name="email" class="form-control" require required autofocus placeholder="Email">
           </div>  
           <div class="form-group">
             <label>Contraseña: </label>
-            <input type="password" name="password" autocomplete="cc-number" autofocus require placeholder="********" class="form-control">
+            <input type="password" name="password" autocomplete="cc-number" autofocus require required  placeholder="********" class="form-control">
           </div>
-          <div class="form-group">
+          <div class="form-group" >
           <label>Privilegio: </label>
            <select name="priv" id="priv" class="form-control" required require>
-           <option selected>Seleccionar</option>
+           <option value="">Seleccionar</option>
             <option value="1">Administrador</option>
            <option value="2">Vendedor</option>
            <option value="3">Cliente</option>
@@ -116,7 +115,7 @@
             <!-- <input type="checkbox" name="activa" id="activa" value="1" />Activar</>
              <input type="checkbox" name="activa" id="activa" value="0" />DesActivar</>-->
            <select name="activa" id="activa" class="form-control" required require align="center">
-           <option selected required>Seleccionar</option>
+           <option value="">Seleccionar</option>
            <option value="1">Activar</option>
             <option value="0">desActivar</option>
            
