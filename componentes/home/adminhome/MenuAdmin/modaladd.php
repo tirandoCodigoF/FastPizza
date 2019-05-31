@@ -413,7 +413,11 @@
 						</div>
 						<div class="modal-footer">
 <<<<<<< HEAD
+<<<<<<< HEAD
 							<button type="button" id="elimina"  name="elimina" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+=======
+							<button type="button" onclick="" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+>>>>>>> parent of ecade07... ACTULIZAR FULL
 =======
 							<button type="button" onclick="" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
 >>>>>>> parent of ecade07... ACTULIZAR FULL
