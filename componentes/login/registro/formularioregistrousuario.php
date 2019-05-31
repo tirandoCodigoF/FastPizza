@@ -1,5 +1,32 @@
 <!-- Modal -->
-<
+<div class="modal fade" id="ModalRegistro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Registro..</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <form  name="FormRegister" method="POST" action="componentes/login/registro/controlregistro.php" >
+        <div class="form-group">
+        <small id="" class="form-text text-muted">Todos tus datos estan seguros..</small>
+    <label for="emailR">Correo Electronico </label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@ejemplo.com" required>
+  </div>
+  <div class="form-group">
+    <label for="pass1">Contraseña</label>
+    <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Contraseña" required>
+  </div>
+  
+  <div class="form-group">
+    <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Confirmar contraseña" required>
+  </div>
+  <a href="javascript:validform()" class="btn btn-outline-success">Registrar</a>
+        </form>
+      </div>
+      <div class="modal-footer">
         <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancelar</button>
       </div>
     </div>
