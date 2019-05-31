@@ -56,9 +56,8 @@ include_once 'Conne.php';
 		cerrar($con,$query);
 	}
 	function eliminar($idusuario,$con){
-		$query=" DELETE clientes WHERE id=:idusuario";
+		$query=" DELETE *FROM clientes WHERE id=:idusuario";
 		$upcliente = $con -> prepare($query);
-	
 		$upcliente-> bindParam(':idusuario',$idusuario, PDO::PARAM_INT);
 		$upcliente->execute();
 		verificar_resultado($upcliente);
@@ -72,7 +71,7 @@ echo json_encode($informacion);
 
 	}
 function cerrar($con,$query){
-	//mysqli_close($con);
+	mysqli_close($con);
 	$query=null;
     $con=null;
 

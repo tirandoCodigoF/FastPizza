@@ -8,17 +8,19 @@ include '../adminhome.php';
 
   <div class="container">
       <br>
-      <br>
-      <br>
-      
+   
+      <div class="col-sm-offset-4 col-sm-12">
+				<p class="msg_full"></p>
+			</div>
         <div class="row d-flex justify-content-around mt-5">
-            <div class="card col-md-10 col-md-offset-1">
+            <div class="card col-md-12 col-md-offset-1">
+           
                 <article class="card-body">
                 <h2 align="center">Lista Clientes</h2>
                 <button type="submit" class="btn btn-info btn-xs" data-toggle="modal" data-target="#addusuarios">Nuevo Usuario</button>
                 <div class="row">
 		<div id="cuadro1" class="col-sm-12 col-md-12 col-lg-12">
-			<div class="col-sm-offset-2 col-sm-8">
+			<div class="col-sm-offset-2 col-sm-5 ">
 				<h3 class="text-center"> <small class="mensaje"></small></h3>
 			</div>
 			<div class="table-responsive col-sm-12">		
@@ -42,7 +44,7 @@ include '../adminhome.php';
     
     <?php include_once '../navar/footer.php'; ?>
     <script src="../modelo/datolista.js"></script>
-    <script src="../modelo/UsuarioDao.js"></script>
+    <script src="./modelo/UsuarioDao.js"></script>
     <script>
    
 /*
