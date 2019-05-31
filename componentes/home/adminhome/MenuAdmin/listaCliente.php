@@ -29,6 +29,7 @@ include '../adminhome.php';
                             <th>Direccion</th>
                             <th>Telefono</th>	
                             <th>Email</th>	
+                            <th>Privilegio</th>
                             <th>Status</th>	
                             <th></th>
 							<th> </th>											

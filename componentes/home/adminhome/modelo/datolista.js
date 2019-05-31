@@ -16,11 +16,13 @@ var listar= function(){
             {"data" : "direccion_cliente"},
             {"data" : "telefono_cliente"},
             {"data" : "email_cliente"},
+            {"data" : "tipo_user"},
             {"data" : "activacion"},
             {"defaultContent":"<button type='button' class='editar btn btn-primary 'data-toggle='modal' data-target='#upusuarios1'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminar btn btn-danger' data-toggle='modal' data-target='#modalEliminar' ><i class='fa fa-trash-o'></i></button>"}
         ]
     });
     opc_editar("#dt_cliente tbody", table);
+    opc_eliminar("#dt_cliente tbody", table);
 }
 
 $(document).on("ready", function(){
@@ -60,8 +62,15 @@ var opc_editar= function(tbody,table){
             telefono=$("#telefono1").val(data.telefono_cliente),
             direccion=$("#direccion1").val(data.direccion_cliente),
             email=$("#email1").val(data.email_cliente),
-            
+            privi=$("#priv1").val(data.tipo_user),
             
             activacion=$("#activa1").val(data.activacion);
+    })
+}
+var opc_eliminar= function(tbody,table){
+    $(tbody).on("click","button.eliminar", function () {
+        var data = table.row( $(this).parents("tr")).data();
+         console.log(data);
+        var idusuario=$("#EliminarUsuario #idusuario2").val(data.id);
     })
 }
