@@ -18,12 +18,9 @@ include_once 'Conne.php';
 			modificar ($idusuario,$email,$nombre,$telefono,$direccion,$fk_tipo,$activa,$con);
 			break;
 
-			case 'eliminar':
+		case 'eliminar':
 			eliminar($idusuario,$con);
 				break;
-		default:
-			echo "hola elige o eerror";
-			break;
 	}
 
 
@@ -53,15 +50,16 @@ include_once 'Conne.php';
 		$upcliente-> bindParam(':idusuario',$idusuario, PDO::PARAM_INT);
 		$upcliente->execute();
 		verificar_resultado($upcliente);
-		cerrar($con,$query);
+		cerrar($con);
 	}
 	function eliminar($idusuario,$con){
-		$query=" DELETE *FROM clientes WHERE id=:idusuario";
+		//$query1=" UPDATE clientes SET estado = 0 WHERE id ='$idusuario'";
+		$query=("DELETE FROM tabla WHERE id=".$idusuario);
 		$upcliente = $con -> prepare($query);
-		$upcliente-> bindParam(':idusuario',$idusuario, PDO::PARAM_INT);
+		//$upcliente-> bindParam(':idusuario',$idusuario, PDO::PARAM_INT);
 		$upcliente->execute();
 		verificar_resultado($upcliente);
-		cerrar($con,$query);
+		cerrar($con);
 	}
 
 	function verificar_resultado($upcliente){
@@ -70,9 +68,9 @@ else $informacion["respuesta"]="BIEN";
 echo json_encode($informacion);
 
 	}
-function cerrar($con,$query){
+function cerrar($con){
 	mysqli_close($con);
-	$query=null;
+	
     $con=null;
 
 }

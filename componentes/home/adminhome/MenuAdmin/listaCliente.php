@@ -24,7 +24,7 @@ include '../adminhome.php';
 				<h3 class="text-center"> <small class="mensaje"></small></h3>
 			</div>
 			<div class="table-responsive col-sm-12">		
-				<table id="dt_cliente" class="table table-bordered table-hover" cellspacing="0" width="108%" height="100%">
+				<table id="dt_cliente" class="table table-bordered table-hover" cellspacing="0" width="auto" height="100%">
 					<thead>
 						<tr>								
 							              <th>Nombre</th>
@@ -34,7 +34,7 @@ include '../adminhome.php';
                             <th>Privilegio</th>
                             <th>Status</th>	
                             <th></th>
-							<th> </th>											
+									
 						</tr>
 					</thead>					
 				</table>

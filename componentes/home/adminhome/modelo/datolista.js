@@ -51,7 +51,7 @@ var listar= function(){
 }
 
 var eliminar= function (){
-    $("#eliminar_user").on("click",function(){
+    $("#elimina" ).on("Click", function(){
         var idusuario=$("#EliminarUsuario #idusuario").val(),
         opcion=$("#EliminarUsuario #opcion").val();
         $.ajax({
@@ -60,13 +60,13 @@ var eliminar= function (){
             data:{"idusuario": idusuario, "opcion": opcion}
 
         }).done(function(info){
-            var json_info=JSON.parse(info);
+            var json_info = JSON.parse(info);
             mensajes(json_info);
             limpiar();
             listar();
 
-        })
-    })
+        });
+    });
 }
 
 var opc_editar= function(tbody,table){
@@ -87,7 +87,7 @@ var opc_eliminar= function(tbody,table){
     $(tbody).on("click","button.eliminar", function () {
         var data = table.row( $(this).parents("tr")).data();
          console.log(data);
-        var idusuario=$("#EliminarUsuario #idusuario").val(data.id);
+        var idusuario=$("#EliminarUsuario #idusuario").val(data.idusuario);
     })
 }
 

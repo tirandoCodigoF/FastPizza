@@ -401,7 +401,7 @@
   modal eliminar cliente
 -->
 <div>
-		<form id="EliminarUsuario" action="" method="POST">
+		<form id="EliminarUsuario"  method="POST">
 			<input type="hidden" id="idusuario" name="idusuario" value="">
 			<input type="hidden" id="opcion" name="opcion" value="eliminar">
 			<!-- Modal -->
@@ -416,7 +416,7 @@
 							¿Está seguro de eliminar al usuario?<strong data-name=""></strong>
 						</div>
 						<div class="modal-footer">
-							<button type="button" id="eliminarp"  name="eliminarp" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+							<button type="button" id="elimina"  name="elimina" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
 							<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
 						</div>
 					</div>
