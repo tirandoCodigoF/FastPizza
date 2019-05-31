@@ -267,15 +267,11 @@
         </button>
       </div>
       <div class="modal-body">
-      
     <div class="card cold-md-6 cold-md-offset-6">
-    <div class="col-sm-offset-1 col-sm-12">
-				<p class="msg_full"></p>
-			</div>
       <article class="card-body">
       
         <div id="msg_error" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
-        <div id="msg_full" name="msg_full" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
+        <div id="msg_full" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
        
         <form action="POST" class="formulario_registro1" id="form" >
          <div class="form-group">
@@ -416,7 +412,11 @@
 							¿Está seguro de eliminar al usuario?<strong data-name=""></strong>
 						</div>
 						<div class="modal-footer">
+<<<<<<< HEAD
 							<button type="button" id="elimina"  name="elimina" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+=======
+							<button type="button" onclick="" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+>>>>>>> parent of ecade07... ACTULIZAR FULL
 							<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
 						</div>
 					</div>

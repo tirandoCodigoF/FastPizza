@@ -2,7 +2,6 @@
 $(document).on("ready", function(){
     listar();
     guardar();
-    eliminar();
 });
 $("#btn_listar").on("click", function(){
     listar();
@@ -17,16 +16,16 @@ $("#form").on("submit", function(e){
         url: "../controlador/ControladorGuardar.php",
         data: frm
     }).done(function(info){
-        //console.log(info);
+        console.log(info);
         var json_info=JSON.parse(info);
-         //console.log(json_info);
-        mensajes(json_info);
-        limpiar();
-        listar();
+         console.log(json_info);
     });
   
 });
 }
+
+
+
 var listar= function(){
     var table= $("#dt_cliente").DataTable({
         "language": {
@@ -50,6 +49,7 @@ var listar= function(){
     opc_eliminar("#dt_cliente tbody", table);
 }
 
+<<<<<<< HEAD
 var eliminar= function (){
     $("#elimina" ).on("Click", function(){
         var idusuario=$("#EliminarUsuario #idusuario").val(),
@@ -68,6 +68,8 @@ var eliminar= function (){
         });
     });
 }
+=======
+>>>>>>> parent of ecade07... ACTULIZAR FULL
 
 var opc_editar= function(tbody,table){
     $(tbody).on("click","button.editar", function () {
@@ -90,48 +92,6 @@ var opc_eliminar= function(tbody,table){
         var idusuario=$("#EliminarUsuario #idusuario").val(data.idusuario);
     })
 }
-
-var mensajes = function( informacion){
-    var txt="", color="";
-    if (informacion.respuesta =="BIEN") {
-        txt="<strong> <b>Bien!!!...</b></strong>  Se han guardado los cambios Correctamente...";
-        color="#379911";
-    }else if(informacion.respuesta == "ERROR"){
-        txt="<strong> <b>Ha Ocurrido un ERROR!!!...</b></strong>  No se ejecuto la consulta Correctamente...";
-        color="#C9302C";
-    }else if(informacion.respuesta =="EXISTE"){
-        txt="<strong> <b>Informacion!!!...</b></strong>  El usuario ya existe...";
-        color="#5b94c5";
-
-    } else if(informacion.respuesta == "VACIO"){
-        txt="<strong> <b>Advertencia!!!...</b></strong> Debe llenar Todos los Campos Solicitados...";
-        color="#ddb11d";
-    }
-
-    $(".msg_full").html(txt).css({"color": color});
-    $(".msg_full" ).fadeOut(5000, function (){
-        $(this).html("");
-        $(this).fadeIn(3000);
-    });
-}
- var limpiar = function (){
-     $("#opcion").val("modificar");
-        $("#nombre1").val("").focus();
-        $("#telefono1").val("");
-        $("#direccion1").val("");
-        $("#email1").val("");
-        $("#priv1").val("");
-        $("#activa1").val("");
-    
-     //$('input').val("");
-     //$('select').val("");
- }
-
-
-
-
-
-
 
 
 

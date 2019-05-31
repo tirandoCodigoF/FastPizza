@@ -53,10 +53,17 @@ include_once 'Conne.php';
 		cerrar($con);
 	}
 	function eliminar($idusuario,$con){
+<<<<<<< HEAD
 		//$query1=" UPDATE clientes SET estado = 0 WHERE id ='$idusuario'";
 		$query=("DELETE FROM tabla WHERE id=".$idusuario);
 		$upcliente = $con -> prepare($query);
 		//$upcliente-> bindParam(':idusuario',$idusuario, PDO::PARAM_INT);
+=======
+		$query=" DELETE clientes WHERE id=:idusuario";
+		$upcliente = $con -> prepare($query);
+	
+		$upcliente-> bindParam(':idusuario',$idusuario, PDO::PARAM_INT);
+>>>>>>> parent of ecade07... ACTULIZAR FULL
 		$upcliente->execute();
 		verificar_resultado($upcliente);
 		cerrar($con);
@@ -68,9 +75,15 @@ else $informacion["respuesta"]="BIEN";
 echo json_encode($informacion);
 
 	}
+<<<<<<< HEAD
 function cerrar($con){
 	mysqli_close($con);
 	
+=======
+function cerrar($con,$query){
+	//mysqli_close($con);
+	$query=null;
+>>>>>>> parent of ecade07... ACTULIZAR FULL
     $con=null;
 
 }
