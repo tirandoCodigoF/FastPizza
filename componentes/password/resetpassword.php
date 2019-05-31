@@ -28,7 +28,7 @@
         <form action="sendpass.php" method="POST">
             <label for="user">Email:</label>
             <div class="form-group">
-                <input type="email" class="form-control" name="user" id="user" placeholder="example@example.com" required>
+                <input type="email" class="form-control" name="email" id="email" placeholder="example@example.com" required>
             </div>
             <br>
                     <input type="submit" value="Recuperar" class="btn btn-outline-primary">               
