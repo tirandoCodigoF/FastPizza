@@ -14,21 +14,3 @@ if(count($_SESSION)>0)  {
   cierra_sesion();   // Cerramos la sesión y destruimos los datos
   $cerrada=true;
 }
-?>
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Destruir variables</title>
-</head>
-
-<body>
-<?php
-if(isset($cerrada)) {
-  header("Location: ../../index.php");
-} else {
-  echo '<p>Todavía no se han creado las variables de sesión.</p>';	
-}
-?>
-</body>
-</html>
