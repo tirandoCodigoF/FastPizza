@@ -19,17 +19,9 @@ include_once 'Conne.php';
 			break;
 
 		case 'eliminar':
-			eliminar($idusuario,$con);
+			eliminar ($idusuario,$con);
 				break;
 	}
-
-
-
-
-
-
-
-
 
 
 
@@ -39,8 +31,6 @@ include_once 'Conne.php';
 		$query=" UPDATE clientes SET nombre_cliente=:nombre, direccion_cliente=:direccion, telefono_cliente=:telefono,
 		 email_cliente=:email, tipo_user=:tipo, activacion=:activa WHERE id=:idusuario";
 		$upcliente = $con -> prepare($query);
-	
-	
 		$upcliente-> bindParam(':nombre', $nombre, PDO::PARAM_STR);
 		$upcliente-> bindParam(':direccion',$direccion , PDO::PARAM_STR);
 		$upcliente -> bindParam(':telefono',$telefono , PDO::PARAM_STR);
@@ -50,29 +40,16 @@ include_once 'Conne.php';
 		$upcliente-> bindParam(':idusuario',$idusuario, PDO::PARAM_INT);
 		$upcliente->execute();
 		verificar_resultado($upcliente);
-		cerrar($con);
+		cerrar($con,$upcliente);
 	}
 	function eliminar($idusuario,$con){
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		//$query1=" UPDATE clientes SET estado = 0 WHERE id ='$idusuario'";
-		$query=("DELETE FROM tabla WHERE id=".$idusuario);
-		$upcliente = $con -> prepare($query);
-		//$upcliente-> bindParam(':idusuario',$idusuario, PDO::PARAM_INT);
-=======
-=======
->>>>>>> parent of ecade07... ACTULIZAR FULL
-=======
->>>>>>> parent of ecade07... ACTULIZAR FULL
+
 		$query=" DELETE clientes WHERE id=:idusuario";
 		$upcliente = $con -> prepare($query);
-	
 		$upcliente-> bindParam(':idusuario',$idusuario, PDO::PARAM_INT);
->>>>>>> parent of ecade07... ACTULIZAR FULL
 		$upcliente->execute();
 		verificar_resultado($upcliente);
-		cerrar($con);
+		cerrar($con,$upcliente);
 	}
 
 	function verificar_resultado($upcliente){
@@ -81,23 +58,12 @@ else $informacion["respuesta"]="BIEN";
 echo json_encode($informacion);
 
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-function cerrar($con){
-	mysqli_close($con);
-	
-=======
-=======
->>>>>>> parent of ecade07... ACTULIZAR FULL
-=======
->>>>>>> parent of ecade07... ACTULIZAR FULL
-function cerrar($con,$query){
-	//mysqli_close($con);
-	$query=null;
->>>>>>> parent of ecade07... ACTULIZAR FULL
-    $con=null;
 
-}
+function cerrar($con,$upcliente){
+		global $con, $upcliente;
+		//$upcliente->closeCursor();
+		$upcliente = null;
+		$con = null;
+	 }
 
 ?>

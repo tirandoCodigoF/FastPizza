@@ -397,8 +397,8 @@
   modal eliminar cliente
 -->
 <div>
-		<form id="EliminarUsuario"  method="POST">
-			<input type="hidden" id="idusuario" name="idusuario" value="">
+		<form id="EliminarUsuario" action="" method="POST">
+			<input type="hidden" id="idusuario" name="idusuario" value="0">
 			<input type="hidden" id="opcion" name="opcion" value="eliminar">
 			<!-- Modal -->
 			<div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel">
@@ -412,19 +412,7 @@
 							¿Está seguro de eliminar al usuario?<strong data-name=""></strong>
 						</div>
 						<div class="modal-footer">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-							<button type="button" id="elimina"  name="elimina" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
-=======
-							<button type="button" onclick="" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
->>>>>>> parent of ecade07... ACTULIZAR FULL
-=======
-							<button type="button" onclick="" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
->>>>>>> parent of ecade07... ACTULIZAR FULL
-=======
-							<button type="button" onclick="" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
->>>>>>> parent of ecade07... ACTULIZAR FULL
+							<button type="button" id="name" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
 							<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
 						</div>
 					</div>

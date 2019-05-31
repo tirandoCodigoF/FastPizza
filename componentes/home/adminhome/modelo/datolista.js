@@ -2,6 +2,7 @@
 $(document).on("ready", function(){
     listar();
     guardar();
+    eliminar();
 });
 $("#btn_listar").on("click", function(){
     listar();
@@ -49,9 +50,7 @@ var listar= function(){
     opc_eliminar("#dt_cliente tbody", table);
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 var eliminar= function (){
     $("#elimina" ).on("Click", function(){
         var idusuario=$("#EliminarUsuario #idusuario").val(),
@@ -70,12 +69,7 @@ var eliminar= function (){
         });
     });
 }
-=======
->>>>>>> parent of ecade07... ACTULIZAR FULL
-=======
->>>>>>> parent of ecade07... ACTULIZAR FULL
-=======
->>>>>>> parent of ecade07... ACTULIZAR FULL
+
 
 var opc_editar= function(tbody,table){
     $(tbody).on("click","button.editar", function () {
@@ -95,7 +89,7 @@ var opc_eliminar= function(tbody,table){
     $(tbody).on("click","button.eliminar", function () {
         var data = table.row( $(this).parents("tr")).data();
          console.log(data);
-        var idusuario=$("#EliminarUsuario #idusuario").val(data.idusuario);
+        var idusuario=$("#EliminarUsuario #idusuario").val(data.id);
     })
 }
 
