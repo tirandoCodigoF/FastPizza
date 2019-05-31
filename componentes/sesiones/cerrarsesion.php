@@ -27,7 +27,7 @@ if(count($_SESSION)>0)  {
 if(isset($cerrada)) {
   header("Location: ../../index.php");
 } else {
-  echo '<p>Todavía no se han creado las variables de sesión.</p>';	
+  header("Location: ../../index.php");	
 }
 ?>
 </body>
