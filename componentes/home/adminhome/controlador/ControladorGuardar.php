@@ -55,11 +55,14 @@ include_once 'Conne.php';
 	function eliminar($idusuario,$con){
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		//$query1=" UPDATE clientes SET estado = 0 WHERE id ='$idusuario'";
 		$query=("DELETE FROM tabla WHERE id=".$idusuario);
 		$upcliente = $con -> prepare($query);
 		//$upcliente-> bindParam(':idusuario',$idusuario, PDO::PARAM_INT);
 =======
+=======
+>>>>>>> parent of ecade07... ACTULIZAR FULL
 =======
 >>>>>>> parent of ecade07... ACTULIZAR FULL
 		$query=" DELETE clientes WHERE id=:idusuario";
@@ -80,10 +83,13 @@ echo json_encode($informacion);
 	}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 function cerrar($con){
 	mysqli_close($con);
 	
 =======
+=======
+>>>>>>> parent of ecade07... ACTULIZAR FULL
 =======
 >>>>>>> parent of ecade07... ACTULIZAR FULL
 function cerrar($con,$query){

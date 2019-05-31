@@ -51,6 +51,7 @@ var listar= function(){
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 var eliminar= function (){
     $("#elimina" ).on("Click", function(){
         var idusuario=$("#EliminarUsuario #idusuario").val(),
@@ -69,6 +70,8 @@ var eliminar= function (){
         });
     });
 }
+=======
+>>>>>>> parent of ecade07... ACTULIZAR FULL
 =======
 >>>>>>> parent of ecade07... ACTULIZAR FULL
 =======
