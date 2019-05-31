@@ -1,7 +1,31 @@
-
+/////actulaizar//listar//eliminar clientes 
 $(document).on("ready", function(){
     listar();
+    guardar();
 });
+$("#btn_listar").on("click", function(){
+    listar();
+});
+
+var guardar = function (){
+$("#form").on("submit", function(e){
+    e.preventDefault();
+    var frm =$(this).serialize();
+    $.ajax({
+        method: "POST",
+        url: "../controlador/ControladorGuardar.php",
+        data: frm
+    }).done(function(info){
+        console.log(info);
+        var json_info=JSON.parse(info);
+         console.log(json_info);
+    });
+  
+});
+}
+
+
+
 var listar= function(){
     var table= $("#dt_cliente").DataTable({
         "language": {
@@ -25,6 +49,32 @@ var listar= function(){
     opc_eliminar("#dt_cliente tbody", table);
 }
 
+
+var opc_editar= function(tbody,table){
+    $(tbody).on("click","button.editar", function () {
+        var data = table.row( $(this).parents("tr")).data();
+       console.log(data);
+        var idusuario=$("#idusuario").val(data.id),
+            nombre=$("#nombre1").val(data.nombre_cliente),
+            telefono=$("#telefono1").val(data.telefono_cliente),
+            direccion=$("#direccion1").val(data.direccion_cliente),
+            email=$("#email1").val(data.email_cliente),
+            privi=$("#priv1").val(data.tipo_user),
+            
+            activacion=$("#activa1").val(data.activacion);
+    })
+}
+var opc_eliminar= function(tbody,table){
+    $(tbody).on("click","button.eliminar", function () {
+        var data = table.row( $(this).parents("tr")).data();
+         console.log(data);
+        var idusuario=$("#EliminarUsuario #idusuario").val(data.id);
+    })
+}
+
+
+
+//listar pizzasss//eliminar//actualizar
 $(document).on("ready", function(){
     listar1();
 });
@@ -53,24 +103,3 @@ var listar1= function(){
     
 }
 
-var opc_editar= function(tbody,table){
-    $(tbody).on("click","button.editar", function () {
-        var data = table.row( $(this).parents("tr")).data();
-       console.log(data);
-        var idusuario=$("#idusuario1").val(data.id),
-            nombre=$("#nombre1").val(data.nombre_cliente),
-            telefono=$("#telefono1").val(data.telefono_cliente),
-            direccion=$("#direccion1").val(data.direccion_cliente),
-            email=$("#email1").val(data.email_cliente),
-            privi=$("#priv1").val(data.tipo_user),
-            
-            activacion=$("#activa1").val(data.activacion);
-    })
-}
-var opc_eliminar= function(tbody,table){
-    $(tbody).on("click","button.eliminar", function () {
-        var data = table.row( $(this).parents("tr")).data();
-         console.log(data);
-        var idusuario=$("#EliminarUsuario #idusuario2").val(data.id);
-    })
-}

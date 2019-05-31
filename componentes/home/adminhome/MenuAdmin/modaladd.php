@@ -273,7 +273,7 @@
         <div id="msg_error" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
         <div id="msg_full" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
        
-        <form action="POST" class="formulario_registro" >
+        <form action="POST" class="formulario_registro1" id="form" >
          <div class="form-group">
           <div class="row">
                 <div class="col-md-12">
@@ -281,7 +281,7 @@
                 <div class="col-md-6">
                 
             <input type="hidden" name="idusuario" id="idusuario" value="0" >
-         
+            <input type="hidden" id="opcion" name="opcion" value="modificar">
               <div class="form-group">
             <label>Nombre: </label>
             <input type="text" name="nombre1" id="nombre1" class="form-control" autofocus placeholder="Nombre" required require  onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]{4,30}" title="No puede ingresar Caracteres especiales (*/&.@-%!$#''?¿¨´+*[]{}_;:) etc, minimo 4, maximo 30 letras"  maxlength="30">
@@ -345,10 +345,7 @@
             <label>Email: </label>
             <input type="email" name="email1" id="email1" class="form-control" require required autofocus placeholder="Email">
           </div>  
-          <div class="form-group">
-            <label>Contraseña: </label>
-            <input type="password" name="password1" id="password1"  autocomplete="cc-number" autofocus require required  placeholder="********" class="form-control">
-          </div>
+         
           <div class="form-group" >
           <label>Privilegio: </label>
            <select name="priv1" id="priv1" class="form-control" required require>
@@ -358,10 +355,7 @@
            <option value="3">Cliente</option>
            </select>
           </div>
-          </div>
-          
-           </div>
-           <div class="form-group" >
+          <div class="form-group" >
           <label>Act/Des Cuenta: </label><br>
             <!-- <input type="checkbox" name="activa" id="activa" value="1" />Activar</>
              <input type="checkbox" name="activa" id="activa" value="0" />DesActivar</>-->
@@ -372,14 +366,20 @@
            
            </select>
           </div>
+          </div>
+          
+           </div>
+          
            </div>
             </div>
             <br>
           <div class="form-group" align="center">
-            <!--<button type="submit"  class="btn btn-success">Registrar</button>-->
-           
-        <button type="submit" class="btn btn-success">Registrar</button>
-        <button type="submit" class="btn btn-danger"  data-dismiss="modal" >Cerrar</button>
+            <!--<button type="submit"  class="btn btn-success">Registrar</button>
+          <button type="submit" class="btn btn-danger"  data-dismiss="modal" >Cerrar</button>
+          -->
+         <input type="submit" class="btn btn-success" value="Guardar">  
+         <input type="submit" class="btn btn-danger"  data-dismiss="modal" value="Cerrar"> 
+        
 
      
           </div>
@@ -398,7 +398,7 @@
 -->
 <div>
 		<form id="EliminarUsuario" action="" method="POST">
-			<input type="hidden" id="idusuario2" name="idusuario2" value="">
+			<input type="hidden" id="idusuario" name="idusuario" value="">
 			<input type="hidden" id="opcion" name="opcion" value="eliminar">
 			<!-- Modal -->
 			<div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel">
