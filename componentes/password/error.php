@@ -31,9 +31,19 @@
                 <input type="email" class="form-control" name="email" id="email" placeholder="example@example.com" required>
             </div>
             <br>
-                    <input type="submit" value="Recuperar" class="btn btn-outline-primary">               
+                    <input type="submit" value="Recuperar" class="btn btn-outline-primary">   
+                    <button type="button" id="cancel" class="btn btn-outline-danger" data-toggle="modal" data-target="#ModalRegistro">
+	Registrate
+</button>                      
         </form>
         </div>
     </div>
 </body>
 </html>
+<?php require '../login/registro/formularioregistrousuario.php' ?>
+        <script>
+		function miFuncion() {
+			alertify.alert('Ups..: ',"Este usuario no esta registrado.").set({transition:'zoom',message: 'Este usuario no esta registrado.'}).show(); 
+		}
+		window.onload=miFuncion;
+        </script>
