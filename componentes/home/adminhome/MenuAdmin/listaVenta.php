@@ -35,7 +35,8 @@ require_once '../navar/head.php';
                             <th>cantidad</th>
                             <th>Total</th>		
                             <th>Status</th>	
-							<th></th>											
+              <th></th>	
+              <th></th>											
 						</tr>
 					</thead>					
 				</table>

@@ -1,6 +1,7 @@
 <?php 
  require_once '../navar/head.php';
 include 'modaladd.php';
+include '../adminhome.php';
 //include 'modaladdP.php';
 //include_once '../navar/navar.php';
 ?>
@@ -24,8 +25,7 @@ include 'modaladd.php';
 				<table id="dt_cliente" class="table table-bordered table-hover" cellspacing="0" width="108%" height="100%">
 					<thead>
 						<tr>								
-							<th>Nombre</th>
-							
+							              <th>Nombre</th>
                             <th>Direccion</th>
                             <th>Telefono</th>	
                             <th>Email</th>	
