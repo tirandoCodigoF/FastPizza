@@ -17,23 +17,10 @@ include_once 'Conne.php';
 		case 'modificar':
 			modificar ($idusuario,$email,$nombre,$telefono,$direccion,$fk_tipo,$activa,$con);
 			break;
-
-			case 'eliminar':
-			eliminar($idusuario,$con);
-				break;
 		default:
 			echo "hola elige o eerror";
 			break;
 	}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -71,7 +58,7 @@ echo json_encode($informacion);
 
 	}
 function cerrar($con,$query){
-	mysqli_close($con);
+	//mysqli_close($con);
 	$query=null;
     $con=null;
 

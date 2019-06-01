@@ -1,3 +1,8 @@
+$(document).on("ready", function(){
+    listar();
+    guardar();
+    eliminar();
+});
 
 $(document).on("submit", ".formulario_registro", function(event){
     event.preventDefault();
@@ -57,6 +62,7 @@ $(document).on("submit", ".formulario_registro", function(event){
         window.location = res.redirect;
     }
     if(res.full !== undefined){
+      
         //$("#msg_full").text('registro exitoso').show();
         alertify.success('Registro Exitoso');
         //this.reset();
@@ -68,6 +74,7 @@ $(document).on("submit", ".formulario_registro", function(event){
        // $ ('#addpersona'). modal (). hide (); 
         //onSubmit="this.reset()"
         //$('#addpersona').hide();
+        listar();
         return false;
    } 
     })

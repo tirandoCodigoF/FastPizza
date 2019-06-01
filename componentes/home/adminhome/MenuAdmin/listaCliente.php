@@ -1,7 +1,7 @@
 <?php 
  require_once '../navar/head.php';
 include 'modaladd.php';
-include '../adminhome.php';
+//include '../adminhome.php';
 //include 'modaladdP.php';
 //include_once '../navar/navar.php';
 ?>
@@ -34,7 +34,7 @@ include '../adminhome.php';
                             <th>Privilegio</th>
                             <th>Status</th>	
                             <th></th>
-							<th> </th>											
+										
 						</tr>
 					</thead>					
 				</table>
@@ -44,7 +44,7 @@ include '../adminhome.php';
     
     <?php include_once '../navar/footer.php'; ?>
     <script src="../modelo/datolista.js"></script>
-    <script src="./modelo/UsuarioDao.js"></script>
+    <script src="../modelo/UsuarioDao.js"></script>
     <script>
    
 /*

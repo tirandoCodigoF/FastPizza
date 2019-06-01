@@ -14,7 +14,7 @@ $("#form").on("submit", function(e){
     var frm =$(this).serialize();
     $.ajax({
         method: "POST",
-        url: "../controlador/ControladorGuardar.php",
+        url: "../controlador/ControladorEliminar.php",
         data: frm
     }).done(function(info){
         //console.log(info);
@@ -27,6 +27,30 @@ $("#form").on("submit", function(e){
   
 });
 }
+
+var eliminar= function (){
+    $("#eliminap").on("click",function(){
+        var idusuario=$("#EliminarUsuario #idusuario").val(),
+        opcion=$("#EliminarUsuario #opcion").val();
+        $.ajax({
+            method:"POST",
+            url: "../controlador/ControladorEliminar.php",
+            data:{"id": idusuario, "opcion": opcion}
+
+        }).done(function(info){
+            console.log(info);
+            var json_info=JSON.parse(info);
+            
+            mensajes(json_info);
+            limpiar();
+            listar();
+
+        });
+    });
+}
+
+
+
 var listar= function(){
     var table= $("#dt_cliente").DataTable({
         "language": {
@@ -50,29 +74,11 @@ var listar= function(){
     opc_eliminar("#dt_cliente tbody", table);
 }
 
-var eliminar= function (){
-    $("#eliminar_user").on("click",function(){
-        var idusuario=$("#EliminarUsuario #idusuario").val(),
-        opcion=$("#EliminarUsuario #opcion").val();
-        $.ajax({
-            method:"POST",
-            url: "../controlador/ControladorGuardar.php",
-            data:{"idusuario": idusuario, "opcion": opcion}
-
-        }).done(function(info){
-            var json_info=JSON.parse(info);
-            mensajes(json_info);
-            limpiar();
-            listar();
-
-        })
-    })
-}
 
 var opc_editar= function(tbody,table){
     $(tbody).on("click","button.editar", function () {
         var data = table.row( $(this).parents("tr")).data();
-       console.log(data);
+      // console.log(data);
         var idusuario=$("#idusuario").val(data.id),
             nombre=$("#nombre1").val(data.nombre_cliente),
             telefono=$("#telefono1").val(data.telefono_cliente),
@@ -81,14 +87,14 @@ var opc_editar= function(tbody,table){
             privi=$("#priv1").val(data.tipo_user),
             
             activacion=$("#activa1").val(data.activacion);
-    })
+    });
 }
 var opc_eliminar= function(tbody,table){
     $(tbody).on("click","button.eliminar", function () {
         var data = table.row( $(this).parents("tr")).data();
-         console.log(data);
+         //console.log(data);
         var idusuario=$("#EliminarUsuario #idusuario").val(data.id);
-    })
+    });
 }
 
 var mensajes = function( informacion){
@@ -115,7 +121,8 @@ var mensajes = function( informacion){
     });
 }
  var limpiar = function (){
-     $("#opcion").val("modificar");
+        $("#form #opcion").val("modificar");
+        $("#form #idusuario").val("");
         $("#nombre1").val("").focus();
         $("#telefono1").val("");
         $("#direccion1").val("");
@@ -126,7 +133,11 @@ var mensajes = function( informacion){
      //$('input').val("");
      //$('select').val("");
  }
+var limp = function (){
+    $("#EliminarUsuario #opcion").val("eliminar");
+    $("#EliminarUsuario #idusuario").val("");
 
+}
 
 
 
