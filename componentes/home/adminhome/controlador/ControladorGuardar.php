@@ -22,10 +22,6 @@ include_once 'Conne.php';
 			eliminar ($idusuario,$con);
 				break;
 	}
-
-
-
-
 	function modificar ($idusuario,$email,$nombre,$telefono,$direccion,$fk_tipo,$activa,$con){
 		
 		$query=" UPDATE clientes SET nombre_cliente=:nombre, direccion_cliente=:direccion, telefono_cliente=:telefono,
@@ -45,11 +41,11 @@ include_once 'Conne.php';
 	function eliminar($idusuario,$con){
 
 		$query=" DELETE clientes WHERE id=:idusuario";
-		$upcliente = $con -> prepare($query);
-		$upcliente-> bindParam(':idusuario',$idusuario, PDO::PARAM_INT);
-		$upcliente->execute();
-		verificar_resultado($upcliente);
-		cerrar($con,$upcliente);
+		$upcliente1 = $con -> prepare($query);
+		$upcliente1-> bindParam(':idusuario',$idusuario, PDO::PARAM_INT);
+		$upcliente1->execute();
+		verificar_resultado($upcliente1);
+		cerrar($con,$upcliente1);
 	}
 
 	function verificar_resultado($upcliente){
@@ -59,7 +55,7 @@ echo json_encode($informacion);
 
 	}
 
-function cerrar($con,$upcliente){
+function cerrar ($con,$upcliente){
 		global $con, $upcliente;
 		//$upcliente->closeCursor();
 		$upcliente = null;

@@ -20,6 +20,9 @@ $("#form").on("submit", function(e){
         console.log(info);
         var json_info=JSON.parse(info);
          console.log(json_info);
+         mensajes(json_info);
+            limpiar();
+            listar();
     });
   
 });
@@ -89,7 +92,7 @@ var opc_eliminar= function(tbody,table){
     $(tbody).on("click","button.eliminar", function () {
         var data = table.row( $(this).parents("tr")).data();
          console.log(data);
-        var idusuario=$("#EliminarUsuario #idusuario").val(data.id);
+        var idusuario=$("#EliminarUsuario #idusuario").val(data.idusuario);
     })
 }
 

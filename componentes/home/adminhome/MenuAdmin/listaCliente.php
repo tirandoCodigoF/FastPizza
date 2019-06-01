@@ -12,7 +12,7 @@ include 'modaladd.php';
       <br>
       
         <div class="row d-flex justify-content-around mt-5">
-            <div class="card col-md-10 col-md-offset-1">
+            <div class="card  col-md-offset-1" >
                 <article class="card-body">
                 <h2 align="center">Lista Clientes</h2>
                 <button type="submit" class="btn btn-info btn-xs" data-toggle="modal" data-target="#addusuarios">Nuevo Usuario</button>
@@ -22,7 +22,7 @@ include 'modaladd.php';
 				<h3 class="text-center"> <small class="mensaje"></small></h3>
 			</div>
 			<div class="table-responsive col-sm-12">		
-				<table id="dt_cliente" class="table table-bordered table-hover" cellspacing="0" width="auto" height="100%">
+				<table id="dt_cliente" class="table table-bordered table-hover" cellspacing="0" width="" height="100%">
 					<thead>
 						<tr>								
 							              <th>Nombre</th>
@@ -39,6 +39,9 @@ include 'modaladd.php';
 			</div>			
 		</div>		
     </div>
+    </article>
+</div></div>
+</div>
     
     <?php include_once '../navar/footer.php'; ?>
     <script src="../modelo/datolista.js"></script>
