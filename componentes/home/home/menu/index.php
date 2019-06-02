@@ -38,11 +38,10 @@ require ('../../../navbar/index.php');
      elaboración con ingredientes de primera calidad, a un precio razonable y competitivo, de esa manera superar las expectativas 
      de nuestro público consumidor.</p><hr>
      
-     <h3 class="slogan">Misión</h3>
-    <p class="parrafo">Brindar un servicio de calidad, proporcionando a nuestros clientes una variedad de ofertas que
-     permitan a nuestro público disfrutar de productos propios e innovadores, en un mercado establecido, con una delicada 
-     elaboración con ingredientes de primera calidad, a un precio razonable y competitivo, de esa manera superar las expectativas 
-     de nuestro público consumidor.</p><hr>
+     <h3 class="slogan">Visión</h3>
+    <p class="parrafo">Ser una pizzería líder con productos de calidad y un servicio superior, teniendo como compromiso 
+    superar las expectativas del consumidor, brindándole y garantizándole la mejor pizza del mercado, el más respetuoso y 
+    cordial trato, así como un sitio agradable para comer. Contamos con personal motivado, entrenado  y conformes con el futuro del negocio.</p><hr>
 
 </p>
     <a href="#" class="boton">Home</a>
