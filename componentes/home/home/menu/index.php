@@ -71,25 +71,20 @@ require ('../../../navbar/index.php');
    <h3 class="slogan">Conoce más de nosotros..</h3>
    <div class="cards">
     <div class="card">
-    <img src="https://img2.freepng.es/20180626/fhs/kisspng-avatar-user-computer-icons-software-developer-5b327cc98b5780.5684824215300354015708.jpg">
-     <h4>Geovanni Hernández</h4>
-     <p>Lider Del Proyecto/Desarrollador.</p>
+    <img src="https://st2.depositphotos.com/3452085/11389/v/950/depositphotos_113893596-stock-illustration-icon-web-development.jpg">
+    <h3 class="slogan">Geovanni Hernández</h3>
     </div>
     <div class="card">
-     <img src="https://banner2.kisspng.com/20180403/tkw/kisspng-avatar-computer-icons-user-profile-business-user-avatar-5ac3a1f7d96614.9721182215227704238905.jpg" alt="">
-     <h4>Vicente Pérez</h4>
-     <p>Tester/Desarrollador.</p>
+     <img src="https://st2.depositphotos.com/3452085/11389/v/950/depositphotos_113893596-stock-illustration-icon-web-development.jpg">
+     <h3 class="slogan">Vicente Pérez</h3>
     </div>
     <div class="card">
-     <img src="https://www.shareicon.net/download/2015/09/18/103158_user_512x512.png" alt="">
-     <h4>Oliver José</h4>
-     <p>Desarrollador.</p>
+     <img src="https://st2.depositphotos.com/3452085/11389/v/950/depositphotos_113893596-stock-illustration-icon-web-development.jpg">
+     <h3 class="slogan">Oliver José</h3>
     </div>
     <div class="card">
-     <img src="http://chittagongit.com/download/96686" alt="">
-     <h4>Diana Isunza</h4>
-     <p>Analista/Desarrollador.</p>
-    </div>
+     <img src="https://st2.depositphotos.com/3452085/11389/v/950/depositphotos_113893596-stock-illustration-icon-web-development.jpg">
+     <h3 class="slogan">Diana Isunza</h3>
    </div>
   </div>
   </section>
