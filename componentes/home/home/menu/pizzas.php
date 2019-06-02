@@ -33,6 +33,7 @@
     <section class="acerca-de">
     <div class="wrap">
         <div class="tarjeta-wrap">
+        <h3 class="slogan">HAWAINA</h3>
         <div class="tarjeta">
             <div class="adelante img1"></div>
             <div class="atras">
@@ -44,17 +45,19 @@
             <option value="HGR">Grande</option>
             <option value="HFA">Familiar</option>
             </select>
-            <input type="number" class="form-control-sm" name="cant" id="cant" placeholder="Cantidad" required>
-            <button type="submit" class="btn btn-outline-primary">Ordenar</button>
+            <input type="number" class="form-control-sm" name="cant" id="cant" placeholder="Cantidad" required style="display:inline; margin-top:3%;">
+            <button type="submit" class="btn btn-outline-light">Ordenar</button>
             </form>
             </div>
         </div>   
         
         </div>
     <!--PEPERONI-->
-
+    
         <div class="tarjeta-wrap">
+        <h3 class="slogan">PEPERONI</h3>
         <div class="tarjeta">
+     
             <div class="adelante img2"></div>
             <div class="atras">
             <form action="../tomarorden/buscarpizza.php" method="POST">
@@ -65,8 +68,8 @@
             <option value="PPGR">Grande</option>
             <option value="PPFA">Familiar</option>
             </select>
-            <input type="number" class="form-control-sm" name="cant" id="cant" placeholder="Cantidad" required>
-            <button type="submit" class="btn btn-outline-primary">Ordenar</button>
+            <input type="number" class="form-control-sm" name="cant" id="cant" placeholder="Cantidad" required style="display:inline; margin-top:3%;">
+            <button type="submit" class="btn btn-outline-light">Ordenar</button>
             </form>
             </div>
         </div>
@@ -75,6 +78,7 @@
     <!--Mexicana-->
 
         <div class="tarjeta-wrap">
+        <h3 class="slogan">MEXICANA</h3>
         <div class="tarjeta">
             <div class="adelante img3"></div>
             <div class="atras">
@@ -86,8 +90,8 @@
             <option value="MXGR">Grande</option>
             <option value="MXFA">Familiar</option>
             </select>
-            <input type="number" class="form-control-sm" name="cant" id="cant" placeholder="Cantidad" required>
-            <button type="submit" class="btn btn-outline-primary">Ordenar</button>
+            <input type="number" class="form-control-sm" name="cant" id="cant" placeholder="Cantidad" required style="display:inline; margin-top:3%;">
+            <button type="submit" class="btn btn-outline-light">Ordenar</button>
             </form>
             </div>
         </div>
@@ -99,6 +103,7 @@
     <section class="acerca-de">
     <div class="wrap">
         <div class="tarjeta-wrap">
+        <h3 class="slogan">TRES QUESOS</h3>
         <div class="tarjeta">
             <div class="adelante img4"></div>
             <div class="atras">
@@ -110,8 +115,8 @@
             <option value="3QGR">Grande</option>
             <option value="3QFA">Familiar</option>
             </select>
-            <input type="number" class="form-control-sm" name="cant" id="cant" placeholder="Cantidad" required>
-            <button type="submit" class="btn btn-outline-primary">Ordenar</button>
+            <input type="number" class="form-control-sm" name="cant" id="cant" placeholder="Cantidad" required style="display:inline; margin-top:3%;">
+            <button type="submit" class="btn btn-outline-light">Ordenar</button>
             </form>
             </div>
         </div>
@@ -119,6 +124,7 @@
         <!--CARNES FRIAS-->
 
         <div class="tarjeta-wrap">
+        <h3 class="slogan">CARNES FRÍAS</h3>
         <div class="tarjeta">
             <div class="adelante img5"></div>
             <div class="atras">
@@ -130,8 +136,8 @@
             <option value="CFGR">Grande</option>
             <option value="CFFA">Familiar</option>
             </select>
-            <input type="number" class="form-control-sm" name="cant" id="cant" placeholder="Cantidad" required>
-            <button type="submit" class="btn btn-outline-primary">Ordenar</button>
+            <input type="number" class="form-control-sm" name="cant" id="cant" placeholder="Cantidad" required style="display:inline; margin-top:3%;">
+            <button type="submit" class="btn btn-outline-light">Ordenar</button>
             </form>
             </div>
         </div> 
@@ -139,6 +145,7 @@
         <!--CHORIZO-->
         
         <div class="tarjeta-wrap">
+        <h3 class="slogan">CHORIZO</h3>
         <div class="tarjeta">
             <div class="adelante img6"></div>
             <div class="atras">
@@ -150,8 +157,8 @@
             <option value="CHGR">Grande</option>
             <option value="CHFA">Familiar</option>
             </select>
-            <input type="number" class="form-control-sm" name="cant" id="cant" placeholder="Cantidad" required>
-            <button type="submit" class="btn btn-outline-primary">Ordenar</button>
+            <input type="number" class="form-control-sm" name="cant" id="cant" placeholder="Cantidad" required style="display:inline; margin-top:3%;">
+            <button type="submit" class="btn btn-outline-light">Ordenar</button>
             </form>
             </div>
         </div>
