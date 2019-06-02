@@ -6,6 +6,11 @@ include '../../../basededatos/conexion.php';
 include '../../../sesiones/datosuser.php';
 include 'datosorden.php';
 
+$orden=$_SESSION['orden'];
+
+$sql1=$conexion->query("UPDATE ventas set estado=1 where nv=$orden ");
+
+
 $token_id=$_POST["conektaTokenId"];
 try{
     $order = \Conekta\Order::create(
@@ -95,6 +100,6 @@ echo "<br>______________________";
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <br>
-<a href="#" class="btn btn-outline-danger" >Enviar ticket de compra a tu correo electronico</a>
+<a href="#" class="btn btn-outline-danger btn-responsive btninter" >Enviar ticket de compra a tu correo electronico</a>
 <br>
-<a href="finalizar.php" class="btn btn-outline-success" >Inicio</a>
+<a href="finalizar.php" class="btn btn-outline-success btn-responsive btninter" >Terminar</a>
