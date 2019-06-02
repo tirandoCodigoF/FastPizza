@@ -27,6 +27,28 @@ $("#form").on("submit", function(e){
   
 });
 }
+/*
+var eliminar2 = function (){
+    $("#eliminaruser").on("click", function(e){
+        e.preventDefault();
+        var frm =$(this).serialize();
+        console.log(frm);
+        $.ajax({
+            method: "POST",
+            url: "../controlador/ControladorGuardar.php",
+            data: frm
+            
+        }).done(function(info){
+            //console.log(info);
+            var json_info=JSON.parse(info);
+             //console.log(json_info);
+            mensajes(json_info);
+            limpiar2();
+            listar();
+        });
+      
+    });
+    }*/
 
 var eliminar= function (){
     $("#eliminap").on("click",function(){
@@ -35,7 +57,7 @@ var eliminar= function (){
         $.ajax({
             method:"POST",
             url: "../controlador/ControladorEliminar.php",
-            data:{"id": idusuario, "opcion": opcion}
+            data:{"idusuario": idusuario, "opcion": opcion}
 
         }).done(function(info){
             console.log(info);
@@ -89,6 +111,22 @@ var opc_editar= function(tbody,table){
             activacion=$("#activa1").val(data.activacion);
     });
 }
+/*
+var opc_elimanar2= function(tbody,table){
+    $(tbody).on("click","button.eliminar", function () {
+        var data = table.row( $(this).parents("tr")).data();
+      // console.log(data);
+        var idusuario=$("#idusuario2").val(data.id),
+            nombre=$("#nombre2").val(data.nombre_cliente),
+            telefono=$("#telefono2").val(data.telefono_cliente),
+            direccion=$("#direccion2").val(data.direccion_cliente),
+            email=$("#email2").val(data.email_cliente),
+            privi=$("#priv2").val(data.tipo_user),
+            pass=$("#pass2").val(data.pass_cliente),
+            activacion=$("#activa2").val(data.activacion);
+    });
+}*/
+
 var opc_eliminar= function(tbody,table){
     $(tbody).on("click","button.eliminar", function () {
         var data = table.row( $(this).parents("tr")).data();
@@ -133,6 +171,20 @@ var mensajes = function( informacion){
      //$('input').val("");
      //$('select').val("");
  }
+ /*var limpiar2 = function (){
+    $("#form2 #opcion").val("eliminar");
+    $("#form2 #idusuario2").val("");
+    $("#nombre2").val("").focus();
+    $("#telefono2").val("");
+    $("#direccion2").val("");
+    $("#email2").val("");
+    $("#priv2").val("");
+    $("#pass2").val("");
+    $("#activa2").val("");
+
+ //$('input').val("");
+ //$('select').val("");
+}*/
 var limp = function (){
     $("#EliminarUsuario #opcion").val("eliminar");
     $("#EliminarUsuario #idusuario").val("");

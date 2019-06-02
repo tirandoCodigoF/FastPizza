@@ -5,29 +5,30 @@ include_once 'Conne.php';
 
 	$informacion = [];
 	$opcion=$_POST['opcion'];
-    $idusuario=$_POST['idusuario'];
-	$email= ($_POST['email1']);
-	$nombre= $_POST['nombre1'];
-	$telefono= $_POST['telefono1'];
-	$direccion= $_POST['direccion1'];
-	$fk_tipo= $_POST['priv1'];
-	$activa=$_POST['activa1'];
+    $idusuario=$_POST['idusuario2'];
+	$email= ($_POST['email2']);
+	$pass= ($_POST['pass2']);
+	$nombre= $_POST['nombre2'];
+	$telefono= $_POST['telefono2'];
+	$direccion= $_POST['direccion2'];
+	$fk_tipo= $_POST['priv2'];
+	$activa=$_POST['activa2'];
 
 	switch ($opcion) {
-		case 'modificar':
-			modificar ($idusuario,$email,$nombre,$telefono,$direccion,$fk_tipo,$activa,$con);
+		case 'eliminar':
+			eliminar ($idusuario,$email,$nombre,$telefono,$direccion,$fk_tipo,$activa,$con);
 			break;
-		default:
-			echo "hola elige o eerror";
-			break;
+	//	default:
+	//		echo "hola elige o eerror";
+	//		break;
 	}
 
 
 
-	function modificar ($idusuario,$email,$nombre,$telefono,$direccion,$fk_tipo,$activa,$con){
+	function eliminar ($idusuario,$email,$pass,$nombre,$telefono,$direccion,$fk_tipo,$activa,$con){
 		
-		$query=" UPDATE clientes SET nombre_cliente=:nombre, direccion_cliente=:direccion, telefono_cliente=:telefono,
-		 email_cliente=:email, tipo_user=:tipo, activacion=:activa WHERE id=:idusuario";
+		$query=" DELETE FROM clientes WHERE nombre_cliente=:nombre,pass_cliente=:pass, direccion_cliente=:direccion, telefono_cliente=:telefono,
+		 email_cliente=:email, tipo_user=:tipo, activacion=:activa, id=:idusuario";
 		$upcliente = $con -> prepare($query);
 	
 	
@@ -35,6 +36,7 @@ include_once 'Conne.php';
 		$upcliente-> bindParam(':direccion',$direccion , PDO::PARAM_STR);
 		$upcliente -> bindParam(':telefono',$telefono , PDO::PARAM_STR);
 		$upcliente-> bindParam(':email', $email, PDO::PARAM_STR);
+		$upcliente-> bindParam(':pass1',$pass, PDO::PARAM_STR);
 		$upcliente-> bindParam(':tipo',$fk_tipo, PDO::PARAM_INT);
 		$upcliente-> bindParam(':activa',$activa, PDO::PARAM_INT);
 		$upcliente-> bindParam(':idusuario',$idusuario, PDO::PARAM_INT);
@@ -42,7 +44,7 @@ include_once 'Conne.php';
 		verificar_resultado($upcliente);
 		cerrar($con,$query);
 	}
-	function eliminar($idusuario,$con){
+	/*function eliminar($idusuario,$con){
 		$query=" DELETE *FROM clientes WHERE id=:idusuario";
 		$upcliente = $con -> prepare($query);
 		$upcliente-> bindParam(':idusuario',$idusuario, PDO::PARAM_INT);
@@ -50,7 +52,7 @@ include_once 'Conne.php';
 		verificar_resultado($upcliente);
 		cerrar($con,$query);
 	}
-
+*/
 	function verificar_resultado($upcliente){
 if (!$upcliente) $informacion["respuesta"]="ERROR"; 
 else $informacion["respuesta"]="BIEN";

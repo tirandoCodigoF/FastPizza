@@ -274,9 +274,7 @@
 			</div>
       <article class="card-body">
       
-        <div id="msg_error" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
-        <div id="msg_full" name="msg_full" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
-       
+         
         <form action="POST" class="formulario_registro1" id="form" >
          <div class="form-group">
           <div class="row">
@@ -402,7 +400,8 @@
 -->
 <div>
 		<form id="EliminarUsuario" action="" method="POST">
-			<input type="hidden" id="idusuario" name="idusuario" value="">
+  
+			<input type="hidden" id="idusuario" name="idusuario" value="0">
 			<input type="hidden" id="opcion" name="opcion" value="eliminar">
 			<!-- Modal -->
 			<div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel">
@@ -416,7 +415,7 @@
 							¿Está seguro de eliminar al usuario?<strong data-name=""></strong>
 						</div>
 						<div class="modal-footer">
-							<button type="button" id="eliminarp"  name="eliminarp" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+							<button type="button" id="Eliminar"  name="eliminarp" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
 							<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
 						</div>
 					</div>
@@ -424,4 +423,185 @@
 			</div>
 			<!-- Modal -->
 		</form>
-	</div>
+  </div>
+  <!--
+  dar de alta cliente
+-->
+<div>
+		<form action="POST" class="AltaUsuario">
+		
+			<!-- Modal -->
+			<div class="modal fade" id="modalAlta" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						
+						</div>
+						<div class="modal-body">
+            <div id="msg_error" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
+              <div id="msg_full" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
+       
+              <div class="card">
+      
+              
+              </div>							
+              
+            <h4 align="center" class="modal-title" id="modalEliminarLabel">Activar Usuario</h4>
+          <br>
+          <div class="form-group">
+            <label>Selecciona un Cliente: </label>
+            <br>
+           <select name="idcliente" id="idcliente"  class="form-control" required require align="center">
+           "<option selected value=''>Cliente</option>";
+             <?php 
+             include_once '../controlador/Conne.php';
+            $query ="SELECT * FROM clientes";
+            $consulta= $con->prepare($query);
+            $consulta->execute();
+             foreach ($consulta as $fin) {
+               
+               echo "<option  value=".$fin[0].">".$fin[1]."</option>";
+             } ?>
+
+           </select>
+
+          </div> 
+          <div class="form-group" >
+          <label>Act/Des Cuenta: </label><br>
+               <select name="activarcuenta" id="activarcuenta" class="form-control" required require align="center">
+           <option value="">Seleccionar</option>
+           <option value="0">desActivar</option>
+           <option value="1">Activar</option>
+           </select>
+          </div>
+              
+						<div class="modal-footer">
+            <input type="submit" class="btn btn-success"  id="AltaUsuariobtn"  name="AltaUsuariobtn" value="Guardar">  
+            <input type="submit" class="btn btn-danger"  data-dismiss="modal" value="Cerrar"> 
+        <!--
+							<button type="submit" id="AltaUsuariobtn"  name="AltaUsuariobtn" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+							<button type="submit" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            -->
+            </div>
+					</div>
+				</div>
+			</div>
+			<!-- Modal -->
+		</form>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modal  eliminate cliente
+<div class="modal fade" id="eliminarmod" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close"  data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+     
+      <h4 align="center" class="modal-title" id="modalEliminarLabel">Eliminar Usuario</h4>
+				
+    <div class="card cold-md-6 cold-md-offset-6">
+    <div class="col-sm-offset-1 col-sm-12">
+				<p class="msg_full"></p>
+			</div>
+      <article class="card-body">
+      
+        <div id="msg_error" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
+        <div id="msg_full" name="msg_full" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
+       
+        <form action=""  id="form1"  method="POST">
+         <div class="form-group">
+          <div class="row">
+                <div class="col-md-12">
+                <div class="row">
+              <h2 align="center"><strong data-name="" align="center">¿Está seguro de eliminar al usuario?</strong>
+                </h2>  
+                <div class="col-md-6">
+              
+            <input type="hidden" name="idusuario" id="idusuario2" value="0" >
+            <input type="hidden" id="opcion" name="opcion" value="eliminar">
+              <div class="form-group">
+            
+            <input type="hidden" name="nombre2" id="nombre2" >
+          </div> 
+            
+           <div class="form-group">
+            
+            <input type="hidden" name="telefono2" id="telefono2" >
+          </div> 
+         
+          <div class="form-group">
+            
+            <input type="hidden" name="direccion2" id="direccion2" >
+  
+
+          </div> 
+          </div>
+          <div class="col-md-6">
+         
+          <div class="form-group">
+        
+            <input type="hidden" name="email2" id="email2" >
+          </div> 
+          
+          <div class="form-group">
+        
+            <input type="hidden" name="pass2" id="pass2" >
+          </div>   
+         
+          <div class="form-group" >
+         
+           <select style="visibility:hidden" name="priv2" id="priv2">
+           <option value="">Seleccionar</option>
+            <option value="1">Administrador</option>
+           <option value="2">Cliente</option>
+           <option value="3">Cliente</option>
+           </select>
+          </div>
+          <div class="form-group" >
+            <select style="visibility:hidden" name="activa2" id="activa2">
+           <option value="">Seleccionar</option>
+           <option value="1">Activar</option>
+            <option value="0">desActivar</option>
+           
+           </select>
+          </div>
+          </div>
+          
+           </div>
+          
+           </div>
+            </div>
+            <br>
+            <button type="button" id="eliminaruser"  name="eliminaruser" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+						
+           <input type="submit" class="btn btn-danger" id="eliminaruser" value="eliminar">  
+         <input type="submit" class="btn btn-success"  data-dismiss="modal" value="Cerrar"> 
+            
+          </div>
+        </form>   
+      </article>
+    </div>
+  </div>
+</div>
+      </div>
+     
+    </div>
+  </div>
+</div>-->

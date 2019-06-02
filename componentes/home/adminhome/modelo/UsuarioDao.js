@@ -182,3 +182,65 @@ $(document).on("submit", ".formulario_acceso", function(event){
     })
     return false;
 });
+
+
+
+$(document).on("submit", ".AltaUsuario", function(event){
+    event.preventDefault();
+    var $form = $(this);
+  
+    var data_form = {
+        idcliente: $("#idcliente",$form).val(),
+        activarcuenta: $("#activarcuenta",$form).val()
+         }
+         if(data_form == null){
+            $("#msg_error").text("no se pueden dejar los campos vacios.").show();
+            return false;        
+        }
+    
+    $("#msg_error").hide();
+    var url_php = 'http://localhost:8080/FastPizza/componentes/home/adminhome/controlador/AltaControlador.php';
+
+    $.ajax({
+        type:'POST',
+        url: url_php,
+        data: data_form,
+        dataType: 'json',
+        async: true,
+    })
+    .done(function ajaxDone(res){
+       console.log(res); 
+       if(res.error1 !== undefined){
+            $("#msg_error").text(res.error1).show();
+            return false;
+       } 
+
+       if(res.redirect !== undefined){
+        window.location = res.redirect;
+    }
+    if(res.full1 !== undefined){
+      
+        //$("#msg_full").text('registro exitoso').show();
+        alertify.success('Cambio Exitoso!!!...');
+        //this.reset();
+       // $('input').val("");
+        $('select').val("");
+        //$('.addpersona').modal('hide');
+        $("#modalAlta .close").click();
+       // $ ('#addpersona'). Modal ('hide');
+       // $ ('#addpersona'). modal (). hide (); 
+        //onSubmit="this.reset()"
+        //$('#addpersona').hide();
+        listar();
+        return false;
+   } 
+    })
+    .fail(function ajaxError(e){
+        console.log(e);
+    })
+    .always(function ajaxSiempre(){
+        console.log('Final de la llamada ajax.');
+    })
+    return false;
+});
+

@@ -10,14 +10,18 @@ include 'modaladd.php';
       <br>
    
       <div class="col-sm-offset-4 col-sm-12">
-				<p class="msg_full"></p>
+        <p class="msg_full"></p>
+        <div id="msg_error" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
+        <div id="msg_full" name="msg_full" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
+       
 			</div>
         <div class="row d-flex justify-content-around mt-5">
             <div class="card col-md-12 col-md-offset-1">
            
                 <article class="card-body">
                 <h2 align="center">Lista Clientes</h2>
-                <button type="submit" class="btn btn-info btn-xs" data-toggle="modal" data-target="#addusuarios">Nuevo Usuario</button>
+                <button type="submit" class="btn btn-info btn-xs" data-toggle="modal" data-target="#addusuarios">Nuevo Usuario</button>   
+                <button type="submit" class="btn btn-info btn-xs" data-toggle="modal" data-target="#modalAlta">Activar Usuario</button>                             
                 <div class="row">
 		<div id="cuadro1" class="col-sm-12 col-md-12 col-lg-12">
 			<div class="col-sm-offset-2 col-sm-5 ">
