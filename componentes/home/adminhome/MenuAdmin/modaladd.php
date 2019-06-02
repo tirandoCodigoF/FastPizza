@@ -407,16 +407,17 @@
 			<div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
-						<div class="modal-header">
+         <div class="modal-header">
+           <div class="card">  <h4 align="left"  class="modal-title" id="modalEliminarLabel"><b>Eliminar Usuario</b></h4>
+			</div>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<h4 class="modal-title" id="modalEliminarLabel">Eliminar Usuario</h4>
-						</div>
+         			</div>
 						<div class="modal-body">							
-							¿Está seguro de eliminar al usuario?<strong data-name=""></strong>
+						<strong data-name="">	¿Está seguro de eliminar al usuario?</strong>
 						</div>
 						<div class="modal-footer">
-            <input type="submit" class="btn btn-success"  id="EliUsuariobtn"  name="EliUsuariobtn" value="Guardar">  
-            <input type="submit" class="btn btn-danger"  data-dismiss="modal" value="Cerrar"> 
+            <input type="submit" class="btn btn-success"  id="EliUsuariobtn"  name="EliUsuariobtn" value="Aceptar">  
+            <input type="submit" class="btn btn-danger"  data-dismiss="modal" value="Cancelar"> 
        	</div>
 					</div>
 				</div>
