@@ -72,7 +72,7 @@
         </div>
     
         </div>
-    <<!--Mexicana-->
+    <!--Mexicana-->
 
         <div class="tarjeta-wrap">
         <div class="tarjeta">
