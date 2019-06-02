@@ -71,19 +71,19 @@ require ('../../../navbar/index.php');
    <h3 class="slogan">Conoce más de nosotros..</h3>
    <div class="cards">
     <div class="card">
-    <img src="https://st2.depositphotos.com/3452085/11389/v/950/depositphotos_113893596-stock-illustration-icon-web-development.jpg">
-    <h3 class="slogan">Geovanni Hernández</h3>
+    <hr><img src="https://st2.depositphotos.com/3452085/11389/v/950/depositphotos_113893596-stock-illustration-icon-web-development.jpg"><hr>
+    <h3 class="slogan">Geovanni Hdz</h3>
     </div>
     <div class="card">
-     <img src="https://st2.depositphotos.com/3452085/11389/v/950/depositphotos_113893596-stock-illustration-icon-web-development.jpg">
+     <hr><img src="https://st2.depositphotos.com/3452085/11389/v/950/depositphotos_113893596-stock-illustration-icon-web-development.jpg"><hr>
      <h3 class="slogan">Vicente Pérez</h3>
     </div>
     <div class="card">
-     <img src="https://st2.depositphotos.com/3452085/11389/v/950/depositphotos_113893596-stock-illustration-icon-web-development.jpg">
+    <hr> <img src="https://st2.depositphotos.com/3452085/11389/v/950/depositphotos_113893596-stock-illustration-icon-web-development.jpg"><hr>
      <h3 class="slogan">Oliver José</h3>
     </div>
     <div class="card">
-     <img src="https://st2.depositphotos.com/3452085/11389/v/950/depositphotos_113893596-stock-illustration-icon-web-development.jpg">
+    <hr> <img src="https://st2.depositphotos.com/3452085/11389/v/950/depositphotos_113893596-stock-illustration-icon-web-development.jpg"><hr>
      <h3 class="slogan">Diana Isunza</h3>
    </div>
   </div>
