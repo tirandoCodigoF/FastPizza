@@ -1,7 +1,7 @@
 $(document).on("ready", function(){
     listar();
     guardar();
-    eliminar();
+   // eliminar();
 });
 
 $(document).on("submit", ".formulario_registro", function(event){
@@ -244,3 +244,63 @@ $(document).on("submit", ".AltaUsuario", function(event){
     return false;
 });
 
+
+
+$(document).on("submit", ".EliminarUsuario", function(event){
+    event.preventDefault();
+    var $form = $(this);
+  
+    var data_form = {
+        eliminaruser: $("#eliminaruser",$form).val()
+        
+         }
+         if(data_form == null){
+            $("#msg_error").text("no se pueden dejar los campos vacios.").show();
+            return false;        
+        }
+    
+    $("#msg_error").hide();
+    var url_php = 'http://localhost:8080/FastPizza/componentes/home/adminhome/controlador/EliminarControlador.php';
+
+    $.ajax({
+        type:'POST',
+        url: url_php,
+        data: data_form,
+        dataType: 'json',
+        async: true,
+    })
+    .done(function ajaxDone(res){
+       console.log(res); 
+       if(res.error2 !== undefined){
+            $("#msg_error").text(res.error2).show();
+            return false;
+       } 
+
+       if(res.redirect !== undefined){
+        window.location = res.redirect;
+    }
+    if(res.full2 !== undefined){
+      
+        //$("#msg_full").text('registro exitoso').show();
+        alertify.success('Eliminado Exitosamente!!!...');
+        //this.reset();
+       // $('input').val("");
+        $('select').val("");
+        //$('.addpersona').modal('hide');
+        $("#modalEliminar .close").click();
+       // $ ('#addpersona'). Modal ('hide');
+       // $ ('#addpersona'). modal (). hide (); 
+        //onSubmit="this.reset()"
+        //$('#addpersona').hide();
+        listar();
+        return false;
+   } 
+    })
+    .fail(function ajaxError(e){
+        console.log(e);
+    })
+    .always(function ajaxSiempre(){
+        console.log('Final de la llamada ajax.');
+    })
+    return false;
+});

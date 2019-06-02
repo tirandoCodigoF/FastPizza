@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$activarcuenta=$_POST['activarcuenta'];
 
 	//comprobar si existe el usuario
-	$query=" SELECT * FROM clientes WHERE id='$idcliente' LIMIT 1";
+	$query=" SELECT * FROM clientes WHERE id=:id LIMIT 1";
 	$resultado = $con -> prepare($query);
 	$resultado->bindParam(':id',$idcliente,PDO::PARAM_INT);
 	$resultado->execute();
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		}
 		else{
 	
-            $query = "UPDATE clientes SET estado = '$activarcuenta' WHERE id ='$idcliente'";
+            $query = "UPDATE clientes SET estado = :activa WHERE id =:idcliente";
     $nusuario = $con->prepare($query);
     $resultado->bindParam(':idcliente',$idcliente,PDO::PARAM_INT);
 	$nusuario -> bindParam(':activa',$activarcuenta, PDO::PARAM_INT);

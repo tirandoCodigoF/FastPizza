@@ -399,11 +399,11 @@
   modal eliminar cliente
 -->
 <div>
-		<form id="EliminarUsuario" action="" method="POST">
+		<form class="EliminarUsuario" action="POST" >
   
-			<input type="hidden" id="idusuario" name="idusuario" value="0">
-			<input type="hidden" id="opcion" name="opcion" value="eliminar">
-			<!-- Modal -->
+			<input type="hidden" id="eliminaruser" name="eliminaruser" value="0">
+			<!--<input type="hidden" id="opcion" name="opcion" value="eliminar">
+			 Modal -->
 			<div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
@@ -415,9 +415,9 @@
 							¿Está seguro de eliminar al usuario?<strong data-name=""></strong>
 						</div>
 						<div class="modal-footer">
-							<button type="button" id="Eliminar"  name="eliminarp" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
-							<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-						</div>
+            <input type="submit" class="btn btn-success"  id="EliUsuariobtn"  name="EliUsuariobtn" value="Guardar">  
+            <input type="submit" class="btn btn-danger"  data-dismiss="modal" value="Cerrar"> 
+       	</div>
 					</div>
 				</div>
 			</div>

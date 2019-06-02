@@ -2,7 +2,7 @@
 $(document).on("ready", function(){
     listar();
     guardar();
-    eliminar();
+   // eliminar();
 });
 $("#btn_listar").on("click", function(){
     listar();
@@ -49,6 +49,7 @@ var eliminar2 = function (){
       
     });
     }*/
+    /*
 
 var eliminar= function (){
     $("#eliminap").on("click",function(){
@@ -71,7 +72,7 @@ var eliminar= function (){
     });
 }
 
-
+*/
 
 var listar= function(){
     var table= $("#dt_cliente").DataTable({
@@ -131,7 +132,7 @@ var opc_eliminar= function(tbody,table){
     $(tbody).on("click","button.eliminar", function () {
         var data = table.row( $(this).parents("tr")).data();
          //console.log(data);
-        var idusuario=$("#EliminarUsuario #idusuario").val(data.id);
+        var idusuario=$(".EliminarUsuario #eliminaruser").val(data.id);
     });
 }
 
