@@ -1,6 +1,7 @@
 <?php 
  require_once '../navar/head.php';
 include 'modaladd.php';
+include 'modaladd2.php';
 //include '../adminhome.php';
 //include 'modaladdP.php';
 //include_once '../navar/navar.php';

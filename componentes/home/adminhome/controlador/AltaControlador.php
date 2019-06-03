@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
             $query = "UPDATE clientes SET estado = :activa WHERE id =:idcliente";
     $nusuario = $con->prepare($query);
-    $resultado->bindParam(':idcliente',$idcliente,PDO::PARAM_INT);
+    $nusuario->bindParam(':idcliente',$idcliente,PDO::PARAM_INT);
 	$nusuario -> bindParam(':activa',$activarcuenta, PDO::PARAM_INT);
 	
  			$nusuario -> execute();

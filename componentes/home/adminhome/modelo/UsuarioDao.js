@@ -69,7 +69,7 @@ $(document).on("submit", ".formulario_registro", function(event){
         $('input').val("");
         $('select').val("");
         //$('.addpersona').modal('hide');
-        $("#addusuarios .close").click();
+       // $("#addusuarios .close").click();
        // $ ('#addpersona'). Modal ('hide');
        // $ ('#addpersona'). modal (). hide (); 
         //onSubmit="this.reset()"
@@ -226,7 +226,7 @@ $(document).on("submit", ".AltaUsuario", function(event){
        // $('input').val("");
         $('select').val("");
         //$('.addpersona').modal('hide');
-        $("#modalAlta .close").click();
+        //$("#modalAlta .close").click();
        // $ ('#addpersona'). Modal ('hide');
        // $ ('#addpersona'). modal (). hide (); 
         //onSubmit="this.reset()"
