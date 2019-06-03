@@ -154,14 +154,19 @@
         </button>
       </div>
       <div class="modal-body">
-      
+      <div id="msg_error" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
+        <div id="msg_full" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
+       
 <div class="container">
+<div id="msg_error" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
+        <div id="msg_full" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
+       
   <div class="row d-flex justify-content-around mt-1">
 
     <div class="card cold-md-6 cold-md-offset-6">
       <article class="card-body">
-      
-        <div id="msg_error" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
+      <div id="msg_error" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
+        <div id="msg_full" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
        
         <form action="POST" class="formulario_pizzas" >
          <div class="form-group">
@@ -169,10 +174,14 @@
                 <div class="col-md-12">
                 <div class="row">
                 <div class="col-md-4">
+                <div class="form-group">
+            <label>Codigo Pizza: </label>
+            <input type="text" name="codPizza" id="codPizza" class="form-control" autofocus placeholder="Codigo" required require onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]*.{5,50}" title="Ingresa el codigo de la pizza min 5, max 50" minlength="5" maxlength="50">
+             </div> 
           
             <div class="form-group">
             <label>Nombre Pizza: </label>
-            <input type="text" name="nombrep" id="nombrep" class="form-control" autofocus placeholder="Nombre de la pizza" required require  onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]{4,40}" title="No puede ingresar Caracteres especiales (*/&.@-%!$#''?¿¨´+*[]{}_;:) etc, minimo 4, maximo 40 letras" minlength="4" maxlength="40">
+            <input type="text" name="nombrep" id="nombrep" class="form-control" autofocus placeholder="Nombre" required require  onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]{4,40}" title="No puede ingresar Caracteres especiales (*/&.@-%!$#''?¿¨´+*[]{}_;:) etc, minimo 4, maximo 40 letras" minlength="4" maxlength="40">
           </div> 
           
           </div>
@@ -186,7 +195,7 @@
          
           <div class="form-group">
             <label>Tamaño: </label>
-            <input type="text" name="tamaño" id="tamaño" class="form-control" autofocus placeholder="Tamaño" required require onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]*.{5,150}" title="Ingresa el tamaño de la pizza" maxlength="150" minlength="5">
+            <input type="text" name="tamano" id="tamano" class="form-control" autofocus placeholder="Tamaño" required require onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]*.{5,150}" title="Ingresa el tamaño de la pizza" maxlength="150" minlength="5">
   
           </div> 
       
@@ -195,7 +204,7 @@
           
           <div class="form-group">
             <label>Porciones: </label>
-            <input type="number" name="porciones" id="porciones" class="form-control" autofocus placeholder="Porciones" required require min="5" max="20" >
+            <input type="number" name="porcion" id="porcion" class="form-control" autofocus placeholder="Porcion" required require min="5" max="20" >
           </div> 
          
           <div class="form-group">

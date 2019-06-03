@@ -50,16 +50,3 @@ include 'modaladd2.php';
     <?php include_once '../navar/footer.php'; ?>
     <script src="../modelo/datolista.js"></script>
     <script src="../modelo/UsuarioDao.js"></script>
-    <script>
-   
-/*
-$(document).ready(function() {
-  $('#dt_cliente').DataTable({
-    "language": {
-      "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
-    }
-  });
-});*/
-    </script>
-
-    

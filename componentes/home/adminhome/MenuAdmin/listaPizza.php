@@ -1,5 +1,6 @@
 <?php 
 require_once '../navar/head.php';
+include 'modaladd.php';
  //require_once '../navar/navar.php';
  //include_once 'modaladd.php';
 //include '../adminhome.php';
@@ -47,5 +48,4 @@ require_once '../navar/head.php';
     
     <?php include_once '../navar/footer.php'; ?>
     <script src="../modelo/datolista.js"></script>
-    <script>
-
+    <script src="../modelo/UsuarioDao.js"></script>

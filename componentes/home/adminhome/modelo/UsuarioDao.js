@@ -81,6 +81,7 @@ $(document).on("submit", ".formulario_registro", function(event){
    
     .fail(function ajaxError(e){
         console.log(e);
+        $("#msg_error").text(e).show();
     })
     .always(function ajaxSiempre(){
         console.log('Final de la llamada ajax.');
@@ -95,17 +96,17 @@ $(document).on("submit", ".formulario_pizzas", function(event){
   
   // $telf="/^[953]+[0-9]{7}$/";
     var data_form = {
-        imagen:$("#imagen", $form).val(),
-        nombre: $("#nombrep",$form).val(),
-       
-    ingredientes: $("#ingredientes",$form).val(),
-        descripcion:$("#descripcion", $form).val(),
-        tamaño:$("#tamaño",$form).val(),
-        precio: $("#precio",$form).val(),
+        codPizza: $("#codPizza",$form).val(),
+        nombrep: $("#nombrep",$form).val(),
+        ingredientes: $("#ingredientes",$form).val(),
+        tamano: $("#tamano",$form).val(),
+        porcion: $("#porcion", $form).val(),
+        precio: $("#precio",$form).val()
          }
+        
     
     $("#msg_error").hide();
-    var url_php = 'http://localhost:8080/Sistema-pizzas/PIZZAS/Controlador/PizzaControlador.php';
+    var url_php = 'http://localhost:8080/FastPizza/componentes/home/adminhome/controlador/RegPizzasControlador.php';
 
     $.ajax({
         type:'POST',
@@ -116,14 +117,30 @@ $(document).on("submit", ".formulario_pizzas", function(event){
     })
     .done(function ajaxDone(res){
        console.log(res); 
-       if(res.error !== undefined){
-            $("#msg_error").text(res.error).show();
+       if(res.error3 !== undefined){
+            $("#msg_error").text(res.error3).show();
             return false;
        } 
 
        if(res.redirect !== undefined){
         window.location = res.redirect;
     }
+    if(res.full3 !== undefined){
+      
+        $("#msg_full").text(res.full3).show();
+        alertify.success('Registro Exitoso');
+        //this.reset();
+        $('input').val("");
+        $('select').val("");
+        //$('.addpersona').modal('hide');
+       // $("#addusuarios .close").click();
+       // $ ('#addpersona'). Modal ('hide');
+       // $ ('#addpersona'). modal (). hide (); 
+        //onSubmit="this.reset()"
+        //$('#addpersona').hide();
+        listar();
+        return false;
+   } 
     })
     .fail(function ajaxError(e){
         console.log(e);
@@ -154,7 +171,7 @@ $(document).on("submit", ".formulario_acceso", function(event){
         return false;   
     }
     $("#msg_error").hide();
-    var url_php = 'http://localhost:8080/Sistema-pizzas/PIZZAS/Controlador/AccesoControlador.php';
+    var url_php = 'http://localhost:8080/FastPizza/componentes/home/adminhome/controlador/RegPizzaWsControlador.php';
 
     $.ajax({
         type:'POST',

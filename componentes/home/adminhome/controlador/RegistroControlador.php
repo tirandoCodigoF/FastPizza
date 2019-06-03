@@ -1,5 +1,5 @@
 <?php 
-require '../../../basededatos/Conne.php';
+require 'Conne.php';
 //require '../../../basededatos/conexion.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
