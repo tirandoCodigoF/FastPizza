@@ -88,8 +88,6 @@ var listar= function(){
             {"data" : "direccion_cliente"},
             {"data" : "telefono_cliente"},
             {"data" : "email_cliente"},
-            {"data" : "tipo_user"},
-            {"data" : "activacion"},
             {"defaultContent":"<button type='button' class='editar btn btn-primary 'data-toggle='modal' data-target='#upusuarios1'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminar btn btn-danger' data-toggle='modal' data-target='#modalEliminar' ><i class='fa fa-trash-o'></i></button>"}
         ]
     });
@@ -220,7 +218,7 @@ var listar1= function(){
             {"data" : "orden"},
             {"data" : "cantidad"},
             {"data" : "total"},
-            {"data" : "estado"}
+            {"data" : "status"}
            // {"defaultContent":"<button type='button' class='editar btn btn-primary'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminar btn btn-danger' data-toggle='modal' data-target='#modalEliminar' ><i class='fa fa-trash-o'></i></button>"}
        
         ]

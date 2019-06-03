@@ -7,10 +7,7 @@ require_once '../navar/head.php';
 ?>
 
   <div class="container" id="listaVentas">
-      <br>
-      <DIV class="card col-md-offset-4" style="background-image: url('../imGP/7.gif'); width: 35%; height: 29vh; ">
-
-</DIV>
+ 
       <div class="row d-flex justify-content-around col-md-offset-1 " >
       
     </div>
@@ -23,7 +20,8 @@ require_once '../navar/head.php';
                 <article class="card-body">
                 
 <div class="row" >
-		<div id="cuadro1" class="col-sm-12 col-md-12 col-lg-12" style="background-image: url('../imGP/15.jpg'); width: 100; height: 100; ">
+		<div id="cuadro1" class="col-sm-12 col-md-12 col-lg-12" >
+      <!--style="background-image: url('../imGP/15.jpg'); width: 100; height: 100; "-->
       
     <div class="col-sm-offset-2 col-sm-8" >
 				<h3 class="text-center"> <small class="mensaje"></small></h3>
@@ -39,7 +37,7 @@ require_once '../navar/head.php';
                             <th>Orden</th>	
                             <th>cantidad</th>
                             <th>Total</th>		
-                            <th>Status</th>	
+                            <th>Estado</th>	
            
               										
 						</tr>

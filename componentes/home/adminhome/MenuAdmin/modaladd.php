@@ -103,8 +103,7 @@
            <select name="priv" id="priv" class="form-control" required require>
            <option value="">Seleccionar</option>
             <option value="1">Administrador</option>
-           <option value="2">Vendedor</option>
-           <option value="3">Cliente</option>
+           <option value="2">Cliente</option>
            </select>
           </div>
           </div>

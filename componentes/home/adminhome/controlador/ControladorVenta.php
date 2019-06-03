@@ -4,7 +4,7 @@
  
 //$arreglo=[];
 $un=1;
-$query="SELECT * FROM ventas  ORDER BY numVenta desc;";
+$query="SELECT * FROM ventas WHERE estado='$un'  ORDER BY numVenta desc;";
 $resultado2 = $con -> prepare($query);
 	//$resultado2->bindParam(':ti_user',$un,PDO::PARAM_INT);
     $resultado2->execute();
