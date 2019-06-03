@@ -22,8 +22,8 @@ include 'modaladd2.php';
                 <article class="card-body">
                 <h2 align="center">Lista Clientes</h2>
                 <button type="submit" class="btn btn-info btn-xs" data-toggle="modal" data-target="#addusuarios">Nuevo Usuario</button>   
-                <button type="submit" class="btn btn-info btn-xs" data-toggle="modal" data-target="#modalAlta">Activar Usuario</button>                             
-                <div class="row">
+                <!--<button type="submit" class="btn btn-info btn-xs" data-toggle="modal" data-target="#modalAlta">Activar Usuario</button>                             
+--><div class="row">
 		<div id="cuadro1" class="col-sm-12 col-md-12 col-lg-12">
 			<div class="col-sm-offset-2 col-sm-5 ">
 				<h3 class="text-center"> <small class="mensaje"></small></h3>
@@ -36,7 +36,7 @@ include 'modaladd2.php';
                             <th>Direccion</th>
                             <th>Telefono</th>	
                             <th>Email</th>	
-                            <th></th>
+                            <th>Opcion</th>
 										
 						</tr>
 					</thead>					

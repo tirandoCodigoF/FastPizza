@@ -153,19 +153,19 @@
         </button>
       </div>
       <div class="modal-body">
-      <div id="msg_error" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
-        <div id="msg_full" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
+      <div id="msg_error1" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
+        <div id="msg_full1" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
        
 <div class="container">
-<div id="msg_error" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
-        <div id="msg_full" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
+<div id="msg_error1" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
+        <div id="msg_full1" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
        
   <div class="row d-flex justify-content-around mt-1">
 
     <div class="card cold-md-6 cold-md-offset-6">
       <article class="card-body">
-      <div id="msg_error" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
-        <div id="msg_full" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
+      <div id="msg_error1" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
+        <div id="msg_full1" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
        
         <form action="POST" class="formulario_pizzas" >
          <div class="form-group">
@@ -262,7 +262,7 @@
       
     <div class="card cold-md-6 cold-md-offset-6">
     <div class="col-sm-offset-1 col-sm-12">
-				<p class="msg_full"></p>
+			<!--	<p class="msg_full"></p>-->
 			</div>
       <article class="card-body">
       

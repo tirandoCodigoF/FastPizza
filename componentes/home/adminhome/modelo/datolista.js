@@ -20,9 +20,13 @@ $("#form").on("submit", function(e){
         //console.log(info);
         var json_info=JSON.parse(info);
          //console.log(json_info);
+         
         mensajes(json_info);
         limpiar();
         listar();
+        $('#upusuarios1').modal('hide');
+        $("#upusuarios1 .close").click();
+       // alertify.success('Actualizado Exitosamente!!!...');
     });
   
 });
@@ -154,7 +158,7 @@ var mensajes = function( informacion){
     $(".msg_full").html(txt).css({"color": color});
     $(".msg_full" ).fadeOut(5000, function (){
         $(this).html("");
-        $(this).fadeIn(3000);
+        $(this).fadeIn(6000);
     });
 }
  var limpiar = function (){

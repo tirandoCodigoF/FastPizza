@@ -54,7 +54,8 @@ $(document).on("submit", ".formulario_registro", function(event){
     .done(function ajaxDone(res){
        console.log(res); 
        if(res.error !== undefined){
-            $("#msg_error").text(res.error).show();
+           // $("#msg_error").text(res.error).show();
+           alertify.error(res.error);
             return false;
        } 
 
@@ -68,13 +69,15 @@ $(document).on("submit", ".formulario_registro", function(event){
         //this.reset();
         $('input').val("");
         $('select').val("");
-        //$('.addpersona').modal('hide');
-       // $("#addusuarios .close").click();
+        $('#addusuarios').modal('hide');
+       
+        
        // $ ('#addpersona'). Modal ('hide');
        // $ ('#addpersona'). modal (). hide (); 
         //onSubmit="this.reset()"
         //$('#addpersona').hide();
         listar();
+        //$("#addusuarios .close").click();
         return false;
    } 
     })
@@ -118,7 +121,9 @@ $(document).on("submit", ".formulario_pizzas", function(event){
     .done(function ajaxDone(res){
        console.log(res); 
        if(res.error3 !== undefined){
-            $("#msg_error").text(res.error3).show();
+           // $("#msg_error1").text(res.error3).show();
+           alertify.error(res.error3);
+           // var notification = alertify.notify('sample', 'success ', 5, function(){  console.log('dismissed'); });
             return false;
        } 
 
@@ -127,14 +132,14 @@ $(document).on("submit", ".formulario_pizzas", function(event){
     }
     if(res.full3 !== undefined){
       
-        $("#msg_full").text(res.full3).show();
-        alertify.success('Registro Exitoso');
+        //$("#msg_full").text(res.full3).show();
+        alertify.success('Registro  Exitoso');
         //this.reset();
         $('input').val("");
         $('select').val("");
         //$('.addpersona').modal('hide');
-       // $("#addusuarios .close").click();
-       // $ ('#addpersona'). Modal ('hide');
+        $("#addpizzas .close").click();
+        $ ('#addpizzas'). Modal ('hide');
        // $ ('#addpersona'). modal (). hide (); 
         //onSubmit="this.reset()"
         //$('#addpersona').hide();
@@ -288,7 +293,8 @@ $(document).on("submit", ".EliminarUsuario", function(event){
     .done(function ajaxDone(res){
        console.log(res); 
        if(res.error2 !== undefined){
-            $("#msg_error").text(res.error2).show();
+           // $("#msg_error").text(res.error2).show();
+            alertify.error(res.error2);
             return false;
        } 
 
