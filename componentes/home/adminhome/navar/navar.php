@@ -32,7 +32,7 @@
                   <a class="nav-link dropdown-toggle btn btn-success" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" 
                   aria-expanded="false">    Pizzas</a>
                   <div class="dropdown-menu" aria-labelledby="dropdownId">
-                      <a  class="dropdown-item" href="http://localhost:8080/FastPizza/componentes/home/adminhome/MenuAdmin/listaventa.php">Lista Pizzas</a>
+                      <a  class="dropdown-item" href="http://localhost:8080/FastPizza/componentes/home/adminhome/MenuAdmin/listaPizza.php">Lista Pizzas</a>
                       <a  class="dropdown-item" style="cursor: pointer" data-toggle="modal" data-target="#addpizzas">Agregar Pizza</a>
                   </div>
               </li>
@@ -40,7 +40,7 @@
                   <a class="nav-link dropdown-toggle btn btn-success" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" 
                   aria-expanded="false">    Ventas</a>
                   <div class="dropdown-menu" aria-labelledby="dropdownId">
-                      <a class="dropdown-item" href="../Vista/login/Acceso.php">Lista Ventas</a>
+                      <a class="dropdown-item" href="http://localhost:8080/FastPizza/componentes/home/adminhome/MenuAdmin/listaVenta.php" >Lista Ventas</a>
                       <a class="dropdown-item" href="../Vista/login/Registro.php">Agregar Venta</a>
                   </div>
               </li>

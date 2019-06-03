@@ -199,7 +199,7 @@ var limp = function (){
 
 
 
-//listar pizzasss//eliminar//actualizar
+//listar ventas pedidos//eliminar//actualizar
 $(document).on("ready", function(){
     listar1();
 });
@@ -222,6 +222,43 @@ var listar1= function(){
             {"data" : "total"},
             {"data" : "estado"}
            // {"defaultContent":"<button type='button' class='editar btn btn-primary'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminar btn btn-danger' data-toggle='modal' data-target='#modalEliminar' ><i class='fa fa-trash-o'></i></button>"}
+       
+        ]
+    });
+    
+}
+
+
+
+
+
+
+
+
+
+
+//listar tipos pizzas//eliminar//actualizar
+$(document).on("ready", function(){
+    listar2();
+});
+var listar2= function(){
+    var table= $("#dt_pizza").DataTable({
+        "language": {
+      "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+    },"destroy":true,
+        "ajax":{
+            "method":"POST",
+            "url":"../controlador/ControladorPizza.php"
+        },
+        "columns":[
+
+            {"data" : "codPizza"},
+            {"data" : "tipo"},
+            {"data" : "ingredientes"},
+            {"data" : "tamano"},
+            {"data" : "porciones"},
+            {"data" : "precio"},
+            {"defaultContent":"<button type='button' class='editar btn btn-primary'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminar btn btn-danger' data-toggle='modal' data-target='#modalEliminar' ><i class='fa fa-trash-o'></i></button>"}
        
         ]
     });

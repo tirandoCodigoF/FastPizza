@@ -8,18 +8,15 @@ require_once '../navar/head.php';
 
   <div class="container" id="listaVentas">
       <br>
-      <DIV class="card col-md-offset-4" style="background-image: url('../imGP/7.gif'); width: 35%; height: 29vh; ">
-
-</DIV>
       <div class="row d-flex justify-content-around col-md-offset-1 " >
-      
+       
     </div>
      
      <br>
         <div class="row d-flex justify-content-around mt-5">
             
             <div class="card col-md-10 col-md-offset-1">
-            <h2 align="center">Lista De Pedidos</h2>    
+            <h2 align="center">Lista De Pizzas</h2>    
                 <article class="card-body">
                 
 <div class="row" >
@@ -29,19 +26,18 @@ require_once '../navar/head.php';
 				<h3 class="text-center"> <small class="mensaje"></small></h3>
 			</div>
 			<div class="table-responsive col-sm-12">		
-				<table id="dt_ventas" class="table table-bordered table-hover" cellspacing="0" width="100%" >
+				<table id="dt_pizza" class="table table-bordered table-hover" cellspacing="0" width="100%" >
 					<thead>
 						<tr>								
-						
-                            <th>Codigo Venta</th>	
-                            <th>Fecha</th>
-                            <th>cliente</th>	
-                            <th>Orden</th>	
-                            <th>cantidad</th>
-                            <th>Total</th>		
-                            <th>Status</th>	
+                            <th>Codigo Pizza</th>	
+                            <th>Tipo Pizzas</th>	
+                            <th>Ingredientes</th>
+                            <th>Tamaño</th>	
+                            <th>Porciones</th>	
+                            <th>Precio</th>
+                            <th></th>	
            
-              										
+              											
 						</tr>
 					</thead>					
 				</table>

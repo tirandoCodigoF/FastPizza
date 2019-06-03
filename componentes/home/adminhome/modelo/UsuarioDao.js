@@ -111,7 +111,6 @@ $(document).on("submit", ".formulario_pizzas", function(event){
         type:'POST',
         url: url_php,
         data: data_form,
-        data: FormData,
         dataType: 'json',
         async: true,
     })
