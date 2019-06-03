@@ -26,7 +26,7 @@ $("#form").on("submit", function(e){
         listar();
         $('#upusuarios1').modal('hide');
         $("#upusuarios1 .close").click();
-       // alertify.success('Actualizado Exitosamente!!!...');
+        //alertify.success('Actualizado Exitosamente!!!...');
     });
   
 });
@@ -141,18 +141,24 @@ var opc_eliminar= function(tbody,table){
 var mensajes = function( informacion){
     var txt="", color="";
     if (informacion.respuesta =="BIEN") {
-        txt="<strong> <b>Bien!!!...</b></strong>  Se han guardado los cambios Correctamente...";
-        color="#379911";
+        //txt="<strong> <b>Bien!!!...</b></strong>  Se han guardado los cambios Correctamente...";
+        //color="#379911";
+        alertify.success("<strong> <b>Bien!!!...</b></strong>  Se han guardado los cambios Correctamente...");
     }else if(informacion.respuesta == "ERROR"){
-        txt="<strong> <b>Ha Ocurrido un ERROR!!!...</b></strong>  No se ejecuto la consulta Correctamente...";
-        color="#C9302C";
+        alertify.error("<strong> <b>Ha Ocurrido un ERROR!!!...</b></strong>  No se ejecuto la consulta Correctamente...");
+        //txt="<strong> <b>Ha Ocurrido un ERROR!!!...</b></strong>  No se ejecuto la consulta Correctamente...";
+
+        //color="#C9302C";
     }else if(informacion.respuesta =="EXISTE"){
-        txt="<strong> <b>Informacion!!!...</b></strong>  El usuario ya existe...";
-        color="#5b94c5";
+        alertify.error("<strong> <b>Informacion!!!...</b></strong>  El usuario ya existe...");
+      
+       // txt="<strong> <b>Informacion!!!...</b></strong>  El usuario ya existe...";
+       // color="#5b94c5";
 
     } else if(informacion.respuesta == "VACIO"){
-        txt="<strong> <b>Advertencia!!!...</b></strong> Debe llenar Todos los Campos Solicitados...";
-        color="#ddb11d";
+        alertify.error("<strong> <b>Advertencia!!!...</b></strong> Debe llenar Todos los Campos Solicitados...");
+       // txt="<strong> <b>Advertencia!!!...</b></strong> Debe llenar Todos los Campos Solicitados...";
+        //color="#ddb11d";
     }
 
     $(".msg_full").html(txt).css({"color": color});
