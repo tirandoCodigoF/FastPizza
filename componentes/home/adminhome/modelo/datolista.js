@@ -220,8 +220,8 @@ var listar1= function(){
             {"data" : "orden"},
             {"data" : "cantidad"},
             {"data" : "total"},
-            {"data" : "estado"},
-            {"defaultContent":"<button type='button' class='editar btn btn-primary'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminar btn btn-danger' data-toggle='modal' data-target='#modalEliminar' ><i class='fa fa-trash-o'></i></button>"}
+            {"data" : "estado"}
+           // {"defaultContent":"<button type='button' class='editar btn btn-primary'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminar btn btn-danger' data-toggle='modal' data-target='#modalEliminar' ><i class='fa fa-trash-o'></i></button>"}
        
         ]
     });
