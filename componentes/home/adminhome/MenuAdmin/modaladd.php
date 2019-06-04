@@ -143,30 +143,24 @@
 </div>
 
 <!-- MODAL AGREGAR PIZZA..........-->
+
 <div class="modal fade" id="addpizzas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+<div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title text-center" id="exampleModalLabel"><B>AGREGAR PIZZA</B></h5>
+        <h5 class="modal-title text-center" id="exampleModalLabel"><B>Formulario de Registro</B></h5>
         <button type="button" class="close"  data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-      <div id="msg_error1" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
-        <div id="msg_full1" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
-       
-<div class="container">
-<div id="msg_error1" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
-        <div id="msg_full1" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
-       
-  <div class="row d-flex justify-content-around mt-1">
-
     <div class="card cold-md-6 cold-md-offset-6">
       <article class="card-body">
-      <div id="msg_error1" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
-        <div id="msg_full1" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
+      
+        <div id="msg_error" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
+        <div id="msg_full" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
        
+        
         <form action="POST" class="formulario_pizzas" >
          <div class="form-group">
           <div class="row">
@@ -234,8 +228,7 @@
       </div>
      
     </div>
-  </div>
-</div>
+ 
 
 
 
