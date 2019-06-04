@@ -32,7 +32,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 			 $array_devolver['full4']=true;
 			 $array_devolver['is_login4'] = true;
+<<<<<<< HEAD
 			 $array_devolver['Pizza Eliminada exitosamente']= true;
+=======
+			 $array_devolver['Eliminado exitosamente pizza4']= true;
+>>>>>>> parent of 24b7fc9... fulladminpizzas04-06.19
 
 
 

@@ -2,8 +2,11 @@
 $(document).on("ready", function(){
     listar();
     guardar();
+<<<<<<< HEAD
     guardarpizza();
     guardarventa();
+=======
+>>>>>>> parent of 24b7fc9... fulladminpizzas04-06.19
    listar1();
    listar2();
 });
@@ -198,7 +201,7 @@ var listar2= function(){
             {"data" : "tamano"},
             {"data" : "porciones"},
             {"data" : "precio"},
-         {"defaultContent":"<button type='button' class='editarpizza btn btn-primary 'data-toggle='modal' data-target='#updatepizza'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminarpizza btn btn-danger' data-toggle='modal' data-target='#modaleliminarpizza' ><i class='fa fa-trash-o'></i></button>"}
+            {"defaultContent":"<button type='button' class='editarpizza btn btn-primary' 'data-toggle='modal' data-target='#updatepizza'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminarpizza btn btn-danger' data-toggle='modal' data-target='#modaleliminarpizza' ><i class='fa fa-trash-o'></i></button>"}
        
         ]
     });
@@ -245,16 +248,17 @@ var opc_editarpizza= function(tbody,table){
         var data = table.row( $(this).parents("tr")).data();
       // console.log(data);
         var codPizza=$("#codPizza1").val(data.codPizza),
-            nombrep=$("#nombrep1").val(data.tipo),
-            ingredientes=$("#ingredientes1").val(data.ingredientes),
-            tamano=$("#tamano1").val(data.tamano),
-            porcion=$("#porcion1").val(data.porciones),
-            precio=$("#precio1").val(data.precio)
+            nombre=$("#nombrep1").val(data.tipo),
+            telefono=$("#ingredientes1").val(data.ingredientes),
+            direccion=$("#tamano1").val(data.tamano),
+            email=$("#porcion1").val(data.porciones),
+            privi=$("#precio").val(data.precio)
             
             
     });
 }
 
+<<<<<<< HEAD
 
 
 
@@ -301,3 +305,5 @@ var opc_eliminarventa= function(tbody,table){
     });
 }
 
+=======
+>>>>>>> parent of 24b7fc9... fulladminpizzas04-06.19
