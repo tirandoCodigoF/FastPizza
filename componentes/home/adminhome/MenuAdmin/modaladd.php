@@ -537,7 +537,7 @@
         <div id="msg_full" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
        
         
-        <form action="POST" class="formulario_pizzaupdate" >
+        <form action="POST" class="formulario_pizzaupdate" id="formuppizza" >
          <div class="form-group">
           <div class="row">
                 <div class="col-md-12">
@@ -545,7 +545,7 @@
                 <div class="col-md-4">
                 <div class="form-group">
             <label>Codigo Pizza: </label>
-            <input type="text" name="codPizza1" id="codPizza1" class="form-control" autofocus placeholder="Codigo" required require onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]*.{5,50}" title="Ingresa el codigo de la pizza min 5, max 50" minlength="5" maxlength="50">
+            <input type="text"  readonly="readonly" name="codPizza1" id="codPizza1" class="form-control" autofocus placeholder="Codigo" required require onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]*.{4,50}" title="Ingresa el codigo de la pizza min 5, max 50" minlength="5" maxlength="50">
              </div> 
           
             <div class="form-group">
@@ -642,52 +642,4 @@
 		</form>
   </div>
 
-
-<<<<<<< HEAD
-<!--modales para la ventas  -->
-
-
-
-
-
-
-
-
-<!--
-  modal eliminar venta
--->
-<div>
-		<form class="EliminarVenta" id="EliminarVenta" action="POST" >
-  
-			<input type="hidden" id="eliminarventa" name="eliminarventa" value="0">
-			<!--<input type="hidden" id="opcion" name="opcion" value="eliminar">
-			 Modal -->
-			<div class="modal fade" id="modaleliminarventa" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-         <div class="modal-header">
-           <div class="card">  <h4 align="left"  class="modal-title" id="modalEliminarLabel"><b>Eliminar Venta</b></h4>
-			</div>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-         			</div>
-						<div class="modal-body">							
-						<strong data-name="">	¿Está seguro de eliminar la Venta?</strong>
-						</div>
-						<div class="modal-footer">
-           <!-- <input type="submit" class="btn btn-success"  id="EliUsuariobtn" data-dismiss="modal" name="EliUsuariobtn" value="Aceptar">  
-            <input type="submit" class="btn btn-danger"  data-dismiss="modal" value="Cancelar"> 
-            -->
-            <button type="submit" class="btn btn-success" >Aceptar</button>
-           <button type="submit" class="btn btn-danger"  data-dismiss="modal" >Cancelar</button>
-
-
-          </div>
-					</div>
-				</div>
-			</div>
-			<!-- Modal -->
-		</form>
-  </div>
-=======
->>>>>>> parent of 24b7fc9... fulladminpizzas04-06.19
 

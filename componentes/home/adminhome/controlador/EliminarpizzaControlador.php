@@ -20,9 +20,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		}
 		else{*/
 	
-            $query = "DELETE  FROM pizza WHERE codPizza =:Eliminarpizza";
+            $query = "DELETE  FROM pizza WHERE codPizza =:codEliminar";
             $nusuario = $con->prepare($query);
-            $nusuario->bindParam(':Eliminarpizza',$eliminarpizza,PDO::PARAM_INT);
+            $nusuario->bindParam(':codEliminar',$eliminarpizza,PDO::PARAM_INT);
 	
 	
  			$nusuario -> execute();
@@ -32,11 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 			 $array_devolver['full4']=true;
 			 $array_devolver['is_login4'] = true;
-<<<<<<< HEAD
-			 $array_devolver['Pizza Eliminada exitosamente']= true;
-=======
-			 $array_devolver['Eliminado exitosamente pizza4']= true;
->>>>>>> parent of 24b7fc9... fulladminpizzas04-06.19
+			 $array_devolver['Eliminado exitosamente pizza']= true;
 
 
 

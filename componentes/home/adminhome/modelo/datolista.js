@@ -2,18 +2,59 @@
 $(document).on("ready", function(){
     listar();
     guardar();
-<<<<<<< HEAD
     guardarpizza();
-    guardarventa();
-=======
->>>>>>> parent of 24b7fc9... fulladminpizzas04-06.19
    listar1();
    listar2();
 });
 $("#btn_listar").on("click", function(){
     listar();
 });
-//eliminar usuario xd nulll--false
+
+var guardar = function (){
+$("#form").on("submit", function(e){
+    e.preventDefault();
+    var frm =$(this).serialize();
+    $.ajax({
+        method: "POST",
+        url: "../controlador/ControladorEliminar.php",
+        data: frm
+    }).done(function(info){
+        //console.log(info);
+        var json_info=JSON.parse(info);
+         //console.log(json_info);
+         
+        mensajes(json_info);
+        limpiar();
+        listar();
+        $('#upusuarios1').modal('hide');
+        $("#upusuarios1 .close").click();
+        //alertify.success('Actualizado Exitosamente!!!...');
+    });
+  
+});
+}
+/*
+var eliminar2 = function (){
+    $("#eliminaruser").on("click", function(e){
+        e.preventDefault();
+        var frm =$(this).serialize();
+        console.log(frm);
+        $.ajax({
+            method: "POST",
+            url: "../controlador/ControladorGuardar.php",
+            data: frm
+            
+        }).done(function(info){
+            //console.log(info);
+            var json_info=JSON.parse(info);
+             //console.log(json_info);
+            mensajes(json_info);
+            limpiar2();
+            listar();
+        });
+      
+    });
+    }*/
     /*
 
 var eliminar= function (){
@@ -38,7 +79,7 @@ var eliminar= function (){
 }
 
 */
-///listar cliente actualizar cliente / eliminar
+
 var listar= function(){
     var table= $("#dt_cliente").DataTable({
         "language": {
@@ -61,31 +102,6 @@ var listar= function(){
 }
 
 
-var guardar = function (){
-    $("#form").on("submit", function(e){
-        e.preventDefault();
-        var frm =$(this).serialize();
-        $.ajax({
-            method: "POST",
-            url: "../controlador/ControladorEliminar.php",
-            data: frm
-        }).done(function(info){
-            //console.log(info);
-            var json_info=JSON.parse(info);
-             //console.log(json_info);
-             
-            mensajes(json_info);
-            limpiar();
-            listar();
-            $('#upusuarios1').modal('hide');
-            $("#upusuarios1 .close").click();
-            //alertify.success('Actualizado Exitosamente!!!...');
-        });
-      
-    });
-    }
-
-
 var opc_editar= function(tbody,table){
     $(tbody).on("click","button.editar", function () {
         var data = table.row( $(this).parents("tr")).data();
@@ -100,7 +116,21 @@ var opc_editar= function(tbody,table){
             activacion=$("#activa1").val(data.activacion);
     });
 }
-
+/*
+var opc_elimanar2= function(tbody,table){
+    $(tbody).on("click","button.eliminar", function () {
+        var data = table.row( $(this).parents("tr")).data();
+      // console.log(data);
+        var idusuario=$("#idusuario2").val(data.id),
+            nombre=$("#nombre2").val(data.nombre_cliente),
+            telefono=$("#telefono2").val(data.telefono_cliente),
+            direccion=$("#direccion2").val(data.direccion_cliente),
+            email=$("#email2").val(data.email_cliente),
+            privi=$("#priv2").val(data.tipo_user),
+            pass=$("#pass2").val(data.pass_cliente),
+            activacion=$("#activa2").val(data.activacion);
+    });
+}*/
 
 var opc_eliminar= function(tbody,table){
     $(tbody).on("click","button.eliminar", function () {
@@ -179,6 +209,43 @@ var limp = function (){
 
 
 
+//listar ventas pedidos//eliminar//actualizar
+$(document).on("ready", function(){
+    listar1();
+});
+var listar1= function(){
+    var table= $("#dt_ventas").DataTable({
+        "language": {
+      "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+    },"destroy":true,
+        "ajax":{
+            "method":"POST",
+            "url":"../controlador/ControladorVenta.php"
+        },
+        "columns":[
+
+            {"data" : "nv"},
+            {"data" : "fecha"},
+            {"data" : "cliente"},
+            {"data" : "orden"},
+            {"data" : "cantidad"},
+            {"data" : "total"},
+            {"data" : "status"}
+           // {"defaultContent":"<button type='button' class='editar btn btn-primary'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminar btn btn-danger' data-toggle='modal' data-target='#modalEliminar' ><i class='fa fa-trash-o'></i></button>"}
+       
+        ]
+    });
+    
+}
+
+
+
+
+
+
+
+
+
 
 //listar tipos pizzas//eliminar//actualizar
 $(document).on("ready", function(){
@@ -201,13 +268,37 @@ var listar2= function(){
             {"data" : "tamano"},
             {"data" : "porciones"},
             {"data" : "precio"},
-            {"defaultContent":"<button type='button' class='editarpizza btn btn-primary' 'data-toggle='modal' data-target='#updatepizza'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminarpizza btn btn-danger' data-toggle='modal' data-target='#modaleliminarpizza' ><i class='fa fa-trash-o'></i></button>"}
+         {"defaultContent":"<button type='button' class='editarpizza btn btn-primary 'data-toggle='modal' data-target='#updatepizza'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminarpizza btn btn-danger' data-toggle='modal' data-target='#modaleliminarpizza' ><i class='fa fa-trash-o'></i></button>"}
        
         ]
     });
     opc_editarpizza("#dt_pizza tbody", table);
     opc_eliminarpizza("#dt_pizza tbody", table);
     
+}
+
+var opc_eliminarpizza= function(tbody,table){
+    $(tbody).on("click","button.eliminarpizza", function () {
+        var data = table.row( $(this).parents("tr")).data();
+         //console.log(data);
+        var eliminarpizza=$(".EliminarPizza #eliminarpizza").val(data.codPizza);
+    });
+}
+
+
+var opc_editarpizza= function(tbody,table){
+    $(tbody).on("click","button.editarpizza", function () {
+        var data = table.row( $(this).parents("tr")).data();
+      // console.log(data);
+        var codPizza=$("#codPizza1").val(data.codPizza),
+            nombrep=$("#nombrep1").val(data.tipo),
+            ingredientes=$("#ingredientes1").val(data.ingredientes),
+            tamano=$("#tamano1").val(data.tamano),
+            porcion=$("#porcion1").val(data.porciones),
+            precio=$("#precio1").val(data.precio)
+            
+            
+    });
 }
 
 var guardarpizza = function (){
@@ -233,77 +324,4 @@ var guardarpizza = function (){
       
     });
     }
-//optener id pizza
-var opc_eliminarpizza= function(tbody,table){
-    $(tbody).on("click","button.eliminarpizza", function () {
-        var data = table.row( $(this).parents("tr")).data();
-         //console.log(data);
-        var eliminarpizza=$(".EliminarPizza #eliminarpizza").val(data.codPizza);
-    });
-}
-
-
-var opc_editarpizza= function(tbody,table){
-    $(tbody).on("click","button.editarpizza", function () {
-        var data = table.row( $(this).parents("tr")).data();
-      // console.log(data);
-        var codPizza=$("#codPizza1").val(data.codPizza),
-            nombre=$("#nombrep1").val(data.tipo),
-            telefono=$("#ingredientes1").val(data.ingredientes),
-            direccion=$("#tamano1").val(data.tamano),
-            email=$("#porcion1").val(data.porciones),
-            privi=$("#precio").val(data.precio)
-            
-            
-    });
-}
-
-<<<<<<< HEAD
-
-
-
-
-    // lista ventas //acutlizar estus venta xd  
-//listar ventas
-$(document).on("ready", function(){
-    listar1();
-});
-var listar1= function(){
-    var table= $("#dt_ventas").DataTable({
-        "language": {
-      "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
-    },"destroy" : true,
-        "ajax":{
-            "method":"POST",
-            "url":"../controlador/ControladorVenta.php"
-        },
-        "columns":[
-
-            {"data" : "nv"},
-            {"data" : "fecha"},
-            {"data" : "cliente"},
-            {"data" : "orden"},
-            {"data" : "cantidad"},
-            {"data" : "total"},
-            {"data" : "status"},
-            {"defaultContent":"<button type='button' class='editarV btn btn-primary 'data-toggle='modal' data-target='#updatepizza'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminarV btn btn-danger' data-toggle='modal' data-target='#modaleliminarventa' ><i class='fa fa-trash-o'></i></button>"}
-       
-        ]
-
-    });
-    //opc_editarventa("#dt_ventas tbody", table);
-    opc_eliminarventa("#dt_ventas tbody", table);
     
-}
-//actulizar venta
-//optener ids
-var opc_eliminarventa= function(tbody,table){
-    $(tbody).on("click","button.eliminarV", function () {
-        var data = table.row( $(this).parents("tr")).data();
-         //console.log(data);
-        var eliminarventa=$("#EliminarVenta #eliminarventa").val(data.numVenta);
-    });
-}
-
-=======
->>>>>>> parent of 24b7fc9... fulladminpizzas04-06.19
