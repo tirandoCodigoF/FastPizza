@@ -643,3 +643,48 @@
   </div>
 
 
+<!--modales para la ventas  -->
+
+
+
+
+
+
+
+
+<!--
+  modal eliminar venta
+-->
+<div>
+		<form class="EliminarVenta" id="EliminarVenta" action="POST" >
+  
+			<input type="hidden" id="eliminarventa" name="eliminarventa" value="0">
+			<!--<input type="hidden" id="opcion" name="opcion" value="eliminar">
+			 Modal -->
+			<div class="modal fade" id="modaleliminarventa" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+         <div class="modal-header">
+           <div class="card">  <h4 align="left"  class="modal-title" id="modalEliminarLabel"><b>Eliminar Venta</b></h4>
+			</div>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+         			</div>
+						<div class="modal-body">							
+						<strong data-name="">	¿Está seguro de eliminar la Venta?</strong>
+						</div>
+						<div class="modal-footer">
+           <!-- <input type="submit" class="btn btn-success"  id="EliUsuariobtn" data-dismiss="modal" name="EliUsuariobtn" value="Aceptar">  
+            <input type="submit" class="btn btn-danger"  data-dismiss="modal" value="Cancelar"> 
+            -->
+            <button type="submit" class="btn btn-success" >Aceptar</button>
+           <button type="submit" class="btn btn-danger"  data-dismiss="modal" >Cancelar</button>
+
+
+          </div>
+					</div>
+				</div>
+			</div>
+			<!-- Modal -->
+		</form>
+  </div>
+

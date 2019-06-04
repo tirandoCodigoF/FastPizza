@@ -20,9 +20,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		}
 		else{*/
 	
-            $query = "DELETE  FROM pizza WHERE codPizza =:codEliminar";
+            $query = "DELETE  FROM pizza WHERE codPizza =:Eliminarpizza";
             $nusuario = $con->prepare($query);
-            $nusuario->bindParam(':codEliminar',$eliminarpizza,PDO::PARAM_INT);
+            $nusuario->bindParam(':Eliminarpizza',$eliminarpizza,PDO::PARAM_INT);
 	
 	
  			$nusuario -> execute();
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 			 $array_devolver['full4']=true;
 			 $array_devolver['is_login4'] = true;
-			 $array_devolver['Eliminado exitosamente pizza']= true;
+			 $array_devolver['Pizza Eliminada exitosamente']= true;
 
 
 

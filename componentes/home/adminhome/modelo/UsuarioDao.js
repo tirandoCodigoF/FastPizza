@@ -2,6 +2,7 @@ $(document).on("ready", function(){
     listar();
     guardar();
     listar2();
+    listar1();
    // eliminar();
 });
 
@@ -390,3 +391,70 @@ $(document).on("submit", ".EliminarPizza", function(event){
     })
     return false;
 });
+
+
+
+
+
+// eliminar venta
+
+$(document).on("submit", ".EliminarVenta", function(event){
+    event.preventDefault();
+    var $form = $(this);
+  
+    var data_form = {
+        eliminarventa: $("#eliminarventa",$form).val()
+        
+         }
+         if(data_form == null){
+            $("#msg_error").text("no se pueden dejar los campos vacios.").show();
+            return false;        
+        }
+    
+    $("#msg_error").hide();
+    var url_php = 'http://localhost:8080/FastPizza/componentes/home/adminhome/controlador/EliminarventaControlador.php';
+
+    $.ajax({
+        type:'POST',
+        url: url_php,
+        data: data_form,
+        dataType: 'json',
+        async: true,
+    })
+    .done(function ajaxDone(res){
+       console.log(res); 
+       if(res.error5 !== undefined){
+           // $("#msg_error").text(res.error2).show();
+            alertify.error(res.error5);
+            return false;
+       } 
+
+       if(res.redirect !== undefined){
+        window.location = res.redirect;
+    }
+    if(res.full5 !== undefined){
+      
+        //$("#msg_full").text('registro exitoso').show();
+        alertify.success('Eliminado Exitosamente!!!...');
+        //this.reset();
+       // $('input').val("");
+        $('input').val("");
+        //$('.addpersona').modal('hide');
+        //$("#modaleliminarventa .close").click();
+        //$ ('#modaleliminarventa'). Modal ('hide');
+       // $ ('#addpersona'). modal (). hide (); 
+        //onSubmit="this.reset()"
+        //$('#addpersona').hide();
+        listar1();
+        return false;
+   } 
+    })
+    .fail(function ajaxError(e){
+        console.log(e);
+    })
+    .always(function ajaxSiempre(){
+        console.log('Final de la llamada ajax.');
+    })
+    return false;
+});
+
