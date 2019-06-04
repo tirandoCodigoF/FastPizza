@@ -25,4 +25,8 @@ if ($tipo==2 && $estado==0){
     $_SESSION['user']=null;
         header("Location: ../../activacionerror.php");
     }
+if ($tipo==3){
+        $_SESSION['user']=$email;
+            header("Location: ../home/home/menu/menuv.php");
+        }
 }   

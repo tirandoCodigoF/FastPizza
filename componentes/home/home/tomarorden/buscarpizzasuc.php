@@ -77,9 +77,10 @@ require ('../../../navbar/index.php');
 <input type="number" class="form-control" name="numero" id="numero" value="<?php  echo $telefono;?>">
 </div>
 <div class="col-sm-6">
-<label for="" visibility: hidden>Forma de pago:</label>
-<select class="custom-select mr-sm-2" name="fpag" id="fpag" visibility: hidden>
-            <option value="t" >Tarjeta de crédito/débito</option>
+<label for="">Forma de pago:</label>
+<select class="custom-select mr-sm-2" name="fpag" id="fpag">
+            <option value="t">Tarjeta de crédito/débito</option>
+            <option value="e">Efectivo</option>
             </select>
 </div>
 <div class="btnsc">
