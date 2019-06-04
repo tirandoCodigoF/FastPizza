@@ -1,13 +1,13 @@
 <?php 
 require_once '../navar/head.php';
-include 'modaladd.php';
+  include 'modaladd.php';
  //require_once '../navar/navar.php';
  //include_once 'modaladd.php';
 //include '../adminhome.php';
 //include '../adminhome.php';
 ?>
 
-  <div class="container" id="listaVentas">
+  <div class="container">
       <br>
      
      
@@ -17,8 +17,7 @@ include 'modaladd.php';
             <h2 align="center">Lista De Pizzas</h2>    
                 <article class="card-body">
                 <button type="submit" class="btn btn-info btn-xs" data-toggle="modal" data-target="#addpizzas">Agregar pizza</button>   
-       
-<div class="row" >
+  <div class="row" >
 		<div id="cuadro1" class="col-sm-12 col-md-12 col-lg-12" >
       
     <div class="col-sm-offset-2 col-sm-8" >
@@ -34,7 +33,7 @@ include 'modaladd.php';
                             <th>Tamaño</th>	
                             <th>Porciones</th>	
                             <th>Precio</th>
-                            <th></th>	
+                            <th>Opcion</th>	
            
               											
 						</tr>

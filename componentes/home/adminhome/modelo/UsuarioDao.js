@@ -1,6 +1,7 @@
 $(document).on("ready", function(){
     listar();
     guardar();
+    listar2();
    // eliminar();
 });
 
@@ -143,7 +144,7 @@ $(document).on("submit", ".formulario_pizzas", function(event){
        // $ ('#addpersona'). modal (). hide (); 
         //onSubmit="this.reset()"
         //$('#addpersona').hide();
-        listar();
+        listar2();
         return false;
    } 
     })
@@ -265,7 +266,7 @@ $(document).on("submit", ".AltaUsuario", function(event){
     return false;
 });
 
-
+//elimar cliente
 
 $(document).on("submit", ".EliminarUsuario", function(event){
     event.preventDefault();
@@ -315,6 +316,69 @@ $(document).on("submit", ".EliminarUsuario", function(event){
         //onSubmit="this.reset()"
         //$('#addpersona').hide();
         listar();
+        return false;
+   } 
+    })
+    .fail(function ajaxError(e){
+        console.log(e);
+    })
+    .always(function ajaxSiempre(){
+        console.log('Final de la llamada ajax.');
+    })
+    return false;
+});
+
+
+// eliminar pizza
+
+$(document).on("submit", ".EliminarPizza", function(event){
+    event.preventDefault();
+    var $form = $(this);
+  
+    var data_form = {
+        eliminarpizza: $("#eliminarpizza",$form).val()
+        
+         }
+         if(data_form == null){
+            $("#msg_error").text("no se pueden dejar los campos vacios.").show();
+            return false;        
+        }
+    
+    $("#msg_error").hide();
+    var url_php = 'http://localhost:8080/FastPizza/componentes/home/adminhome/controlador/EliminarpizzaControlador.php';
+
+    $.ajax({
+        type:'POST',
+        url: url_php,
+        data: data_form,
+        dataType: 'json',
+        async: true,
+    })
+    .done(function ajaxDone(res){
+       console.log(res); 
+       if(res.error4 !== undefined){
+           // $("#msg_error").text(res.error2).show();
+            alertify.error(res.error4);
+            return false;
+       } 
+
+       if(res.redirect !== undefined){
+        window.location = res.redirect;
+    }
+    if(res.full4 !== undefined){
+      
+        //$("#msg_full").text('registro exitoso').show();
+        alertify.success('Eliminado Exitosamente!!!...');
+        //this.reset();
+       // $('input').val("");
+        $('select').val("");
+        //$('.addpersona').modal('hide');
+        $("#modaleliminarpizza .close").click();
+       // $ ('#addpersona'). Modal ('hide');
+       // $ ('#addpersona'). modal (). hide (); 
+        //onSubmit="this.reset()"
+        //$('#addpersona').hide();
+        listar2();
         return false;
    } 
     })

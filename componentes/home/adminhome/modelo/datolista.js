@@ -2,7 +2,8 @@
 $(document).on("ready", function(){
     listar();
     guardar();
-   // eliminar();
+   listar1();
+   listar2();
 });
 $("#btn_listar").on("click", function(){
     listar();
@@ -266,10 +267,36 @@ var listar2= function(){
             {"data" : "tamano"},
             {"data" : "porciones"},
             {"data" : "precio"},
-            {"defaultContent":"<button type='button' class='editar btn btn-primary'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminar btn btn-danger' data-toggle='modal' data-target='#modalEliminar' ><i class='fa fa-trash-o'></i></button>"}
+            {"defaultContent":"<button type='button' class='editarpizza btn btn-primary' 'data-toggle='modal' data-target='#updatepizza'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminarpizza btn btn-danger' data-toggle='modal' data-target='#modaleliminarpizza' ><i class='fa fa-trash-o'></i></button>"}
        
         ]
     });
+    opc_editarpizza("#dt_pizza tbody", table);
+    opc_eliminarpizza("#dt_pizza tbody", table);
     
+}
+
+var opc_eliminarpizza= function(tbody,table){
+    $(tbody).on("click","button.eliminarpizza", function () {
+        var data = table.row( $(this).parents("tr")).data();
+         //console.log(data);
+        var eliminarpizza=$(".EliminarPizza #eliminarpizza").val(data.codPizza);
+    });
+}
+
+
+var opc_editarpizza= function(tbody,table){
+    $(tbody).on("click","button.editarpizza", function () {
+        var data = table.row( $(this).parents("tr")).data();
+      // console.log(data);
+        var codPizza=$("#codPizza1").val(data.codPizza),
+            nombre=$("#nombrep1").val(data.tipo),
+            telefono=$("#ingredientes1").val(data.ingredientes),
+            direccion=$("#tamano1").val(data.tamano),
+            email=$("#porcion1").val(data.porciones),
+            privi=$("#precio").val(data.precio)
+            
+            
+    });
 }
 
