@@ -142,104 +142,6 @@
   </div>
 </div>
 
-<!-- MODAL AGREGAR PIZZA..........-->
-
-<div class="modal fade" id="addpizzas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-center" id="exampleModalLabel"><B>Formulario de Registro</B></h5>
-        <button type="button" class="close"  data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-    <div class="card cold-md-6 cold-md-offset-6">
-      <article class="card-body">
-      
-        <div id="msg_error" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
-        <div id="msg_full" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
-       
-        
-        <form action="POST" class="formulario_pizzas" >
-         <div class="form-group">
-          <div class="row">
-                <div class="col-md-12">
-                <div class="row">
-                <div class="col-md-4">
-                <div class="form-group">
-            <label>Codigo Pizza: </label>
-            <input type="text" name="codPizza" id="codPizza" class="form-control" autofocus placeholder="Codigo" required require onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]*.{5,50}" title="Ingresa el codigo de la pizza min 5, max 50" minlength="5" maxlength="50">
-             </div> 
-          
-            <div class="form-group">
-            <label>Nombre Pizza: </label>
-            <input type="text" name="nombrep" id="nombrep" class="form-control" autofocus placeholder="Nombre" required require  onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]{4,40}" title="No puede ingresar Caracteres especiales (*/&.@-%!$#''?¿¨´+*[]{}_;:) etc, minimo 4, maximo 40 letras" minlength="4" maxlength="40">
-          </div> 
-          
-          </div>
-          <div class="col-md-4">
-            
-            
-           <div class="form-group">
-            <label>Ingredientes: </label>
-            <input type="text" name="ingredientes" id="ingredientes" class="form-control" autofocus placeholder="Ingredientes" required require  onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]*.{15,150}" title="Ingresa los ingredientes de la pizza" maxlength="150" minlength="15">
-          </div> 
-         
-          <div class="form-group">
-            <label>Tamaño: </label>
-            <input type="text" name="tamano" id="tamano" class="form-control" autofocus placeholder="Tamaño" required require onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]*.{5,150}" title="Ingresa el tamaño de la pizza" maxlength="150" minlength="5">
-  
-          </div> 
-      
-          </div>
-          <div class="col-md-4">
-          
-          <div class="form-group">
-            <label>Porciones: </label>
-            <input type="number" name="porcion" id="porcion" class="form-control" autofocus placeholder="Porcion" required require min="5" max="20" >
-          </div> 
-         
-          <div class="form-group">
-            <label>Precio: </label>
-            <input type="number" name="precio" id="precio" class="form-control" autofocus placeholder="Precio" required require title="Ingresa el costo de la pizza" min="85" max="300">
-  
-          </div> 
-          
-
-           </div>
-           </div>
-           </div>
-            </div>
-            <br>
-          <div class="form-group" align="center">
-            <!--<button type="submit"  class="btn btn-success">Registrar</button>-->
-           
-        <button type="submit" class="btn btn-success">Registrar</button>
-        <button type="submit" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-
-     
-          </div>
-        </form>   
-      </article>
-    </div>
-  </div>
-</div>
-      </div>
-     
-    </div>
- 
-
-
-
-
-<?php //include_once './navar/footer.php';
-//require_once './modelo/UsuarioDao.js'; 
-//include_once './modelo/UsuarioDao.js';
-
-
-
-?>
 
 <!-- Modal  update cliente-->
 <div class="modal fade" id="upusuarios1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -525,3 +427,184 @@
     </div>
   </div>
 </div>-->
+
+
+
+<!-- MODAL AGREGAR PIZZA..........-->
+
+<div class="modal fade" id="addpizzas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel"><B>Formulario de Registro</B></h5>
+        <button type="button" class="close"  data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    <div class="card cold-md-6 cold-md-offset-6">
+      <article class="card-body">
+      
+        <div id="msg_error" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
+        <div id="msg_full" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
+       
+        
+        <form action="POST" class="formulario_pizzas" >
+         <div class="form-group">
+          <div class="row">
+                <div class="col-md-12">
+                <div class="row">
+                <div class="col-md-4">
+                <div class="form-group">
+            <label>Codigo Pizza: </label>
+            <input type="text" name="codPizza" id="codPizza" class="form-control" autofocus placeholder="Codigo" required require onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]*.{5,50}" title="Ingresa el codigo de la pizza min 5, max 50" minlength="5" maxlength="50">
+             </div> 
+          
+            <div class="form-group">
+            <label>Nombre Pizza: </label>
+            <input type="text" name="nombrep" id="nombrep" class="form-control" autofocus placeholder="Nombre" required require  onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]{4,40}" title="No puede ingresar Caracteres especiales (*/&.@-%!$#''?¿¨´+*[]{}_;:) etc, minimo 4, maximo 40 letras" minlength="4" maxlength="40">
+          </div> 
+          
+          </div>
+          <div class="col-md-4">
+            
+            
+           <div class="form-group">
+            <label>Ingredientes: </label>
+            <input type="text" name="ingredientes" id="ingredientes" class="form-control" autofocus placeholder="Ingredientes" required require  onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]*.{15,150}" title="Ingresa los ingredientes de la pizza" maxlength="150" minlength="15">
+          </div> 
+         
+          <div class="form-group">
+            <label>Tamaño: </label>
+            <input type="text" name="tamano" id="tamano" class="form-control" autofocus placeholder="Tamaño" required require onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]*.{5,150}" title="Ingresa el tamaño de la pizza" maxlength="150" minlength="5">
+  
+          </div> 
+      
+          </div>
+          <div class="col-md-4">
+          
+          <div class="form-group">
+            <label>Porciones: </label>
+            <input type="number" name="porcion" id="porcion" class="form-control" autofocus placeholder="Porcion" required require min="5" max="20" >
+          </div> 
+         
+          <div class="form-group">
+            <label>Precio: </label>
+            <input type="number" name="precio" id="precio" class="form-control" autofocus placeholder="Precio" required require title="Ingresa el costo de la pizza" min="85" max="300">
+  
+          </div> 
+          
+
+           </div>
+           </div>
+           </div>
+            </div>
+            <br>
+          <div class="form-group" align="center">
+            <!--<button type="submit"  class="btn btn-success">Registrar</button>-->
+           
+        <button type="submit" class="btn btn-success">Registrar</button>
+        <button type="submit" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+
+     
+          </div>
+        </form>   
+      </article>
+    </div>
+  </div>
+</div>
+      </div>
+     
+    </div>
+ 
+
+<!-- MODAL UPDATE PIZZA..........-->
+
+<div class="modal fade" id="updatepizzas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel"><B>Formulario de Registro</B></h5>
+        <button type="button" class="close"  data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    <div class="card cold-md-6 cold-md-offset-6">
+      <article class="card-body">
+      
+        <div id="msg_error" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
+        <div id="msg_full" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
+       
+        
+        <form action="POST" class="formulario_pizzasupdate" >
+         <div class="form-group">
+          <div class="row">
+                <div class="col-md-12">
+                <div class="row">
+                <div class="col-md-4">
+                <div class="form-group">
+            <label>Codigo Pizza: </label>
+            <input type="text" name="codPizza" id="codPizza" class="form-control" autofocus placeholder="Codigo" required require onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]*.{5,50}" title="Ingresa el codigo de la pizza min 5, max 50" minlength="5" maxlength="50">
+             </div> 
+          
+            <div class="form-group">
+            <label>Nombre Pizza: </label>
+            <input type="text" name="nombrep" id="nombrep" class="form-control" autofocus placeholder="Nombre" required require  onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]{4,40}" title="No puede ingresar Caracteres especiales (*/&.@-%!$#''?¿¨´+*[]{}_;:) etc, minimo 4, maximo 40 letras" minlength="4" maxlength="40">
+          </div> 
+          
+          </div>
+          <div class="col-md-4">
+            
+            
+           <div class="form-group">
+            <label>Ingredientes: </label>
+            <input type="text" name="ingredientes" id="ingredientes" class="form-control" autofocus placeholder="Ingredientes" required require  onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]*.{15,150}" title="Ingresa los ingredientes de la pizza" maxlength="150" minlength="15">
+          </div> 
+         
+          <div class="form-group">
+            <label>Tamaño: </label>
+            <input type="text" name="tamano" id="tamano" class="form-control" autofocus placeholder="Tamaño" required require onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]*.{5,150}" title="Ingresa el tamaño de la pizza" maxlength="150" minlength="5">
+  
+          </div> 
+      
+          </div>
+          <div class="col-md-4">
+          
+          <div class="form-group">
+            <label>Porciones: </label>
+            <input type="number" name="porcion" id="porcion" class="form-control" autofocus placeholder="Porcion" required require min="5" max="20" >
+          </div> 
+         
+          <div class="form-group">
+            <label>Precio: </label>
+            <input type="number" name="precio" id="precio" class="form-control" autofocus placeholder="Precio" required require title="Ingresa el costo de la pizza" min="85" max="300">
+  
+          </div> 
+          
+
+           </div>
+           </div>
+           </div>
+            </div>
+            <br>
+          <div class="form-group" align="center">
+            <!--<button type="submit"  class="btn btn-success">Registrar</button>-->
+           
+        <button type="submit" class="btn btn-success">Registrar</button>
+        <button type="submit" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+
+     
+          </div>
+        </form>   
+      </article>
+    </div>
+  </div>
+</div>
+      </div>
+     
+    </div>
+
+
+
+
