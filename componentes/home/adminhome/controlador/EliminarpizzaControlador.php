@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 			 $array_devolver['full4']=true;
 			 $array_devolver['is_login4'] = true;
-			 $array_devolver['Eliminado exitosamente pizza4']= true;
+			 $array_devolver['Eliminado exitosamente pizza']= true;
 
 
 

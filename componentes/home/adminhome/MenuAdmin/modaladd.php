@@ -537,7 +537,7 @@
         <div id="msg_full" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
        
         
-        <form action="POST" class="formulario_pizzaupdate" >
+        <form action="POST" class="formulario_pizzaupdate" id="formuppizza" >
          <div class="form-group">
           <div class="row">
                 <div class="col-md-12">
@@ -545,7 +545,7 @@
                 <div class="col-md-4">
                 <div class="form-group">
             <label>Codigo Pizza: </label>
-            <input type="text" name="codPizza1" id="codPizza1" class="form-control" autofocus placeholder="Codigo" required require onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]*.{5,50}" title="Ingresa el codigo de la pizza min 5, max 50" minlength="5" maxlength="50">
+            <input type="text"  readonly="readonly" name="codPizza1" id="codPizza1" class="form-control" autofocus placeholder="Codigo" required require onblur="this.value=this.value.toUpperCase()" pattern="[a-zA-Z\s]*.{4,50}" title="Ingresa el codigo de la pizza min 5, max 50" minlength="5" maxlength="50">
              </div> 
           
             <div class="form-group">
@@ -641,6 +641,5 @@
 			<!-- Modal -->
 		</form>
   </div>
-
 
 
