@@ -1,12 +1,13 @@
 <?php 
 require_once '../navar/head.php';
  //require_once '../navar/navar.php';
- //include_once 'modaladd.php';
+ include_once 'modaladd.php';
+ include_once 'modaladd2.php';
 //include '../adminhome.php';
 //include '../adminhome.php';
 ?>
 
-  <div class="container" id="listaVentas">
+  <div class="container">
  
       <div class="row d-flex justify-content-around col-md-offset-1 " >
       
@@ -38,6 +39,7 @@ require_once '../navar/head.php';
                             <th>cantidad</th>
                             <th>Total</th>		
                             <th>Estado</th>	
+                            <th>Opcion</th>
            
               										
 						</tr>

@@ -1,7 +1,7 @@
 <?php 
  require_once '../navar/head.php';
 include 'modaladd.php';
-include 'modaladd2.php';
+//include 'modaladd2.php';
 //include '../adminhome.php';
 //include 'modaladdP.php';
 //include_once '../navar/navar.php';
@@ -22,7 +22,7 @@ include 'modaladd2.php';
                 <article class="card-body">
                 <h2 align="center">Lista Clientes</h2>
                 <button type="submit" class="btn btn-info btn-xs" data-toggle="modal" data-target="#addusuarios">Nuevo Usuario</button>   
-                <!--<button type="submit" class="btn btn-info btn-xs" data-toggle="modal" data-target="#modalAlta">Activar Usuario</button>                             
+                <!--<button type="submit" class="btn btn-info btn-xs" data-toggle="modal" data-target="#ActulizarVenta">Activar Usuario</button>                             
 --><div class="row">
 		<div id="cuadro1" class="col-sm-12 col-md-12 col-lg-12">
 			<div class="col-sm-offset-2 col-sm-5 ">

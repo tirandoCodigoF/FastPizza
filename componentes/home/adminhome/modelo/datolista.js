@@ -3,6 +3,7 @@ $(document).on("ready", function(){
     listar();
     guardar();
     guardarpizza();
+    guardarventa();
    listar1();
    listar2();
 });
@@ -230,14 +231,63 @@ var listar1= function(){
             {"data" : "orden"},
             {"data" : "cantidad"},
             {"data" : "total"},
-            {"data" : "status"}
-           // {"defaultContent":"<button type='button' class='editar btn btn-primary'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminar btn btn-danger' data-toggle='modal' data-target='#modalEliminar' ><i class='fa fa-trash-o'></i></button>"}
+            {"data" : "estadopizza"},
+            {"defaultContent":"<button type='button' class='editarv btn btn-primary 'data-toggle='modal' data-target='#ActulizarVenta1'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminarv btn btn-danger' data-toggle='modal' data-target='#modaleliminarventa' ><i class='fa fa-trash-o'></i></button>"}
        
         ]
     });
+    opc_editarventa("#dt_ventas tbody", table);
+    opc_eliminarventa("#dt_ventas tbody", table);
     
 }
+var opc_eliminarventa= function(tbody,table){
+    $(tbody).on("click","button.eliminarv", function () {
+        var data = table.row( $(this).parents("tr")).data();
+         //console.log(data);
+        var eliminarpizza=$(".EliminarVenta #eliminarventa").val(data.numVenta);
+    });
+}
 
+var opc_editarventa= function(tbody,table){
+    $(tbody).on("click","button.editarv", function () {
+        var data = table.row( $(this).parents("tr")).data();
+      // console.log(data);
+        var numventap=$("#numventap").val(data.numVenta),
+            fechap=$("#fechap").val(data.fecha),
+            clientep=$("#clientep").val(data.cliente),
+            tpizzap=$("#tpizzap").val(data.orden),
+            cantidadp=$("#cantidadp").val(data.cantidad),
+            totalp=$("#totalp").val(data.total),
+            estadop=$("#estadop").val(data.estadopizza),
+            nventap=$("#nventap").val(data.nv)
+            
+            
+    });
+}
+
+var guardarventa = function (){
+    $("#ActulizarVenta").on("submit", function(e){
+        e.preventDefault();
+        var frm =$(this).serialize();
+        $.ajax({
+            method: "POST",
+            url: "../controlador/ControladorActulizarVenta.php",
+            data: frm
+        }).done(function(info){
+            console.log(info);
+            var json_info=JSON.parse(info);
+             //console.log(json_info);
+             
+            mensajes(json_info);
+            //limpiar();
+            listar1();
+            //$('#ActulizarVenta').modal('hide');
+           // $("#ActulizarVenta .close").click();
+            //alertify.success('Actualizado Exitosamente!!!...');
+        });
+      
+    });
+    }
 
 
 
