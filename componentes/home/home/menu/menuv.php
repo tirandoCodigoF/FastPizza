@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../../css/pizzas.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <?php require '../../../sesiones/sesionlogin2.php'; ?>
+    <?php require '../../../sesiones/sesionlogin3.php'; ?>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -37,13 +37,13 @@
         <div class="tarjeta">
             <div class="adelante img1"></div>
             <div class="atras">
-            <form action="../tomarorden/buscarpizza.php" method="POST">
+            <form action="../tomarorden/buscarpizzasuc.php" method="POST">
             <select class="custom-select mr-sm-2" name="tam" id="tam" required>
             <option value="">Elegir tamaño</option>
-            <option value="HCH">Chica</option>
-            <option value="HMD">Mediana</option>
-            <option value="HGR">Grande</option>
-            <option value="HFA">Familiar</option>
+            <option value="HCH">Chica $90</option>
+            <option value="HMD">Mediana $100</option>
+            <option value="HGR">Grande $110</option>
+            <option value="HFA">Familiar $120</option>
             </select>
             <input type="number" class="form-control-sm" name="cant" id="cant" placeholder="Cantidad" required style="display:inline; margin-top:3%;">
             <button type="submit" class="btn btn-outline-light">Ordenar</button>
@@ -55,12 +55,12 @@
     <!--PEPERONI-->
     
         <div class="tarjeta-wrap">
-        <h3 class="slogan">PEPERONI</h3>
+        <h3 class="slogan">PEPERONNI</h3>
         <div class="tarjeta">
      
             <div class="adelante img2"></div>
             <div class="atras">
-            <form action="../tomarorden/buscarpizza.php" method="POST">
+            <form action="../tomarorden/buscarpizzasuc.php" method="POST">
             <select class="custom-select mr-sm-2" name="tam" id="tam">
             <option value="">Elegir tamaño</option>
             <option value="PPCH">Chica</option>
@@ -82,7 +82,7 @@
         <div class="tarjeta">
             <div class="adelante img3"></div>
             <div class="atras">
-            <form action="../tomarorden/buscarpizza.php" method="POST">
+            <form action="../tomarorden/buscarpizzasuc.php" method="POST">
             <select class="custom-select mr-sm-2" name="tam" id="tam">
             <option value="">Elegir tamaño</option>
             <option value="MXCH">Chica</option>
@@ -107,7 +107,7 @@
         <div class="tarjeta">
             <div class="adelante img4"></div>
             <div class="atras">
-            <form action="../tomarorden/buscarpizza.php" method="POST">
+            <form action="../tomarorden/buscarpizzasuc.php" method="POST">
             <select class="custom-select mr-sm-2" name="tam" id="tam">
             <option value="">Elegir tamaño</option>
             <option value="3QCH">Chica</option>
@@ -128,7 +128,8 @@
         <div class="tarjeta">
             <div class="adelante img5"></div>
             <div class="atras">
-            <form action="../tomarorden/buscarpizza.php" method="POST">
+            <form action="../tomarorden/buscarpizzasuc.php" method="POST">
+            <input type="text">
             <select class="custom-select mr-sm-2" name="tam" id="tam">
             <option value="">Elegir tamaño</option>
             <option value="CFCH">Chica</option>
@@ -149,7 +150,7 @@
         <div class="tarjeta">
             <div class="adelante img6"></div>
             <div class="atras">
-            <form action="../tomarorden/buscarpizza.php" method="POST">
+            <form action="../tomarorden/buscarpizzasuc.php" method="POST">
             <select class="custom-select mr-sm-2" name="tam" id="tam">
             <option value="">Elegir tamaño</option>
             <option value="CHCH">Chica</option>

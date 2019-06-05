@@ -11,14 +11,14 @@ body{
 header{
  width: 100%;
  height: 650px;
- background-image: url(https://image.freepik.com/free-photo/tasty-pepperoni-pizza-black-concrete-background_79782-102.jpg);
+ background-image: url( https://image.freepik.com/free-photo/tasty-pepperoni-pizza-black-concrete-background_79782-102.jpg);
  background-attachment: fixed;
  background-position: center;
  background-size: cover;
  position: relative;
  overflow: hidden;
  color:#fff;
- text-align: center; 
+ text-align: center;
 }
 header .textos{
  margin-top:152px;
@@ -76,7 +76,7 @@ header .boton{
 .fondo{
  height: 550px;
  position: relative;
- background-image: url(https://img.freepik.com/foto-gratis/cortar-rodajas-deliciosa-pizza-fresca-pepperoni_79782-17.jpg?size=626&ext=jpg);
+ background-image: url( https://img.freepik.com/foto-gratis/cortar-rodajas-deliciosa-pizza-fresca-pepperoni_79782-17.jpg?size=626&ext=jpg);
  overflow: hidden;
  background-attachment: fixed;
  background-position: center;
@@ -84,18 +84,23 @@ header .boton{
 }
 
 .wrap{
- width: 1100px;
+ width: 100%;
  margin: 50px auto;
  display: flex;
  justify-content: center;
 }
+
+
 .tarjeta-wrap{
+width: 100%;
 margin:10px;
 -webkit-perspective: 800;
 perspective: 800;
 }
+
+
 .tarjeta{
- width: 300px;
+ width: 100%;
  height: 350px;
  background: black;
  position: relative;
@@ -105,6 +110,8 @@ perspective: 800;
  -moz-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
  box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
 }
+
+
 .adelante, .atras{
  width: 100%;
  height: 100%;
@@ -114,10 +121,17 @@ perspective: 800;
  -webkit-backface-visibility: hidden;
  backface-visibility: hidden;
 }
+
+
 .adelante{
  width: 100%;
+ height: 100%;
 }
+
+
 .atras{
+ width: 50%;
+ height: 50%;
  transform: rotateY(180deg);
  padding: 15px;
  display: flex;
@@ -127,30 +141,53 @@ perspective: 800;
  color:#fff;
  font-family: "open sans";
 }
+
 .tarjeta-wrap:hover .tarjeta{
  transform: rotateY(180deg);
+ width: 100%;
 }
+textarea{
+    font-size: .2rem;
+}
+
 .img1{
- background-image: url(https://cilianosdelicias.com/wp-content/uploads/2016/11/pepperoni.jpg);
+ background-image: url( https://phmex.vteximg.com.br/arquivos/ids/155535/HUT-CHEESE-HAWAIANA.jpg?v=636834183544470000&width=300 );
  background-size:cover;
+ max-width: 100%;
 }
+
+
 .img2{
- background-image: url(https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/styles/480x358/public/media/image/2018/02/pizza.jpg?itok=1cwCizQ3);
+ background-image: url(https://phmex.vteximg.com.br/arquivos/ids/155573/GRAN-HUT-PEPPERONI.jpg?v=636834183688170000&width=300);
  background-size: cover;
+ max-width: 100%;
 }
+
+
 .img3{
- background-image: url(https://mas-mexico.com.mx/wp-content/uploads/2018/04/pizzas-cdmx.jpg);
- background-size: cover;
+ background-image: url(https://phmex.vteximg.com.br/arquivos/ids/155553/MEXICANA.jpg?v=636834183601900000&width=300);
+ background-size:cover;
+ max-width: 100%;
 }
+
 .img4{
- background-image: url(https://static.ideal.es/www/pre2017/multimedia/noticias/201603/14/media/cortadas/pizza--575x323.jpg);
+ background-image: url(https://phmex.vteximg.com.br/arquivos/ids/155503/PAN-PIZZA-QUESO.jpg?v=636834183426970000&width=300);
  background-size: cover;
+ max-width: 100%;
 }
 .img5{
- background-image: url(https://saenzpena.gob.ar/wp-content/uploads/2019/02/48144.jpg);
+ background-image: url(https://phmex.vteximg.com.br/arquivos/ids/155591/PAN-PIZZA-SUPREMA.jpg?v=636834183739770000&width=300);
  background-size: cover;
+ max-width: 100%;
 }
 .img6{
- background-image: url(https://restorando-res.cloudinary.com/image/upload/c_lfill,fl_progressive,g_center,h_326,w_640/v1/restaurant_photos/d//15109/175891/restaurante_estacion-de-pizzas-jose-c-paz_zona-norte_38072335_2435452400010381_3980290405320097792_o.jpg);
+ background-image: url(https://phmex.vteximg.com.br/arquivos/ids/155544/PAN-PIZZA-MEAT-LOVERS.jpg?v=636834183567970000&width=300);
  background-size: cover;
+ max-width: 100%;
+}
+.slogan{
+ font-size: 24px;
+ font-weight: 300;
+ text-align: center;
+ margin-bottom: 24px;
 }

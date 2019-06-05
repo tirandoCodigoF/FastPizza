@@ -2,7 +2,7 @@
 require '../basededatos/conexion.php';
 
 
-    $email=$_POST['user'];
+    $email=$_POST['user']; 
     $pass=$_POST['pass'];
 
     $sql=$conexion->query("SELECT tipo_user from clientes where (email_cliente='$email' and pass_cliente='$pass') ");
