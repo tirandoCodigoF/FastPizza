@@ -2,7 +2,7 @@
  require_once '../navar/head.php';
 include 'modaladd.php';
 //include 'modaladd2.php';
-//include '../adminhome.php';
+include '../adminhome.php';
 //include 'modaladdP.php';
 //include_once '../navar/navar.php';
 ?>
@@ -10,14 +10,9 @@ include 'modaladd.php';
   <div class="container">
       <br>
    
-      <div class="col-sm-offset-4 col-sm-12">
-        <p class="msg_full"></p>
-        <div id="msg_error" align="center"  class="alert alert-danger form-control text-center form-group" role="alert" style="display: none"></div>
-        <div id="msg_full" name="msg_full" align="center"  class="alert alert-success form-control text-center form-group" role="alert" style="display: none"></div>
-       
-			</div>
+     
         <div class="row d-flex justify-content-around mt-5">
-            <div class="card col-md-12 col-md-offset-1">
+            <div class="card col-md-10 col-md-offset-1 bg-light">
            
                 <article class="card-body">
                 <h2 align="center">Lista Clientes</h2>
@@ -25,12 +20,12 @@ include 'modaladd.php';
                 <!--<button type="submit" class="btn btn-info btn-xs" data-toggle="modal" data-target="#ActulizarVenta">Activar Usuario</button>                             
 --><div class="row">
 		<div id="cuadro1" class="col-sm-12 col-md-12 col-lg-12">
-			<div class="col-sm-offset-2 col-sm-5 ">
+			<div class="col-sm-offset-2 col-sm-8 ">
 				<h3 class="text-center"> <small class="mensaje"></small></h3>
 			</div>
 			<div class="table-responsive col-sm-12">		
 				<table id="dt_cliente" class="table table-bordered table-hover" cellspacing="0" width="108%" height="100%">
-					<thead>
+					<thead class="bg-dark text-white">
 						<tr>								
 							              <th>Nombre</th>
                             <th>Direccion</th>

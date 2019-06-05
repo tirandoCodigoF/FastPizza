@@ -3,7 +3,7 @@ require_once '../navar/head.php';
   include 'modaladd.php';
  //require_once '../navar/navar.php';
  //include_once 'modaladd.php';
-//include '../adminhome.php';
+include '../adminhome.php';
 //include '../adminhome.php';
 ?>
 
@@ -13,7 +13,7 @@ require_once '../navar/head.php';
      
         <div class="row d-flex justify-content-around mt-5">
             
-            <div class="card col-md-10 col-md-offset-1">
+            <div class="card col-md-15 col-md-offset-1 bg-light">
             <h2 align="center">Lista De Pizzas</h2>    
                 <article class="card-body">
                 <button type="submit" class="btn btn-info btn-xs" data-toggle="modal" data-target="#addpizzas">Agregar pizza</button>   
@@ -25,7 +25,7 @@ require_once '../navar/head.php';
 			</div>
 			<div class="table-responsive col-sm-12">		
 				<table id="dt_pizza" class="table table-bordered table-hover" cellspacing="0" width="100%" >
-					<thead>
+					<thead class="bg-dark text-white">
 						<tr>								
                             <th>Codigo Pizza</th>	
                             <th>Tipo Pizzas</th>	

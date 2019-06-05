@@ -5,10 +5,12 @@ require 'Conne.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	header("Content-Type: application/json");
 	$array_devolver=[];
-	$eliminarpizza= ($_POST['eliminarpizza']);
-            $query = "DELETE  FROM pizza WHERE codPizza =:codEliminar";
+	$eliminarventa= ($_POST['eliminarventa']);
+
+	
+            $query = "DELETE  FROM ventas WHERE numVenta =:EliminarV";
             $nusuario = $con->prepare($query);
-            $nusuario->bindParam(':codEliminar',$eliminarpizza,PDO::PARAM_INT);
+            $nusuario->bindParam(':EliminarV',$eliminarventa,PDO::PARAM_INT);
 	
 	
  			$nusuario -> execute();
@@ -16,9 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
  			$user_id = $con->lastInsertId();
  			$_SESSION['id'] = (int) $user_id;
 
-			 $array_devolver['full4']=true;
-			 $array_devolver['is_login4'] = true;
-			 $array_devolver['Eliminado exitosamente pizza']= true;
+			 $array_devolver['full6']=true;
+			 $array_devolver['is_login6'] = true;
+			 $array_devolver['Venta_Eliminada_exitosamente']= true;
 
 
 

@@ -649,7 +649,7 @@
   modal eliminar ventas...
 -->
 <div>
-  <form class="EliminarVenta" action="POST">
+  <form class="EliminarVenta" id="EliminarVenta" action="POST">
 
     <input type="hidden" id="eliminarventa" name="eliminarventa" value="0">
     <!--<input type="hidden" id="opcion" name="opcion" value="eliminar">
@@ -667,7 +667,7 @@
             <strong data-name=""> ¿Está seguro de eliminar la Venta!!!!?</strong>
           </div>
           <div class="modal-footer">
-            <button type="submit" class="btn btn-success" id="Eliventabtn">Aceptar</button>
+            <button type="submit" class="btn btn-success">Aceptar</button>
             <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
 
 

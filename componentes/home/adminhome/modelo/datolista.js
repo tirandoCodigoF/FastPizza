@@ -232,7 +232,7 @@ var listar1= function(){
             {"data" : "cantidad"},
             {"data" : "total"},
             {"data" : "estadopizza"},
-            {"defaultContent":"<button type='button' class='editarv btn btn-primary 'data-toggle='modal' data-target='#ActulizarVenta1'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminarv btn btn-danger' data-toggle='modal' data-target='#modaleliminarventa' ><i class='fa fa-trash-o'></i></button>"}
+            {"defaultContent":"<button type='button' class='editarv btn btn-primary 'data-toggle='modal' data-target='#ActulizarVenta1'><i class='fa fa-pencil-square-o'></i></button>     <button type='button' class='eliminarv btn btn-danger' data-toggle='modal' data-target='#modaleliminarventa' ><i class='fa fa-trash-o'></i></button>"}
        
         ]
     });
@@ -318,7 +318,7 @@ var listar2= function(){
             {"data" : "tamano"},
             {"data" : "porciones"},
             {"data" : "precio"},
-         {"defaultContent":"<button type='button' class='editarpizza btn btn-primary 'data-toggle='modal' data-target='#updatepizza'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminarpizza btn btn-danger' data-toggle='modal' data-target='#modaleliminarpizza' ><i class='fa fa-trash-o'></i></button>"}
+         {"defaultContent":"<button type='button' class='editarpizza btn btn-primary 'data-toggle='modal' data-target='#updatepizza'><i class='fa fa-pencil-square-o'></i></button>	  <button type='button' class='eliminarpizza btn btn-danger' data-toggle='modal' data-target='#modaleliminarpizza' ><i class='fa fa-trash-o'></i></button>"}
        
         ]
     });
