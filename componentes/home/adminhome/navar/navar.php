@@ -9,7 +9,19 @@
 
 
 ?>
+<!--<style>
 
+.navbar-nav {
+    width: 100%;
+    text-align: center;
+
+  }
+
+  .navbar-nav > li {
+      float: none;
+      display: inline-block;
+    }
+</style>-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand mr-5 " href="adminhome.php">FastPizzas</a>
       <button class="navbar-toggler d-lg-none  btn btn-success" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
